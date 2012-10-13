@@ -1,0 +1,122 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2012 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Full Version
+# Date created = 08:49:05  September 19, 2012
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Tutorial_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C20F484C8
+set_global_assignment -name TOP_LEVEL_ENTITY Tutorial
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:49:05  SEPTEMBER 19, 2012"
+set_global_assignment -name LAST_QUARTUS_VERSION "12.0 SP2"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (VHDL)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulation
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name VHDL_FILE ../vhdl/counter.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/alu.vhd
+set_global_assignment -name VHDL_FILE ../vhdl/multiplexer.vhd
+set_global_assignment -name BDF_FILE Tutorial.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_location_assignment PIN_G7 -to switchA[7]
+set_location_assignment PIN_H8 -to switchA[6]
+set_location_assignment PIN_F8 -to switchA[5]
+set_location_assignment PIN_H9 -to switchA[4]
+set_location_assignment PIN_E9 -to switchA[3]
+set_location_assignment PIN_F10 -to switchA[2]
+set_location_assignment PIN_G11 -to switchA[1]
+set_location_assignment PIN_E11 -to switchA[0]
+set_location_assignment PIN_H7 -to switchB[7]
+set_location_assignment PIN_C7 -to switchB[6]
+set_location_assignment PIN_G8 -to switchB[5]
+set_location_assignment PIN_E8 -to switchB[4]
+set_location_assignment PIN_F9 -to switchB[3]
+set_location_assignment PIN_H10 -to switchB[2]
+set_location_assignment PIN_H11 -to switchB[1]
+set_location_assignment PIN_F11 -to switchB[0]
+set_location_assignment PIN_L1 -to clk
+set_location_assignment PIN_U11 -to clk_en
+set_location_assignment PIN_B3 -to reset_n
+set_location_assignment PIN_C22 -to counter_led[31]
+set_location_assignment PIN_C20 -to counter_led[30]
+set_location_assignment PIN_D22 -to counter_led[29]
+set_location_assignment PIN_D20 -to counter_led[28]
+set_location_assignment PIN_E22 -to counter_led[27]
+set_location_assignment PIN_E20 -to counter_led[26]
+set_location_assignment PIN_F21 -to counter_led[25]
+set_location_assignment PIN_G22 -to counter_led[24]
+set_location_assignment PIN_C21 -to counter_led[23]
+set_location_assignment PIN_C19 -to counter_led[22]
+set_location_assignment PIN_D21 -to counter_led[21]
+set_location_assignment PIN_D19 -to counter_led[20]
+set_location_assignment PIN_E21 -to counter_led[19]
+set_location_assignment PIN_F22 -to counter_led[18]
+set_location_assignment PIN_F20 -to counter_led[17]
+set_location_assignment PIN_G21 -to counter_led[16]
+set_location_assignment PIN_G18 -to counter_led[15]
+set_location_assignment PIN_H19 -to counter_led[14]
+set_location_assignment PIN_H17 -to counter_led[13]
+set_location_assignment PIN_J22 -to counter_led[12]
+set_location_assignment PIN_J20 -to counter_led[11]
+set_location_assignment PIN_J18 -to counter_led[10]
+set_location_assignment PIN_J15 -to counter_led[9]
+set_location_assignment PIN_K21 -to counter_led[8]
+set_location_assignment PIN_G17 -to counter_led[7]
+set_location_assignment PIN_H18 -to counter_led[6]
+set_location_assignment PIN_H16 -to counter_led[5]
+set_location_assignment PIN_J21 -to counter_led[4]
+set_location_assignment PIN_J19 -to counter_led[3]
+set_location_assignment PIN_J17 -to counter_led[2]
+set_location_assignment PIN_K22 -to counter_led[1]
+set_location_assignment PIN_K20 -to counter_led[0]
+set_location_assignment PIN_U22 -to alu_led[7]
+set_location_assignment PIN_U20 -to alu_led[6]
+set_location_assignment PIN_V22 -to alu_led[5]
+set_location_assignment PIN_V20 -to alu_led[4]
+set_location_assignment PIN_W22 -to alu_led[3]
+set_location_assignment PIN_Y22 -to alu_led[2]
+set_location_assignment PIN_Y20 -to alu_led[1]
+set_location_assignment PIN_Y18 -to alu_led[0]
+set_location_assignment PIN_AB4 -to sel[1]
+set_location_assignment PIN_V12 -to sel[0]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

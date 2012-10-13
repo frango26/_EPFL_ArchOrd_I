@@ -40,21 +40,33 @@ begin
 	op <= "00";
 	wait for 20 ns; -- wait for circuit to settle
 	-- insert an ASSERT statement here
+	ASSERT r(3 downto 0) = "0001"    -- Should be true
+	 REPORT "Incorrect NOR Behavior" -- Message to display
+	 SEVERITY  WARNING;              -- Message is a warning
 	   
 	-- A AND B
 	op <= "01";
 	wait for 20 ns; -- wait for circuit to settle
 	-- insert an ASSERT statement here
+	ASSERT r(3 downto 0) = "1000"    -- Should be true
+	 REPORT "Incorrect AND Behavior" -- Message to display
+	 SEVERITY  WARNING;              -- Message is a warning
 	
 	-- A OR B
 	op <= "10";
 	wait for 20 ns; -- wait for circuit to settle
 	-- insert an ASSERT statement here
+	ASSERT r(3 downto 0) = "1110"    -- Should be true
+	 REPORT "Incorrect OR Behavior" -- Message to display
+	 SEVERITY  WARNING;              -- Message is a warning
 	   
 	-- A XOR B
 	op <= "11";
 	wait for 20 ns; -- wait for circuit to settle
 	-- insert an ASSERT statement here
+	ASSERT r(3 downto 0) = "0110"    -- Should be true
+	 REPORT "Incorrect XOR Behavior" -- Message to display
+	 SEVERITY  WARNING;              -- Message is a warning
 	   
 	wait; -- wait forever
 end process;

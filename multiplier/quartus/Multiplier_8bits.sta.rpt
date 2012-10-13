@@ -1,0 +1,1382 @@
+TimeQuest Timing Analyzer report for Multiplier_8bits
+Wed Oct 03 11:46:08 2012
+Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'CLK_divider:clk_divider_0|clk_out'
+ 12. Slow Model Setup: 'clk'
+ 13. Slow Model Hold: 'clk'
+ 14. Slow Model Hold: 'CLK_divider:clk_divider_0|clk_out'
+ 15. Slow Model Minimum Pulse Width: 'clk'
+ 16. Slow Model Minimum Pulse Width: 'CLK_divider:clk_divider_0|clk_out'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'CLK_divider:clk_divider_0|clk_out'
+ 27. Fast Model Setup: 'clk'
+ 28. Fast Model Hold: 'clk'
+ 29. Fast Model Hold: 'CLK_divider:clk_divider_0|clk_out'
+ 30. Fast Model Minimum Pulse Width: 'clk'
+ 31. Fast Model Minimum Pulse Width: 'CLK_divider:clk_divider_0|clk_out'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                     ;
++--------------------+------------------------------------------------------------------+
+; Quartus II Version ; Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Full Version ;
+; Revision Name      ; Multiplier_8bits                                                 ;
+; Device Family      ; Cyclone II                                                       ;
+; Device Name        ; EP2C20F484C8                                                     ;
+; Timing Models      ; Final                                                            ;
+; Delay Model        ; Combined                                                         ;
+; Rise/Fall Delays   ; Unavailable                                                      ;
++--------------------+------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ; < 0.1%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                               ;
++-----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------+
+; Clock Name                        ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                               ;
++-----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------+
+; clk                               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                               ;
+; CLK_divider:clk_divider_0|clk_out ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK_divider:clk_divider_0|clk_out } ;
++-----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                                           ;
++-------------+-----------------+-----------------------------------+---------------------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name                        ; Note                                                          ;
++-------------+-----------------+-----------------------------------+---------------------------------------------------------------+
+; 223.02 MHz  ; 223.02 MHz      ; CLK_divider:clk_divider_0|clk_out ;                                                               ;
+; 1216.55 MHz ; 340.02 MHz      ; clk                               ; limit due to minimum period restriction (max I/O toggle rate) ;
++-------------+-----------------+-----------------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------------------------+
+; Slow Model Setup Summary                                   ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; CLK_divider:clk_divider_0|clk_out ; -3.484 ; -82.936       ;
+; clk                               ; 0.089  ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------+
+; Slow Model Hold Summary                                   ;
++-----------------------------------+-------+---------------+
+; Clock                             ; Slack ; End Point TNS ;
++-----------------------------------+-------+---------------+
+; clk                               ; 0.145 ; 0.000         ;
+; CLK_divider:clk_divider_0|clk_out ; 0.499 ; 0.000         ;
++-----------------------------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                     ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; clk                               ; -1.941 ; -3.425        ;
+; CLK_divider:clk_divider_0|clk_out ; -0.742 ; -81.620       ;
++-----------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLK_divider:clk_divider_0|clk_out'                                                                                                                                                ;
++--------+------------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                ; To Node                         ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -3.484 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.524      ;
+; -3.349 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.389      ;
+; -3.300 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.340      ;
+; -3.246 ; multiplier:multiplier_0|dataout          ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.286      ;
+; -3.144 ; multiplicand:multiplicand_0|dataout[5]   ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.184      ;
+; -3.111 ; multiplier:multiplier_0|dataout          ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.151      ;
+; -3.099 ; multiplicand:multiplicand_0|dataout[6]   ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.139      ;
+; -3.062 ; multiplier:multiplier_0|dataout          ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.102      ;
+; -3.055 ; product:product_0|dataout[8]             ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.095      ;
+; -3.043 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[4]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.083      ;
+; -3.009 ; multiplicand:multiplicand_0|dataout[5]   ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.049      ;
+; -3.006 ; multiplicand:multiplicand_0|dataout[7]   ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.046      ;
+; -2.960 ; multiplicand:multiplicand_0|dataout[5]   ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 4.000      ;
+; -2.957 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.997      ;
+; -2.921 ; multiplier:multiplier_0|dataout          ; product:product_0|local[2]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.961      ;
+; -2.920 ; product:product_0|dataout[8]             ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.960      ;
+; -2.915 ; multiplicand:multiplicand_0|dataout[6]   ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.955      ;
+; -2.871 ; product:product_0|dataout[8]             ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.911      ;
+; -2.805 ; multiplier:multiplier_0|dataout          ; product:product_0|local[4]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.845      ;
+; -2.795 ; product:product_0|dataout[11]            ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.835      ;
+; -2.786 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[3]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.826      ;
+; -2.768 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[2]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.808      ;
+; -2.738 ; multiplier:multiplier_0|dataout          ; product:product_0|local[1]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.778      ;
+; -2.730 ; product:product_0|dataout[8]             ; product:product_0|local[2]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.770      ;
+; -2.720 ; multiplicand:multiplicand_0|dataout[3]   ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.760      ;
+; -2.719 ; multiplier:multiplier_0|dataout          ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.759      ;
+; -2.673 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.713      ;
+; -2.664 ; multiplicand:multiplicand_0|dataout[4]   ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.704      ;
+; -2.660 ; product:product_0|dataout[11]            ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.700      ;
+; -2.631 ; product:product_0|dataout[9]             ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.671      ;
+; -2.614 ; product:product_0|dataout[8]             ; product:product_0|local[4]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.654      ;
+; -2.611 ; product:product_0|dataout[11]            ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.651      ;
+; -2.585 ; multiplicand:multiplicand_0|dataout[3]   ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.625      ;
+; -2.584 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.624      ;
+; -2.580 ; multiplier:multiplier_0|dataout          ; product:product_0|local[0]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.620      ;
+; -2.572 ; multiplicand:multiplicand_0|dataout[6]   ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.612      ;
+; -2.560 ; controller:controller_0|current_state.s2 ; multiplier:multiplier_0|dataout ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.601      ;
+; -2.548 ; multiplier:multiplier_0|dataout          ; product:product_0|local[3]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.588      ;
+; -2.547 ; product:product_0|dataout[8]             ; product:product_0|local[1]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.587      ;
+; -2.538 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.578      ;
+; -2.536 ; multiplicand:multiplicand_0|dataout[3]   ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.576      ;
+; -2.529 ; multiplicand:multiplicand_0|dataout[4]   ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.569      ;
+; -2.528 ; product:product_0|dataout[8]             ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.568      ;
+; -2.496 ; product:product_0|dataout[9]             ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.536      ;
+; -2.489 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.529      ;
+; -2.480 ; multiplicand:multiplicand_0|dataout[4]   ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.520      ;
+; -2.449 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.489      ;
+; -2.447 ; product:product_0|dataout[9]             ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.487      ;
+; -2.415 ; multiplicand:multiplicand_0|dataout[7]   ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.455      ;
+; -2.400 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.440      ;
+; -2.390 ; product:product_0|dataout[8]             ; product:product_0|local[0]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.430      ;
+; -2.380 ; product:product_0|dataout[12]            ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.420      ;
+; -2.357 ; product:product_0|dataout[8]             ; product:product_0|local[3]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.397      ;
+; -2.354 ; product:product_0|dataout[11]            ; product:product_0|local[4]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.394      ;
+; -2.348 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[2]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.388      ;
+; -2.306 ; product:product_0|dataout[9]             ; product:product_0|local[2]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.346      ;
+; -2.279 ; multiplicand:multiplicand_0|dataout[3]   ; product:product_0|local[4]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.319      ;
+; -2.268 ; product:product_0|dataout[11]            ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.308      ;
+; -2.259 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[2]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.299      ;
+; -2.245 ; product:product_0|dataout[12]            ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.285      ;
+; -2.232 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[4]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.272      ;
+; -2.228 ; product:product_0|dataout[13]            ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.268      ;
+; -2.223 ; multiplicand:multiplicand_0|dataout[5]   ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.263      ;
+; -2.196 ; product:product_0|dataout[12]            ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.236      ;
+; -2.193 ; multiplicand:multiplicand_0|dataout[3]   ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.233      ;
+; -2.191 ; product:product_0|dataout[10]            ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.231      ;
+; -2.190 ; product:product_0|dataout[9]             ; product:product_0|local[4]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.230      ;
+; -2.165 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[1]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.205      ;
+; -2.155 ; controller:controller_0|current_state.s0 ; product:product_0|local[3]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.196      ;
+; -2.155 ; controller:controller_0|current_state.s0 ; product:product_0|local[4]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.196      ;
+; -2.155 ; controller:controller_0|current_state.s0 ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.196      ;
+; -2.155 ; controller:controller_0|current_state.s0 ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.196      ;
+; -2.155 ; controller:controller_0|current_state.s0 ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.196      ;
+; -2.146 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.186      ;
+; -2.143 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[4]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.183      ;
+; -2.137 ; multiplicand:multiplicand_0|dataout[4]   ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.177      ;
+; -2.104 ; product:product_0|dataout[9]             ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.144      ;
+; -2.093 ; product:product_0|dataout[13]            ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.133      ;
+; -2.083 ; controller:controller_0|current_state.s0 ; multiplier:multiplier_0|dataout ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.124      ;
+; -2.057 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.097      ;
+; -2.056 ; product:product_0|dataout[10]            ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.096      ;
+; -2.045 ; product:product_0|dataout[15]            ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.085      ;
+; -2.044 ; product:product_0|dataout[13]            ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.084      ;
+; -2.007 ; product:product_0|dataout[10]            ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.047      ;
+; -2.007 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[0]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.047      ;
+; -1.975 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[3]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 3.015      ;
+; -1.959 ; controller:controller_0|current_state.s1 ; product:product_0|local[3]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.000      ;
+; -1.959 ; controller:controller_0|current_state.s1 ; product:product_0|local[4]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.000      ;
+; -1.959 ; controller:controller_0|current_state.s1 ; product:product_0|local[5]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.000      ;
+; -1.959 ; controller:controller_0|current_state.s1 ; product:product_0|local[8]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.000      ;
+; -1.959 ; controller:controller_0|current_state.s1 ; product:product_0|local[7]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 3.000      ;
+; -1.937 ; controller:controller_0|current_state.s0 ; product:product_0|local[9]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 2.978      ;
+; -1.937 ; controller:controller_0|current_state.s0 ; product:product_0|local[1]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 2.978      ;
+; -1.937 ; controller:controller_0|current_state.s0 ; product:product_0|local[10]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 2.978      ;
+; -1.937 ; controller:controller_0|current_state.s0 ; product:product_0|local[2]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 2.978      ;
+; -1.937 ; controller:controller_0|current_state.s0 ; product:product_0|local[11]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 2.978      ;
+; -1.937 ; controller:controller_0|current_state.s0 ; product:product_0|local[12]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 2.978      ;
+; -1.937 ; controller:controller_0|current_state.s0 ; product:product_0|local[13]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 2.978      ;
+; -1.937 ; controller:controller_0|current_state.s0 ; product:product_0|local[14]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 2.978      ;
+; -1.937 ; controller:controller_0|current_state.s0 ; product:product_0|local[6]      ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 2.978      ;
++--------+------------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                     ;
++-------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.089 ; clk       ; CLK_divider:clk_divider_0|clk_out ; clk          ; clk         ; 0.500        ; 2.289      ; 2.740      ;
+; 0.589 ; clk       ; CLK_divider:clk_divider_0|clk_out ; clk          ; clk         ; 1.000        ; 2.289      ; 2.740      ;
++-------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                      ;
++-------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.145 ; clk       ; CLK_divider:clk_divider_0|clk_out ; clk          ; clk         ; 0.000        ; 2.289      ; 2.740      ;
+; 0.645 ; clk       ; CLK_divider:clk_divider_0|clk_out ; clk          ; clk         ; -0.500       ; 2.289      ; 2.740      ;
++-------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLK_divider:clk_divider_0|clk_out'                                                                                                                                                             ;
++-------+--------------------------------------------+--------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                    ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+--------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.499 ; controller:controller_0|current_state.s0   ; controller:controller_0|current_state.s0   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; controller:controller_0|current_counter[0] ; controller:controller_0|current_counter[0] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; controller:controller_0|current_counter[1] ; controller:controller_0|current_counter[1] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; controller:controller_0|current_counter[2] ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; multiplier:multiplier_0|local[7]           ; multiplier:multiplier_0|local[7]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; product:product_0|local[0]                 ; product:product_0|local[0]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.805      ;
+; 0.748 ; product:product_0|local[2]                 ; product:product_0|dataout[2]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.054      ;
+; 0.753 ; product:product_0|local[1]                 ; product:product_0|dataout[1]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.059      ;
+; 0.757 ; controller:controller_0|current_state.s3   ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.063      ;
+; 0.785 ; controller:controller_0|current_state.s1   ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.091      ;
+; 0.786 ; controller:controller_0|current_state.s1   ; controller:controller_0|current_state.s2   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.092      ;
+; 0.787 ; controller:controller_0|current_state.s2   ; controller:controller_0|current_state.s3   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.093      ;
+; 0.788 ; controller:controller_0|current_state.s1   ; controller:controller_0|current_counter[1] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.094      ;
+; 0.790 ; controller:controller_0|current_state.s1   ; controller:controller_0|current_counter[0] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.096      ;
+; 0.901 ; product:product_0|local[8]                 ; product:product_0|dataout[8]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.207      ;
+; 0.904 ; product:product_0|local[6]                 ; product:product_0|dataout[6]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.210      ;
+; 0.924 ; controller:controller_0|current_counter[2] ; controller:controller_0|current_state.s3   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.230      ;
+; 1.043 ; controller:controller_0|current_counter[1] ; controller:controller_0|current_state.s3   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.349      ;
+; 1.049 ; product:product_0|local[4]                 ; product:product_0|dataout[4]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.355      ;
+; 1.090 ; controller:controller_0|current_counter[0] ; controller:controller_0|current_state.s3   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.396      ;
+; 1.120 ; product:product_0|local[5]                 ; product:product_0|dataout[5]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.426      ;
+; 1.126 ; product:product_0|local[9]                 ; product:product_0|dataout[9]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.432      ;
+; 1.133 ; controller:controller_0|current_counter[1] ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.439      ;
+; 1.145 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[7]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 1.450      ;
+; 1.151 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[4]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 1.456      ;
+; 1.152 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[1]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 1.457      ;
+; 1.153 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[6]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 1.458      ;
+; 1.155 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[5]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 1.460      ;
+; 1.156 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[3]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 1.461      ;
+; 1.157 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[2]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 1.462      ;
+; 1.161 ; multiplier:multiplier_0|local[2]           ; multiplier:multiplier_0|local[1]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.467      ;
+; 1.166 ; multiplier:multiplier_0|local[7]           ; multiplier:multiplier_0|local[6]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.472      ;
+; 1.171 ; multiplier:multiplier_0|local[5]           ; multiplier:multiplier_0|local[4]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.477      ;
+; 1.171 ; multiplier:multiplier_0|local[6]           ; multiplier:multiplier_0|local[5]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.477      ;
+; 1.172 ; product:product_0|local[6]                 ; product:product_0|local[15]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.478      ;
+; 1.174 ; product:product_0|local[2]                 ; product:product_0|local[11]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.480      ;
+; 1.177 ; product:product_0|local[1]                 ; product:product_0|local[10]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.483      ;
+; 1.197 ; controller:controller_0|current_counter[0] ; controller:controller_0|current_counter[1] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.503      ;
+; 1.198 ; product:product_0|local[10]                ; product:product_0|dataout[10]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.504      ;
+; 1.198 ; product:product_0|local[13]                ; product:product_0|dataout[13]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.504      ;
+; 1.198 ; product:product_0|local[0]                 ; product:product_0|dataout[0]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.504      ;
+; 1.204 ; controller:controller_0|current_state.s0   ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.510      ;
+; 1.205 ; product:product_0|local[12]                ; product:product_0|dataout[12]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.511      ;
+; 1.206 ; product:product_0|local[15]                ; product:product_0|dataout[15]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.512      ;
+; 1.208 ; controller:controller_0|current_counter[0] ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.514      ;
+; 1.209 ; product:product_0|local[14]                ; product:product_0|dataout[14]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.515      ;
+; 1.210 ; multiplier:multiplier_0|local[3]           ; multiplier:multiplier_0|local[2]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.516      ;
+; 1.213 ; multiplier:multiplier_0|local[4]           ; multiplier:multiplier_0|local[3]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.519      ;
+; 1.216 ; product:product_0|local[3]                 ; product:product_0|dataout[3]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.522      ;
+; 1.307 ; product:product_0|local[0]                 ; product:product_0|local[9]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.613      ;
+; 1.440 ; product:product_0|local[5]                 ; product:product_0|local[14]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.746      ;
+; 1.467 ; controller:controller_0|current_state.s0   ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 1.774      ;
+; 1.467 ; controller:controller_0|current_state.s0   ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 1.774      ;
+; 1.468 ; controller:controller_0|current_state.s0   ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 1.775      ;
+; 1.469 ; product:product_0|local[3]                 ; product:product_0|local[12]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.775      ;
+; 1.476 ; product:product_0|local[4]                 ; product:product_0|local[13]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.782      ;
+; 1.530 ; controller:controller_0|current_state.s0   ; product:product_0|local[10]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 1.837      ;
+; 1.532 ; controller:controller_0|current_state.s0   ; product:product_0|local[2]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 1.839      ;
+; 1.535 ; product:product_0|local[7]                 ; product:product_0|dataout[7]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.841      ;
+; 1.537 ; controller:controller_0|current_state.s0   ; product:product_0|local[15]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 1.844      ;
+; 1.538 ; controller:controller_0|current_state.s0   ; product:product_0|local[13]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 1.845      ;
+; 1.539 ; controller:controller_0|current_state.s0   ; product:product_0|local[12]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 1.846      ;
+; 1.540 ; product:product_0|local[11]                ; product:product_0|dataout[11]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 1.846      ;
+; 1.541 ; controller:controller_0|current_state.s0   ; product:product_0|local[11]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 1.848      ;
+; 1.541 ; controller:controller_0|current_state.s0   ; product:product_0|local[14]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 1.848      ;
+; 1.828 ; controller:controller_0|current_state.s3   ; controller:controller_0|current_counter[0] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.134      ;
+; 1.828 ; controller:controller_0|current_state.s3   ; controller:controller_0|current_counter[1] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.134      ;
+; 1.828 ; controller:controller_0|current_state.s3   ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.134      ;
+; 1.833 ; controller:controller_0|current_state.s1   ; product:product_0|local[0]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.140      ;
+; 1.844 ; controller:controller_0|current_state.s2   ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.150      ;
+; 1.907 ; controller:controller_0|current_state.s0   ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.214      ;
+; 1.908 ; controller:controller_0|current_state.s0   ; product:product_0|local[3]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.215      ;
+; 1.972 ; controller:controller_0|current_state.s0   ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.279      ;
+; 1.978 ; controller:controller_0|current_counter[2] ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.284      ;
+; 1.980 ; controller:controller_0|current_state.s0   ; product:product_0|local[1]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.287      ;
+; 1.982 ; controller:controller_0|current_state.s2   ; product:product_0|local[0]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.289      ;
+; 1.982 ; controller:controller_0|current_state.s0   ; product:product_0|local[9]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.289      ;
+; 2.034 ; product:product_0|dataout[13]              ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.340      ;
+; 2.080 ; controller:controller_0|current_state.s0   ; multiplier:multiplier_0|local[7]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 2.385      ;
+; 2.106 ; product:product_0|dataout[14]              ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.412      ;
+; 2.157 ; controller:controller_0|current_state.s0   ; product:product_0|local[0]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.464      ;
+; 2.173 ; controller:controller_0|current_state.s0   ; multiplier:multiplier_0|local[6]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 2.478      ;
+; 2.173 ; controller:controller_0|current_state.s0   ; multiplier:multiplier_0|local[5]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 2.478      ;
+; 2.173 ; controller:controller_0|current_state.s0   ; multiplier:multiplier_0|local[4]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 2.478      ;
+; 2.173 ; controller:controller_0|current_state.s0   ; multiplier:multiplier_0|local[3]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 2.478      ;
+; 2.173 ; controller:controller_0|current_state.s0   ; multiplier:multiplier_0|local[2]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 2.478      ;
+; 2.173 ; controller:controller_0|current_state.s0   ; multiplier:multiplier_0|local[1]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 2.478      ;
+; 2.191 ; product:product_0|dataout[15]              ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.497      ;
+; 2.202 ; controller:controller_0|current_counter[1] ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.508      ;
+; 2.208 ; product:product_0|dataout[10]              ; product:product_0|local[2]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.514      ;
+; 2.227 ; product:product_0|dataout[10]              ; product:product_0|local[3]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.533      ;
+; 2.261 ; controller:controller_0|current_state.s0   ; multiplicand:multiplicand_0|dataout[6]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.568      ;
+; 2.263 ; controller:controller_0|current_counter[0] ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.569      ;
+; 2.270 ; controller:controller_0|current_state.s0   ; controller:controller_0|current_counter[0] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.576      ;
+; 2.270 ; controller:controller_0|current_state.s0   ; controller:controller_0|current_counter[1] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.576      ;
+; 2.270 ; controller:controller_0|current_state.s0   ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.576      ;
+; 2.282 ; product:product_0|dataout[12]              ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 2.588      ;
+; 2.335 ; controller:controller_0|current_state.s0   ; multiplicand:multiplicand_0|dataout[7]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.642      ;
+; 2.337 ; controller:controller_0|current_state.s0   ; multiplicand:multiplicand_0|dataout[2]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.644      ;
+; 2.345 ; controller:controller_0|current_state.s0   ; multiplicand:multiplicand_0|dataout[5]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 2.652      ;
++-------+--------------------------------------------+--------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; -1.941 ; 1.000        ; 2.941          ; Port Rate        ; clk   ; Rise       ; clk                               ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; clk   ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; clk   ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk_divider_0|clk_out|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk_divider_0|clk_out|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                       ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLK_divider:clk_divider_0|clk_out'                                                                                     ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                                     ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------+
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[0] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[0] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[1] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[1] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[2] ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[2] ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s0   ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s0   ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s1   ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s1   ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s2   ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s2   ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s3   ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s3   ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[0]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[0]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[1]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[1]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[2]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[2]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[3]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[3]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[4]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[4]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[5]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[5]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[6]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[6]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[7]     ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[7]     ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|dataout            ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|dataout            ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[1]           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[1]           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[2]           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[2]           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[3]           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[3]           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[4]           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[4]           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[5]           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[5]           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[6]           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[6]           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[7]           ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[7]           ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[0]               ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[0]               ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[10]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[10]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[11]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[11]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[12]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[12]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[13]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[13]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[14]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[14]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[15]              ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[15]              ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[1]               ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[1]               ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[2]               ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[2]               ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[3]               ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[3]               ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[4]               ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[4]               ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[5]               ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[5]               ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[6]               ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[6]               ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[7]               ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[7]               ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[8]               ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[8]               ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[9]               ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[9]               ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[0]                 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[0]                 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[10]                ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[10]                ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[11]                ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[11]                ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[12]                ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[12]                ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[13]                ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[13]                ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[14]                ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[14]                ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[15]                ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[15]                ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[1]                 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[1]                 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[2]                 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[2]                 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[3]                 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[3]                 ;
+; -0.742 ; 0.500        ; 1.242          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[4]                 ;
+; -0.742 ; 0.500        ; 1.242          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[4]                 ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                    ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; A[*]      ; CLK_divider:clk_divider_0|clk_out ; 7.497 ; 7.497 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[0]     ; CLK_divider:clk_divider_0|clk_out ; 7.497 ; 7.497 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[1]     ; CLK_divider:clk_divider_0|clk_out ; 6.270 ; 6.270 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[2]     ; CLK_divider:clk_divider_0|clk_out ; 6.247 ; 6.247 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[3]     ; CLK_divider:clk_divider_0|clk_out ; 6.094 ; 6.094 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[4]     ; CLK_divider:clk_divider_0|clk_out ; 6.046 ; 6.046 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[5]     ; CLK_divider:clk_divider_0|clk_out ; 5.604 ; 5.604 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[6]     ; CLK_divider:clk_divider_0|clk_out ; 5.661 ; 5.661 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[7]     ; CLK_divider:clk_divider_0|clk_out ; 5.968 ; 5.968 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; B[*]      ; CLK_divider:clk_divider_0|clk_out ; 7.748 ; 7.748 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[0]     ; CLK_divider:clk_divider_0|clk_out ; 7.645 ; 7.645 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[1]     ; CLK_divider:clk_divider_0|clk_out ; 7.748 ; 7.748 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[2]     ; CLK_divider:clk_divider_0|clk_out ; 7.159 ; 7.159 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[3]     ; CLK_divider:clk_divider_0|clk_out ; 7.307 ; 7.307 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[4]     ; CLK_divider:clk_divider_0|clk_out ; 7.157 ; 7.157 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[5]     ; CLK_divider:clk_divider_0|clk_out ; 7.127 ; 7.127 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[6]     ; CLK_divider:clk_divider_0|clk_out ; 7.067 ; 7.067 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[7]     ; CLK_divider:clk_divider_0|clk_out ; 6.899 ; 6.899 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; start_n   ; CLK_divider:clk_divider_0|clk_out ; 8.929 ; 8.929 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; clk       ; clk                               ; 0.411 ; 0.411 ; Rise       ; clk                               ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                       ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+; A[*]      ; CLK_divider:clk_divider_0|clk_out ; -5.338 ; -5.338 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[0]     ; CLK_divider:clk_divider_0|clk_out ; -7.231 ; -7.231 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[1]     ; CLK_divider:clk_divider_0|clk_out ; -6.004 ; -6.004 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[2]     ; CLK_divider:clk_divider_0|clk_out ; -5.981 ; -5.981 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[3]     ; CLK_divider:clk_divider_0|clk_out ; -5.828 ; -5.828 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[4]     ; CLK_divider:clk_divider_0|clk_out ; -5.780 ; -5.780 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[5]     ; CLK_divider:clk_divider_0|clk_out ; -5.338 ; -5.338 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[6]     ; CLK_divider:clk_divider_0|clk_out ; -5.395 ; -5.395 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[7]     ; CLK_divider:clk_divider_0|clk_out ; -5.702 ; -5.702 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; B[*]      ; CLK_divider:clk_divider_0|clk_out ; -6.633 ; -6.633 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[0]     ; CLK_divider:clk_divider_0|clk_out ; -7.379 ; -7.379 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[1]     ; CLK_divider:clk_divider_0|clk_out ; -7.482 ; -7.482 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[2]     ; CLK_divider:clk_divider_0|clk_out ; -6.893 ; -6.893 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[3]     ; CLK_divider:clk_divider_0|clk_out ; -7.041 ; -7.041 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[4]     ; CLK_divider:clk_divider_0|clk_out ; -6.891 ; -6.891 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[5]     ; CLK_divider:clk_divider_0|clk_out ; -6.861 ; -6.861 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[6]     ; CLK_divider:clk_divider_0|clk_out ; -6.801 ; -6.801 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[7]     ; CLK_divider:clk_divider_0|clk_out ; -6.633 ; -6.633 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; start_n   ; CLK_divider:clk_divider_0|clk_out ; -6.648 ; -6.648 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; clk       ; clk                               ; -0.145 ; -0.145 ; Rise       ; clk                               ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                          ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; P[*]      ; CLK_divider:clk_divider_0|clk_out ; 7.350 ; 7.350 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[0]     ; CLK_divider:clk_divider_0|clk_out ; 7.315 ; 7.315 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[1]     ; CLK_divider:clk_divider_0|clk_out ; 6.955 ; 6.955 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[2]     ; CLK_divider:clk_divider_0|clk_out ; 6.948 ; 6.948 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[3]     ; CLK_divider:clk_divider_0|clk_out ; 7.350 ; 7.350 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[4]     ; CLK_divider:clk_divider_0|clk_out ; 6.949 ; 6.949 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[5]     ; CLK_divider:clk_divider_0|clk_out ; 6.522 ; 6.522 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[6]     ; CLK_divider:clk_divider_0|clk_out ; 7.001 ; 7.001 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[7]     ; CLK_divider:clk_divider_0|clk_out ; 7.339 ; 7.339 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[8]     ; CLK_divider:clk_divider_0|clk_out ; 6.842 ; 6.842 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[9]     ; CLK_divider:clk_divider_0|clk_out ; 7.258 ; 7.258 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[10]    ; CLK_divider:clk_divider_0|clk_out ; 7.287 ; 7.287 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[11]    ; CLK_divider:clk_divider_0|clk_out ; 7.254 ; 7.254 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[12]    ; CLK_divider:clk_divider_0|clk_out ; 7.305 ; 7.305 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[13]    ; CLK_divider:clk_divider_0|clk_out ; 7.272 ; 7.272 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[14]    ; CLK_divider:clk_divider_0|clk_out ; 6.895 ; 6.895 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[15]    ; CLK_divider:clk_divider_0|clk_out ; 7.325 ; 7.325 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; done      ; CLK_divider:clk_divider_0|clk_out ; 9.835 ; 9.835 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                  ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; P[*]      ; CLK_divider:clk_divider_0|clk_out ; 6.522 ; 6.522 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[0]     ; CLK_divider:clk_divider_0|clk_out ; 7.315 ; 7.315 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[1]     ; CLK_divider:clk_divider_0|clk_out ; 6.955 ; 6.955 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[2]     ; CLK_divider:clk_divider_0|clk_out ; 6.948 ; 6.948 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[3]     ; CLK_divider:clk_divider_0|clk_out ; 7.350 ; 7.350 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[4]     ; CLK_divider:clk_divider_0|clk_out ; 6.949 ; 6.949 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[5]     ; CLK_divider:clk_divider_0|clk_out ; 6.522 ; 6.522 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[6]     ; CLK_divider:clk_divider_0|clk_out ; 7.001 ; 7.001 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[7]     ; CLK_divider:clk_divider_0|clk_out ; 7.339 ; 7.339 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[8]     ; CLK_divider:clk_divider_0|clk_out ; 6.842 ; 6.842 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[9]     ; CLK_divider:clk_divider_0|clk_out ; 7.258 ; 7.258 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[10]    ; CLK_divider:clk_divider_0|clk_out ; 7.287 ; 7.287 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[11]    ; CLK_divider:clk_divider_0|clk_out ; 7.254 ; 7.254 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[12]    ; CLK_divider:clk_divider_0|clk_out ; 7.305 ; 7.305 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[13]    ; CLK_divider:clk_divider_0|clk_out ; 7.272 ; 7.272 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[14]    ; CLK_divider:clk_divider_0|clk_out ; 6.895 ; 6.895 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[15]    ; CLK_divider:clk_divider_0|clk_out ; 7.325 ; 7.325 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; done      ; CLK_divider:clk_divider_0|clk_out ; 9.835 ; 9.835 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+
+
++------------------------------------------------------------+
+; Fast Model Setup Summary                                   ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; CLK_divider:clk_divider_0|clk_out ; -0.469 ; -3.199        ;
+; clk                               ; 0.532  ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++------------------------------------------------------------+
+; Fast Model Hold Summary                                    ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; clk                               ; -0.152 ; -0.152        ;
+; CLK_divider:clk_divider_0|clk_out ; 0.215  ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                     ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; clk                               ; -1.380 ; -2.380        ;
+; CLK_divider:clk_divider_0|clk_out ; -0.500 ; -55.000       ;
++-----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLK_divider:clk_divider_0|clk_out'                                                                                                                                                           ;
++--------+------------------------------------------+--------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                ; To Node                                    ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------+--------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.469 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.502      ;
+; -0.413 ; multiplier:multiplier_0|dataout          ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.446      ;
+; -0.379 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.412      ;
+; -0.353 ; product:product_0|dataout[8]             ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.385      ;
+; -0.352 ; multiplicand:multiplicand_0|dataout[5]   ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.385      ;
+; -0.350 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.383      ;
+; -0.323 ; multiplier:multiplier_0|dataout          ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.356      ;
+; -0.318 ; multiplicand:multiplicand_0|dataout[6]   ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.351      ;
+; -0.297 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.329      ;
+; -0.294 ; multiplier:multiplier_0|dataout          ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.327      ;
+; -0.274 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.307      ;
+; -0.274 ; multiplicand:multiplicand_0|dataout[3]   ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.307      ;
+; -0.273 ; multiplicand:multiplicand_0|dataout[7]   ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.306      ;
+; -0.263 ; product:product_0|dataout[8]             ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.295      ;
+; -0.262 ; multiplicand:multiplicand_0|dataout[5]   ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.295      ;
+; -0.261 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.293      ;
+; -0.253 ; multiplicand:multiplicand_0|dataout[4]   ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.286      ;
+; -0.248 ; product:product_0|dataout[11]            ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.280      ;
+; -0.234 ; product:product_0|dataout[8]             ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.266      ;
+; -0.233 ; multiplicand:multiplicand_0|dataout[5]   ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.266      ;
+; -0.232 ; controller:controller_0|current_state.s2 ; multiplier:multiplier_0|dataout            ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.264      ;
+; -0.232 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.265      ;
+; -0.228 ; multiplicand:multiplicand_0|dataout[6]   ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.261      ;
+; -0.225 ; product:product_0|dataout[9]             ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.257      ;
+; -0.221 ; multiplier:multiplier_0|dataout          ; product:product_0|local[2]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.254      ;
+; -0.218 ; multiplier:multiplier_0|dataout          ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.251      ;
+; -0.207 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.239      ;
+; -0.184 ; multiplicand:multiplicand_0|dataout[3]   ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.217      ;
+; -0.178 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.210      ;
+; -0.176 ; multiplier:multiplier_0|dataout          ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.209      ;
+; -0.172 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[2]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.205      ;
+; -0.171 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.203      ;
+; -0.163 ; multiplicand:multiplicand_0|dataout[2]   ; product:product_0|local[3]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.196      ;
+; -0.163 ; multiplicand:multiplicand_0|dataout[4]   ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.196      ;
+; -0.161 ; product:product_0|dataout[8]             ; product:product_0|local[2]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.193      ;
+; -0.158 ; product:product_0|dataout[11]            ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.190      ;
+; -0.158 ; product:product_0|dataout[8]             ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.190      ;
+; -0.155 ; multiplicand:multiplicand_0|dataout[3]   ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.188      ;
+; -0.149 ; multiplier:multiplier_0|dataout          ; product:product_0|local[1]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.182      ;
+; -0.142 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.174      ;
+; -0.135 ; product:product_0|dataout[9]             ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.167      ;
+; -0.134 ; multiplicand:multiplicand_0|dataout[4]   ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.167      ;
+; -0.129 ; product:product_0|dataout[11]            ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.161      ;
+; -0.123 ; product:product_0|dataout[12]            ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.155      ;
+; -0.116 ; product:product_0|dataout[8]             ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.148      ;
+; -0.113 ; controller:controller_0|current_state.s0 ; product:product_0|local[3]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.146      ;
+; -0.113 ; controller:controller_0|current_state.s0 ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.146      ;
+; -0.113 ; controller:controller_0|current_state.s0 ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.146      ;
+; -0.113 ; controller:controller_0|current_state.s0 ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.146      ;
+; -0.113 ; controller:controller_0|current_state.s0 ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.146      ;
+; -0.107 ; multiplier:multiplier_0|dataout          ; product:product_0|local[3]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.140      ;
+; -0.106 ; product:product_0|dataout[9]             ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.138      ;
+; -0.105 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[2]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.137      ;
+; -0.102 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.134      ;
+; -0.098 ; multiplier:multiplier_0|dataout          ; product:product_0|local[0]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.130      ;
+; -0.096 ; multiplicand:multiplicand_0|dataout[6]   ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.129      ;
+; -0.091 ; product:product_0|dataout[10]            ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.123      ;
+; -0.089 ; product:product_0|dataout[8]             ; product:product_0|local[1]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.121      ;
+; -0.084 ; multiplicand:multiplicand_0|dataout[7]   ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.117      ;
+; -0.084 ; controller:controller_0|current_state.s0 ; multiplier:multiplier_0|dataout            ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.116      ;
+; -0.079 ; multiplicand:multiplicand_0|dataout[3]   ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.112      ;
+; -0.069 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[2]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.101      ;
+; -0.066 ; product:product_0|dataout[13]            ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.098      ;
+; -0.066 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.098      ;
+; -0.060 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.092      ;
+; -0.053 ; product:product_0|dataout[11]            ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.085      ;
+; -0.052 ; controller:controller_0|current_state.s1 ; product:product_0|local[3]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.085      ;
+; -0.052 ; controller:controller_0|current_state.s1 ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.085      ;
+; -0.052 ; controller:controller_0|current_state.s1 ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.085      ;
+; -0.052 ; controller:controller_0|current_state.s1 ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.085      ;
+; -0.052 ; controller:controller_0|current_state.s1 ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.085      ;
+; -0.049 ; controller:controller_0|current_state.s2 ; multiplier:multiplier_0|local[6]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; -0.001     ; 1.080      ;
+; -0.049 ; controller:controller_0|current_state.s2 ; multiplier:multiplier_0|local[5]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; -0.001     ; 1.080      ;
+; -0.049 ; controller:controller_0|current_state.s2 ; multiplier:multiplier_0|local[4]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; -0.001     ; 1.080      ;
+; -0.049 ; controller:controller_0|current_state.s2 ; multiplier:multiplier_0|local[3]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; -0.001     ; 1.080      ;
+; -0.049 ; controller:controller_0|current_state.s2 ; multiplier:multiplier_0|local[2]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; -0.001     ; 1.080      ;
+; -0.049 ; controller:controller_0|current_state.s2 ; multiplier:multiplier_0|local[1]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; -0.001     ; 1.080      ;
+; -0.047 ; product:product_0|dataout[8]             ; product:product_0|local[3]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.079      ;
+; -0.041 ; controller:controller_0|current_state.s0 ; product:product_0|local[9]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.074      ;
+; -0.041 ; controller:controller_0|current_state.s0 ; product:product_0|local[1]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.074      ;
+; -0.041 ; controller:controller_0|current_state.s0 ; product:product_0|local[10]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.074      ;
+; -0.041 ; controller:controller_0|current_state.s0 ; product:product_0|local[2]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.074      ;
+; -0.041 ; controller:controller_0|current_state.s0 ; product:product_0|local[11]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.074      ;
+; -0.041 ; controller:controller_0|current_state.s0 ; product:product_0|local[12]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.074      ;
+; -0.041 ; controller:controller_0|current_state.s0 ; product:product_0|local[13]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.074      ;
+; -0.041 ; controller:controller_0|current_state.s0 ; product:product_0|local[14]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.074      ;
+; -0.041 ; controller:controller_0|current_state.s0 ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.074      ;
+; -0.041 ; controller:controller_0|current_state.s0 ; product:product_0|local[15]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.074      ;
+; -0.037 ; multiplicand:multiplicand_0|dataout[3]   ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.070      ;
+; -0.033 ; product:product_0|dataout[12]            ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.065      ;
+; -0.033 ; product:product_0|dataout[9]             ; product:product_0|local[2]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.065      ;
+; -0.033 ; multiplicand:multiplicand_0|dataout[0]   ; product:product_0|local[1]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.065      ;
+; -0.033 ; product:product_0|dataout[8]             ; product:product_0|local[0]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; -0.001     ; 1.064      ;
+; -0.030 ; product:product_0|dataout[9]             ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.062      ;
+; -0.024 ; multiplicand:multiplicand_0|dataout[1]   ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.056      ;
+; -0.017 ; controller:controller_0|current_state.s2 ; controller:controller_0|current_counter[0] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.049      ;
+; -0.017 ; controller:controller_0|current_state.s2 ; controller:controller_0|current_counter[1] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.049      ;
+; -0.017 ; controller:controller_0|current_state.s2 ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.049      ;
+; -0.016 ; multiplicand:multiplicand_0|dataout[4]   ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.001      ; 1.049      ;
+; -0.011 ; product:product_0|dataout[11]            ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 1.000        ; 0.000      ; 1.043      ;
++--------+------------------------------------------+--------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                     ;
++-------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.532 ; clk       ; CLK_divider:clk_divider_0|clk_out ; clk          ; clk         ; 0.500        ; 1.038      ; 1.038      ;
+; 1.032 ; clk       ; CLK_divider:clk_divider_0|clk_out ; clk          ; clk         ; 1.000        ; 1.038      ; 1.038      ;
++-------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                       ;
++--------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node                           ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.152 ; clk       ; CLK_divider:clk_divider_0|clk_out ; clk          ; clk         ; 0.000        ; 1.038      ; 1.038      ;
+; 0.348  ; clk       ; CLK_divider:clk_divider_0|clk_out ; clk          ; clk         ; -0.500       ; 1.038      ; 1.038      ;
++--------+-----------+-----------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLK_divider:clk_divider_0|clk_out'                                                                                                                                                             ;
++-------+--------------------------------------------+--------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                                  ; To Node                                    ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------+--------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.215 ; controller:controller_0|current_state.s0   ; controller:controller_0|current_state.s0   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; controller:controller_0|current_counter[0] ; controller:controller_0|current_counter[0] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; controller:controller_0|current_counter[1] ; controller:controller_0|current_counter[1] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; controller:controller_0|current_counter[2] ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; multiplier:multiplier_0|local[7]           ; multiplier:multiplier_0|local[7]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; product:product_0|local[0]                 ; product:product_0|local[0]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.367      ;
+; 0.244 ; product:product_0|local[2]                 ; product:product_0|dataout[2]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.396      ;
+; 0.246 ; product:product_0|local[1]                 ; product:product_0|dataout[1]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.398      ;
+; 0.247 ; controller:controller_0|current_state.s3   ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.399      ;
+; 0.256 ; controller:controller_0|current_state.s1   ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.408      ;
+; 0.258 ; controller:controller_0|current_state.s1   ; controller:controller_0|current_state.s2   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.410      ;
+; 0.259 ; controller:controller_0|current_state.s1   ; controller:controller_0|current_counter[1] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.411      ;
+; 0.260 ; controller:controller_0|current_state.s2   ; controller:controller_0|current_state.s3   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.412      ;
+; 0.262 ; controller:controller_0|current_state.s1   ; controller:controller_0|current_counter[0] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.414      ;
+; 0.296 ; controller:controller_0|current_counter[2] ; controller:controller_0|current_state.s3   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.448      ;
+; 0.323 ; product:product_0|local[4]                 ; product:product_0|dataout[4]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.475      ;
+; 0.327 ; product:product_0|local[8]                 ; product:product_0|dataout[8]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.479      ;
+; 0.329 ; product:product_0|local[6]                 ; product:product_0|dataout[6]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.481      ;
+; 0.361 ; multiplier:multiplier_0|local[2]           ; multiplier:multiplier_0|local[1]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.513      ;
+; 0.362 ; multiplier:multiplier_0|local[7]           ; multiplier:multiplier_0|local[6]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.514      ;
+; 0.363 ; controller:controller_0|current_counter[1] ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; multiplier:multiplier_0|local[6]           ; multiplier:multiplier_0|local[5]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365 ; multiplier:multiplier_0|local[5]           ; multiplier:multiplier_0|local[4]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; controller:controller_0|current_counter[1] ; controller:controller_0|current_state.s3   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.517      ;
+; 0.366 ; product:product_0|local[6]                 ; product:product_0|local[15]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.518      ;
+; 0.368 ; product:product_0|local[1]                 ; product:product_0|local[10]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.520      ;
+; 0.368 ; product:product_0|local[2]                 ; product:product_0|local[11]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.520      ;
+; 0.372 ; multiplier:multiplier_0|local[3]           ; multiplier:multiplier_0|local[2]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.524      ;
+; 0.372 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[7]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 0.523      ;
+; 0.374 ; multiplier:multiplier_0|local[4]           ; multiplier:multiplier_0|local[3]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[4]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 0.525      ;
+; 0.375 ; controller:controller_0|current_state.s0   ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.527      ;
+; 0.375 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[1]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 0.526      ;
+; 0.375 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[6]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 0.526      ;
+; 0.375 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[5]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 0.526      ;
+; 0.377 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[3]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 0.528      ;
+; 0.379 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|local[2]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 0.530      ;
+; 0.381 ; controller:controller_0|current_counter[0] ; controller:controller_0|current_state.s3   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.533      ;
+; 0.382 ; controller:controller_0|current_counter[0] ; controller:controller_0|current_counter[1] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.534      ;
+; 0.383 ; controller:controller_0|current_counter[0] ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.535      ;
+; 0.399 ; product:product_0|local[5]                 ; product:product_0|dataout[5]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.551      ;
+; 0.403 ; product:product_0|local[9]                 ; product:product_0|dataout[9]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.555      ;
+; 0.405 ; product:product_0|local[0]                 ; product:product_0|dataout[0]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.557      ;
+; 0.407 ; product:product_0|local[0]                 ; product:product_0|local[9]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.560      ;
+; 0.407 ; product:product_0|local[10]                ; product:product_0|dataout[10]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.559      ;
+; 0.407 ; product:product_0|local[13]                ; product:product_0|dataout[13]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.559      ;
+; 0.409 ; product:product_0|local[12]                ; product:product_0|dataout[12]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.561      ;
+; 0.411 ; product:product_0|local[15]                ; product:product_0|dataout[15]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.563      ;
+; 0.414 ; product:product_0|local[14]                ; product:product_0|dataout[14]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.566      ;
+; 0.414 ; product:product_0|local[3]                 ; product:product_0|dataout[3]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 0.565      ;
+; 0.443 ; product:product_0|local[3]                 ; product:product_0|local[12]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.595      ;
+; 0.448 ; product:product_0|local[4]                 ; product:product_0|local[13]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.600      ;
+; 0.450 ; product:product_0|local[5]                 ; product:product_0|local[14]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.602      ;
+; 0.460 ; controller:controller_0|current_state.s0   ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.613      ;
+; 0.460 ; controller:controller_0|current_state.s0   ; product:product_0|local[8]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.613      ;
+; 0.460 ; controller:controller_0|current_state.s0   ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.613      ;
+; 0.492 ; controller:controller_0|current_state.s0   ; product:product_0|local[2]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.645      ;
+; 0.492 ; controller:controller_0|current_state.s0   ; product:product_0|local[10]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.645      ;
+; 0.494 ; controller:controller_0|current_state.s0   ; product:product_0|local[12]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.647      ;
+; 0.494 ; controller:controller_0|current_state.s0   ; product:product_0|local[13]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.647      ;
+; 0.496 ; controller:controller_0|current_state.s0   ; product:product_0|local[15]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.649      ;
+; 0.497 ; controller:controller_0|current_state.s0   ; product:product_0|local[11]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.650      ;
+; 0.497 ; controller:controller_0|current_state.s0   ; product:product_0|local[14]                ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.650      ;
+; 0.500 ; product:product_0|local[7]                 ; product:product_0|dataout[7]               ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 0.651      ;
+; 0.504 ; product:product_0|local[11]                ; product:product_0|dataout[11]              ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.656      ;
+; 0.551 ; controller:controller_0|current_state.s1   ; product:product_0|local[0]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.703      ;
+; 0.562 ; controller:controller_0|current_state.s2   ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.714      ;
+; 0.586 ; controller:controller_0|current_state.s0   ; product:product_0|local[3]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.739      ;
+; 0.587 ; controller:controller_0|current_state.s0   ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.740      ;
+; 0.597 ; controller:controller_0|current_state.s2   ; product:product_0|local[0]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.749      ;
+; 0.597 ; controller:controller_0|current_counter[2] ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.749      ;
+; 0.606 ; product:product_0|dataout[13]              ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.758      ;
+; 0.620 ; controller:controller_0|current_state.s0   ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.773      ;
+; 0.620 ; product:product_0|dataout[14]              ; product:product_0|local[6]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.772      ;
+; 0.623 ; controller:controller_0|current_state.s0   ; product:product_0|local[9]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.776      ;
+; 0.624 ; controller:controller_0|current_state.s0   ; product:product_0|local[1]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.777      ;
+; 0.628 ; controller:controller_0|current_state.s0   ; multiplier:multiplier_0|local[7]           ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; -0.001     ; 0.779      ;
+; 0.650 ; controller:controller_0|current_state.s0   ; product:product_0|local[0]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.802      ;
+; 0.665 ; product:product_0|dataout[10]              ; product:product_0|local[3]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.817      ;
+; 0.666 ; controller:controller_0|current_counter[1] ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.818      ;
+; 0.676 ; product:product_0|dataout[10]              ; product:product_0|local[2]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.828      ;
+; 0.682 ; controller:controller_0|current_state.s3   ; controller:controller_0|current_counter[0] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.834      ;
+; 0.682 ; controller:controller_0|current_state.s3   ; controller:controller_0|current_counter[1] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.834      ;
+; 0.682 ; controller:controller_0|current_state.s3   ; controller:controller_0|current_counter[2] ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.834      ;
+; 0.682 ; controller:controller_0|current_counter[0] ; controller:controller_0|current_state.s1   ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.834      ;
+; 0.689 ; product:product_0|dataout[15]              ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.841      ;
+; 0.695 ; controller:controller_0|current_state.s0   ; multiplicand:multiplicand_0|dataout[6]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.847      ;
+; 0.702 ; controller:controller_0|current_state.s0   ; multiplicand:multiplicand_0|dataout[2]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.854      ;
+; 0.702 ; controller:controller_0|current_state.s0   ; multiplicand:multiplicand_0|dataout[7]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.854      ;
+; 0.703 ; product:product_0|dataout[12]              ; product:product_0|local[4]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.855      ;
+; 0.704 ; multiplier:multiplier_0|local[1]           ; multiplier:multiplier_0|dataout            ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.857      ;
+; 0.707 ; controller:controller_0|current_state.s0   ; multiplicand:multiplicand_0|dataout[5]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.859      ;
+; 0.717 ; product:product_0|dataout[11]              ; product:product_0|local[3]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.869      ;
+; 0.717 ; controller:controller_0|current_state.s2   ; multiplier:multiplier_0|dataout            ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.869      ;
+; 0.734 ; product:product_0|dataout[10]              ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.886      ;
+; 0.736 ; product:product_0|dataout[9]               ; product:product_0|local[1]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.888      ;
+; 0.745 ; multiplicand:multiplicand_0|dataout[3]     ; product:product_0|local[3]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.898      ;
+; 0.754 ; product:product_0|dataout[14]              ; product:product_0|local[7]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.906      ;
+; 0.766 ; product:product_0|dataout[12]              ; product:product_0|local[5]                 ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.000      ; 0.918      ;
+; 0.771 ; controller:controller_0|current_state.s0   ; multiplicand:multiplicand_0|dataout[0]     ; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 0.000        ; 0.001      ; 0.924      ;
++-------+--------------------------------------------+--------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                              ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                            ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk_divider_0|clk_out|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk_divider_0|clk_out|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                       ;
++--------+--------------+----------------+------------------+-------+------------+-----------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLK_divider:clk_divider_0|clk_out'                                                                                     ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                                     ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_counter[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s0   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s0   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s1   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s1   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s2   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s2   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s3   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; controller:controller_0|current_state.s3   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[0]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[1]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[2]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[3]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[4]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[5]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[6]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplicand:multiplicand_0|dataout[7]     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|dataout            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|dataout            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[5]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[5]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[6]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[6]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[7]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; multiplier:multiplier_0|local[7]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[0]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[10]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[10]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[11]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[11]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[12]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[12]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[13]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[13]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[14]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[14]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[15]              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[15]              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[1]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[2]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[3]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[4]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[5]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[6]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[6]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[7]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[7]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[8]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[8]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[9]               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|dataout[9]               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[0]                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[0]                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[10]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[10]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[11]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[11]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[12]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[12]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[13]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[13]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[14]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[14]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[15]                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[15]                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[1]                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[1]                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[2]                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[2]                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[3]                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[3]                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[4]                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLK_divider:clk_divider_0|clk_out ; Rise       ; product:product_0|local[4]                 ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+--------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                      ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+; A[*]      ; CLK_divider:clk_divider_0|clk_out ; 2.933  ; 2.933  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[0]     ; CLK_divider:clk_divider_0|clk_out ; 2.933  ; 2.933  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[1]     ; CLK_divider:clk_divider_0|clk_out ; 2.571  ; 2.571  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[2]     ; CLK_divider:clk_divider_0|clk_out ; 2.559  ; 2.559  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[3]     ; CLK_divider:clk_divider_0|clk_out ; 2.495  ; 2.495  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[4]     ; CLK_divider:clk_divider_0|clk_out ; 2.463  ; 2.463  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[5]     ; CLK_divider:clk_divider_0|clk_out ; 2.333  ; 2.333  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[6]     ; CLK_divider:clk_divider_0|clk_out ; 2.352  ; 2.352  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[7]     ; CLK_divider:clk_divider_0|clk_out ; 2.423  ; 2.423  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; B[*]      ; CLK_divider:clk_divider_0|clk_out ; 3.082  ; 3.082  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[0]     ; CLK_divider:clk_divider_0|clk_out ; 3.061  ; 3.061  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[1]     ; CLK_divider:clk_divider_0|clk_out ; 3.082  ; 3.082  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[2]     ; CLK_divider:clk_divider_0|clk_out ; 2.858  ; 2.858  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[3]     ; CLK_divider:clk_divider_0|clk_out ; 2.931  ; 2.931  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[4]     ; CLK_divider:clk_divider_0|clk_out ; 2.885  ; 2.885  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[5]     ; CLK_divider:clk_divider_0|clk_out ; 2.836  ; 2.836  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[6]     ; CLK_divider:clk_divider_0|clk_out ; 2.762  ; 2.762  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[7]     ; CLK_divider:clk_divider_0|clk_out ; 2.720  ; 2.720  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; start_n   ; CLK_divider:clk_divider_0|clk_out ; 3.666  ; 3.666  ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; clk       ; clk                               ; -0.032 ; -0.032 ; Rise       ; clk                               ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                       ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+; A[*]      ; CLK_divider:clk_divider_0|clk_out ; -2.213 ; -2.213 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[0]     ; CLK_divider:clk_divider_0|clk_out ; -2.813 ; -2.813 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[1]     ; CLK_divider:clk_divider_0|clk_out ; -2.451 ; -2.451 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[2]     ; CLK_divider:clk_divider_0|clk_out ; -2.439 ; -2.439 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[3]     ; CLK_divider:clk_divider_0|clk_out ; -2.375 ; -2.375 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[4]     ; CLK_divider:clk_divider_0|clk_out ; -2.343 ; -2.343 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[5]     ; CLK_divider:clk_divider_0|clk_out ; -2.213 ; -2.213 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[6]     ; CLK_divider:clk_divider_0|clk_out ; -2.232 ; -2.232 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[7]     ; CLK_divider:clk_divider_0|clk_out ; -2.303 ; -2.303 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; B[*]      ; CLK_divider:clk_divider_0|clk_out ; -2.600 ; -2.600 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[0]     ; CLK_divider:clk_divider_0|clk_out ; -2.941 ; -2.941 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[1]     ; CLK_divider:clk_divider_0|clk_out ; -2.962 ; -2.962 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[2]     ; CLK_divider:clk_divider_0|clk_out ; -2.738 ; -2.738 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[3]     ; CLK_divider:clk_divider_0|clk_out ; -2.811 ; -2.811 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[4]     ; CLK_divider:clk_divider_0|clk_out ; -2.765 ; -2.765 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[5]     ; CLK_divider:clk_divider_0|clk_out ; -2.716 ; -2.716 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[6]     ; CLK_divider:clk_divider_0|clk_out ; -2.642 ; -2.642 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[7]     ; CLK_divider:clk_divider_0|clk_out ; -2.600 ; -2.600 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; start_n   ; CLK_divider:clk_divider_0|clk_out ; -2.858 ; -2.858 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; clk       ; clk                               ; 0.152  ; 0.152  ; Rise       ; clk                               ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                          ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; P[*]      ; CLK_divider:clk_divider_0|clk_out ; 3.520 ; 3.520 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[0]     ; CLK_divider:clk_divider_0|clk_out ; 3.502 ; 3.502 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[1]     ; CLK_divider:clk_divider_0|clk_out ; 3.387 ; 3.387 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[2]     ; CLK_divider:clk_divider_0|clk_out ; 3.376 ; 3.376 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[3]     ; CLK_divider:clk_divider_0|clk_out ; 3.519 ; 3.519 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[4]     ; CLK_divider:clk_divider_0|clk_out ; 3.395 ; 3.395 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[5]     ; CLK_divider:clk_divider_0|clk_out ; 3.246 ; 3.246 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[6]     ; CLK_divider:clk_divider_0|clk_out ; 3.427 ; 3.427 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[7]     ; CLK_divider:clk_divider_0|clk_out ; 3.520 ; 3.520 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[8]     ; CLK_divider:clk_divider_0|clk_out ; 3.340 ; 3.340 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[9]     ; CLK_divider:clk_divider_0|clk_out ; 3.471 ; 3.471 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[10]    ; CLK_divider:clk_divider_0|clk_out ; 3.495 ; 3.495 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[11]    ; CLK_divider:clk_divider_0|clk_out ; 3.470 ; 3.470 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[12]    ; CLK_divider:clk_divider_0|clk_out ; 3.503 ; 3.503 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[13]    ; CLK_divider:clk_divider_0|clk_out ; 3.486 ; 3.486 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[14]    ; CLK_divider:clk_divider_0|clk_out ; 3.361 ; 3.361 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[15]    ; CLK_divider:clk_divider_0|clk_out ; 3.512 ; 3.512 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; done      ; CLK_divider:clk_divider_0|clk_out ; 4.422 ; 4.422 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                  ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; P[*]      ; CLK_divider:clk_divider_0|clk_out ; 3.246 ; 3.246 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[0]     ; CLK_divider:clk_divider_0|clk_out ; 3.502 ; 3.502 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[1]     ; CLK_divider:clk_divider_0|clk_out ; 3.387 ; 3.387 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[2]     ; CLK_divider:clk_divider_0|clk_out ; 3.376 ; 3.376 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[3]     ; CLK_divider:clk_divider_0|clk_out ; 3.519 ; 3.519 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[4]     ; CLK_divider:clk_divider_0|clk_out ; 3.395 ; 3.395 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[5]     ; CLK_divider:clk_divider_0|clk_out ; 3.246 ; 3.246 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[6]     ; CLK_divider:clk_divider_0|clk_out ; 3.427 ; 3.427 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[7]     ; CLK_divider:clk_divider_0|clk_out ; 3.520 ; 3.520 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[8]     ; CLK_divider:clk_divider_0|clk_out ; 3.340 ; 3.340 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[9]     ; CLK_divider:clk_divider_0|clk_out ; 3.471 ; 3.471 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[10]    ; CLK_divider:clk_divider_0|clk_out ; 3.495 ; 3.495 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[11]    ; CLK_divider:clk_divider_0|clk_out ; 3.470 ; 3.470 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[12]    ; CLK_divider:clk_divider_0|clk_out ; 3.503 ; 3.503 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[13]    ; CLK_divider:clk_divider_0|clk_out ; 3.486 ; 3.486 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[14]    ; CLK_divider:clk_divider_0|clk_out ; 3.361 ; 3.361 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[15]    ; CLK_divider:clk_divider_0|clk_out ; 3.512 ; 3.512 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; done      ; CLK_divider:clk_divider_0|clk_out ; 4.422 ; 4.422 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                              ;
++------------------------------------+---------+--------+----------+---------+---------------------+
+; Clock                              ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack                   ; -3.484  ; -0.152 ; N/A      ; N/A     ; -1.941              ;
+;  CLK_divider:clk_divider_0|clk_out ; -3.484  ; 0.215  ; N/A      ; N/A     ; -0.742              ;
+;  clk                               ; 0.089   ; -0.152 ; N/A      ; N/A     ; -1.941              ;
+; Design-wide TNS                    ; -82.936 ; -0.152 ; 0.0      ; 0.0     ; -85.045             ;
+;  CLK_divider:clk_divider_0|clk_out ; -82.936 ; 0.000  ; N/A      ; N/A     ; -81.620             ;
+;  clk                               ; 0.000   ; -0.152 ; N/A      ; N/A     ; -3.425              ;
++------------------------------------+---------+--------+----------+---------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Setup Times                                                                                                    ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; A[*]      ; CLK_divider:clk_divider_0|clk_out ; 7.497 ; 7.497 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[0]     ; CLK_divider:clk_divider_0|clk_out ; 7.497 ; 7.497 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[1]     ; CLK_divider:clk_divider_0|clk_out ; 6.270 ; 6.270 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[2]     ; CLK_divider:clk_divider_0|clk_out ; 6.247 ; 6.247 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[3]     ; CLK_divider:clk_divider_0|clk_out ; 6.094 ; 6.094 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[4]     ; CLK_divider:clk_divider_0|clk_out ; 6.046 ; 6.046 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[5]     ; CLK_divider:clk_divider_0|clk_out ; 5.604 ; 5.604 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[6]     ; CLK_divider:clk_divider_0|clk_out ; 5.661 ; 5.661 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[7]     ; CLK_divider:clk_divider_0|clk_out ; 5.968 ; 5.968 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; B[*]      ; CLK_divider:clk_divider_0|clk_out ; 7.748 ; 7.748 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[0]     ; CLK_divider:clk_divider_0|clk_out ; 7.645 ; 7.645 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[1]     ; CLK_divider:clk_divider_0|clk_out ; 7.748 ; 7.748 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[2]     ; CLK_divider:clk_divider_0|clk_out ; 7.159 ; 7.159 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[3]     ; CLK_divider:clk_divider_0|clk_out ; 7.307 ; 7.307 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[4]     ; CLK_divider:clk_divider_0|clk_out ; 7.157 ; 7.157 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[5]     ; CLK_divider:clk_divider_0|clk_out ; 7.127 ; 7.127 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[6]     ; CLK_divider:clk_divider_0|clk_out ; 7.067 ; 7.067 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[7]     ; CLK_divider:clk_divider_0|clk_out ; 6.899 ; 6.899 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; start_n   ; CLK_divider:clk_divider_0|clk_out ; 8.929 ; 8.929 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; clk       ; clk                               ; 0.411 ; 0.411 ; Rise       ; clk                               ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Hold Times                                                                                                       ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+; A[*]      ; CLK_divider:clk_divider_0|clk_out ; -2.213 ; -2.213 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[0]     ; CLK_divider:clk_divider_0|clk_out ; -2.813 ; -2.813 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[1]     ; CLK_divider:clk_divider_0|clk_out ; -2.451 ; -2.451 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[2]     ; CLK_divider:clk_divider_0|clk_out ; -2.439 ; -2.439 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[3]     ; CLK_divider:clk_divider_0|clk_out ; -2.375 ; -2.375 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[4]     ; CLK_divider:clk_divider_0|clk_out ; -2.343 ; -2.343 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[5]     ; CLK_divider:clk_divider_0|clk_out ; -2.213 ; -2.213 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[6]     ; CLK_divider:clk_divider_0|clk_out ; -2.232 ; -2.232 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  A[7]     ; CLK_divider:clk_divider_0|clk_out ; -2.303 ; -2.303 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; B[*]      ; CLK_divider:clk_divider_0|clk_out ; -2.600 ; -2.600 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[0]     ; CLK_divider:clk_divider_0|clk_out ; -2.941 ; -2.941 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[1]     ; CLK_divider:clk_divider_0|clk_out ; -2.962 ; -2.962 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[2]     ; CLK_divider:clk_divider_0|clk_out ; -2.738 ; -2.738 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[3]     ; CLK_divider:clk_divider_0|clk_out ; -2.811 ; -2.811 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[4]     ; CLK_divider:clk_divider_0|clk_out ; -2.765 ; -2.765 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[5]     ; CLK_divider:clk_divider_0|clk_out ; -2.716 ; -2.716 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[6]     ; CLK_divider:clk_divider_0|clk_out ; -2.642 ; -2.642 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  B[7]     ; CLK_divider:clk_divider_0|clk_out ; -2.600 ; -2.600 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; start_n   ; CLK_divider:clk_divider_0|clk_out ; -2.858 ; -2.858 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; clk       ; clk                               ; 0.152  ; 0.152  ; Rise       ; clk                               ;
++-----------+-----------------------------------+--------+--------+------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                          ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; P[*]      ; CLK_divider:clk_divider_0|clk_out ; 7.350 ; 7.350 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[0]     ; CLK_divider:clk_divider_0|clk_out ; 7.315 ; 7.315 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[1]     ; CLK_divider:clk_divider_0|clk_out ; 6.955 ; 6.955 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[2]     ; CLK_divider:clk_divider_0|clk_out ; 6.948 ; 6.948 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[3]     ; CLK_divider:clk_divider_0|clk_out ; 7.350 ; 7.350 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[4]     ; CLK_divider:clk_divider_0|clk_out ; 6.949 ; 6.949 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[5]     ; CLK_divider:clk_divider_0|clk_out ; 6.522 ; 6.522 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[6]     ; CLK_divider:clk_divider_0|clk_out ; 7.001 ; 7.001 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[7]     ; CLK_divider:clk_divider_0|clk_out ; 7.339 ; 7.339 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[8]     ; CLK_divider:clk_divider_0|clk_out ; 6.842 ; 6.842 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[9]     ; CLK_divider:clk_divider_0|clk_out ; 7.258 ; 7.258 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[10]    ; CLK_divider:clk_divider_0|clk_out ; 7.287 ; 7.287 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[11]    ; CLK_divider:clk_divider_0|clk_out ; 7.254 ; 7.254 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[12]    ; CLK_divider:clk_divider_0|clk_out ; 7.305 ; 7.305 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[13]    ; CLK_divider:clk_divider_0|clk_out ; 7.272 ; 7.272 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[14]    ; CLK_divider:clk_divider_0|clk_out ; 6.895 ; 6.895 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[15]    ; CLK_divider:clk_divider_0|clk_out ; 7.325 ; 7.325 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; done      ; CLK_divider:clk_divider_0|clk_out ; 9.835 ; 9.835 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                  ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port                        ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+; P[*]      ; CLK_divider:clk_divider_0|clk_out ; 3.246 ; 3.246 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[0]     ; CLK_divider:clk_divider_0|clk_out ; 3.502 ; 3.502 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[1]     ; CLK_divider:clk_divider_0|clk_out ; 3.387 ; 3.387 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[2]     ; CLK_divider:clk_divider_0|clk_out ; 3.376 ; 3.376 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[3]     ; CLK_divider:clk_divider_0|clk_out ; 3.519 ; 3.519 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[4]     ; CLK_divider:clk_divider_0|clk_out ; 3.395 ; 3.395 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[5]     ; CLK_divider:clk_divider_0|clk_out ; 3.246 ; 3.246 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[6]     ; CLK_divider:clk_divider_0|clk_out ; 3.427 ; 3.427 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[7]     ; CLK_divider:clk_divider_0|clk_out ; 3.520 ; 3.520 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[8]     ; CLK_divider:clk_divider_0|clk_out ; 3.340 ; 3.340 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[9]     ; CLK_divider:clk_divider_0|clk_out ; 3.471 ; 3.471 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[10]    ; CLK_divider:clk_divider_0|clk_out ; 3.495 ; 3.495 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[11]    ; CLK_divider:clk_divider_0|clk_out ; 3.470 ; 3.470 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[12]    ; CLK_divider:clk_divider_0|clk_out ; 3.503 ; 3.503 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[13]    ; CLK_divider:clk_divider_0|clk_out ; 3.486 ; 3.486 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[14]    ; CLK_divider:clk_divider_0|clk_out ; 3.361 ; 3.361 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+;  P[15]    ; CLK_divider:clk_divider_0|clk_out ; 3.512 ; 3.512 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
+; done      ; CLK_divider:clk_divider_0|clk_out ; 4.422 ; 4.422 ; Rise       ; CLK_divider:clk_divider_0|clk_out ;
++-----------+-----------------------------------+-------+-------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                   ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; clk                               ; clk                               ; 1        ; 1        ; 0        ; 0        ;
+; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 273      ; 0        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                    ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; clk                               ; clk                               ; 1        ; 1        ; 0        ; 0        ;
+; CLK_divider:clk_divider_0|clk_out ; CLK_divider:clk_divider_0|clk_out ; 273      ; 0        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 18    ; 18   ;
+; Unconstrained Input Port Paths  ; 60    ; 60   ;
+; Unconstrained Output Ports      ; 17    ; 17   ;
+; Unconstrained Output Port Paths ; 17    ; 17   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Full Version
+    Info: Processing started: Wed Oct 03 11:46:01 2012
+Info: Command: quartus_sta Multiplier_8bits -c Multiplier_8bits
+Info: qsta_default_script.tcl version: #2
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Multiplier_8bits.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK_divider:clk_divider_0|clk_out CLK_divider:clk_divider_0|clk_out
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -3.484
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.484       -82.936 CLK_divider:clk_divider_0|clk_out 
+    Info (332119):     0.089         0.000 clk 
+Info (332146): Worst-case hold slack is 0.145
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.145         0.000 clk 
+    Info (332119):     0.499         0.000 CLK_divider:clk_divider_0|clk_out 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.941
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.941        -3.425 clk 
+    Info (332119):    -0.742       -81.620 CLK_divider:clk_divider_0|clk_out 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.469
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.469        -3.199 CLK_divider:clk_divider_0|clk_out 
+    Info (332119):     0.532         0.000 clk 
+Info (332146): Worst-case hold slack is -0.152
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.152        -0.152 clk 
+    Info (332119):     0.215         0.000 CLK_divider:clk_divider_0|clk_out 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -2.380 clk 
+    Info (332119):    -0.500       -55.000 CLK_divider:clk_divider_0|clk_out 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 275 megabytes
+    Info: Processing ended: Wed Oct 03 11:46:08 2012
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:03
+
+

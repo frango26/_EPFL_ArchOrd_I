@@ -1,0 +1,318 @@
+m255
+K3
+13
+cModel Technology
+dC:\altera\12.0\modelsim_ase
+Eadd
+Z0 w1349161056
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dZ:\workspace\2012-2013\ArchOrdI\multiplier\modelsim
+Z6 8Z:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Add.vhd
+Z7 FZ:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Add.vhd
+l0
+L6
+VSFalFIHcE>f=6i03gWU0M1
+Z8 OV;C;10.0d;49
+32
+Z9 !s108 1349263510.826000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Add.vhd|
+Z11 !s107 Z:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Add.vhd|
+Z12 o-work work -2002 -explicit -O0
+Z13 tExplicit 1
+!s100 Q_<]Ud3<NeigU8bKI@I5W2
+Asynth
+R1
+R2
+R3
+R4
+DEx4 work 3 add 0 22 SFalFIHcE>f=6i03gWU0M1
+l16
+L14
+VQAEY8liFg@FQ9i7Iofo:z1
+R8
+32
+R9
+R10
+R11
+R12
+R13
+!s100 eoYM13Z2KoSE?3UOjKF_Y3
+Eand1x8
+Z14 w1349161056
+R3
+R4
+R5
+Z15 8Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\And1x8.vhd
+Z16 FZ:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\And1x8.vhd
+l0
+L4
+VZR;1lPz=65K;EbXYQ:J]S0
+R8
+32
+Z17 !s108 1349263511.778000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\And1x8.vhd|
+Z19 !s107 Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\And1x8.vhd|
+R12
+R13
+!s100 H?[E4Q@LE8W8H9^j10U<Y0
+Asynth
+R3
+R4
+DEx4 work 6 and1x8 0 22 ZR;1lPz=65K;EbXYQ:J]S0
+l14
+L12
+VI^:a:6<DCm@F]9ViM13[G1
+R8
+32
+R17
+R18
+R19
+R12
+R13
+!s100 HW<dJ`3fI1FW4T>GHc]<61
+Ecombinational_multcell
+Z20 w1349262359
+R1
+R2
+R3
+R4
+R5
+Z21 8Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Combinational_MultCell.vhd
+Z22 FZ:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Combinational_MultCell.vhd
+l0
+L6
+VhXe<1CF3S`?cNXe9IN5N>0
+R8
+32
+Z23 !s108 1349263513.011000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Combinational_MultCell.vhd|
+Z25 !s107 Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Combinational_MultCell.vhd|
+R12
+R13
+!s100 ?<D7ZNz<^^L;`K:JXNoG`1
+Acombinational
+R1
+R2
+R3
+R4
+DEx4 work 22 combinational_multcell 0 22 hXe<1CF3S`?cNXe9IN5N>0
+l18
+L16
+VVm65zZ[QQ]Nmbh6f6=fc50
+R8
+32
+R23
+R24
+R25
+R12
+R13
+!s100 9OCERImdT?z]<KaCTflR[2
+Ecombinational_multiplier
+Z26 w1349263856
+R1
+R2
+R3
+R4
+R5
+Z27 8Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Combinational_Multiplier.vhd
+Z28 FZ:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Combinational_Multiplier.vhd
+l0
+L6
+V;:jH>IFL7nXCROD3c64E40
+!s100 ^:1CW131f;hEgK95m:CiR0
+R8
+32
+Z29 !s108 1349263885.628000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Combinational_Multiplier.vhd|
+Z31 !s107 Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Combinational_Multiplier.vhd|
+R12
+R13
+Acombinational
+R1
+R2
+R3
+R4
+Z32 DEx4 work 24 combinational_multiplier 0 22 ;:jH>IFL7nXCROD3c64E40
+l28
+L15
+VJz@gWCXJBiDcXoUMhQc_02
+!s100 =79=8]C9L6=G<=zFKQG>50
+R8
+32
+R29
+R30
+R31
+R12
+R13
+Econtroller
+Z33 w1349260719
+R1
+R2
+R3
+R4
+R5
+Z34 8Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Controller.vhd
+Z35 FZ:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Controller.vhd
+l0
+L6
+V=`21WlY31jjR0QUJSXPOE2
+R8
+32
+Z36 !s108 1349263514.758000
+Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Controller.vhd|
+Z38 !s107 Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Controller.vhd|
+R12
+R13
+!s100 X9U@R27?Rzak96POz2OmO3
+Asynth
+R1
+R2
+R3
+R4
+DEx4 work 10 controller 0 22 =`21WlY31jjR0QUJSXPOE2
+l31
+L24
+VOcz:Xmmh8]aDncQ6<Gkn`1
+R8
+32
+R36
+R37
+R38
+R12
+R13
+!s100 V7T^Z]FBhGf<cD^KS^DPR1
+Emultiplicand
+Z39 w1349259417
+R3
+R4
+R5
+Z40 8Z:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Multiplicand.vhd
+Z41 FZ:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Multiplicand.vhd
+l0
+L4
+VEQ`igSPTbbG?:@3jzF?e40
+R8
+32
+Z42 !s108 1349263515.522000
+Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Multiplicand.vhd|
+Z44 !s107 Z:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Multiplicand.vhd|
+R12
+R13
+!s100 8gPmelFOOgab`G;D9A7S<1
+Asynth
+R3
+R4
+DEx4 work 12 multiplicand 0 22 EQ`igSPTbbG?:@3jzF?e40
+l15
+L13
+V]:kc9NVNK`d6bVDFeCD:43
+R8
+32
+R42
+R43
+R44
+R12
+R13
+!s100 ^PUzd<^OL6QVo5mZ`WTU91
+Emultiplier
+Z45 w1349259557
+R3
+R4
+R5
+Z46 8Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Multiplier.vhd
+Z47 FZ:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Multiplier.vhd
+l0
+L5
+VUjYM9HBHHddJ8=lSFb7mB2
+R8
+32
+Z48 !s108 1349263516.505000
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Multiplier.vhd|
+Z50 !s107 Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Multiplier.vhd|
+R12
+R13
+!s100 P6lGPaOaVjNH25cO`:CJJ0
+Asynth
+R3
+R4
+DEx4 work 10 multiplier 0 22 UjYM9HBHHddJ8=lSFb7mB2
+l17
+L15
+V`@LhaKEflk<h8WnR1?CnP2
+R8
+32
+R48
+R49
+R50
+R12
+R13
+!s100 ndbPeFR34OD02TE8WOLQj1
+Emultiplier_8bits
+Z51 w1349260766
+R3
+R4
+R5
+Z52 8Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Multiplier_8bits.vhd
+Z53 FZ:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Multiplier_8bits.vhd
+l0
+L24
+V8dT[L:z3]lEWIC7fF:c]O1
+R8
+32
+Z54 !s108 1349263518.252000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Multiplier_8bits.vhd|
+Z56 !s107 Z:\workspace\2012-2013\ArchOrdI\multiplier\vhdl\Multiplier_8bits.vhd|
+R12
+R13
+!s100 LERAI:;zHL?QWVKhdlM7L2
+Abdf_type
+R3
+R4
+DEx4 work 16 multiplier_8bits 0 22 8dT[L:z3]lEWIC7fF:c]O1
+l109
+L37
+VY@]0cFQRD6GECK:<81GNG0
+!s100 9OI31o4edDL7ABQJ7adIE0
+R8
+32
+R54
+R55
+R56
+R12
+R13
+Eproduct
+Z57 w1349259820
+R3
+R4
+R5
+Z58 8Z:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Product.vhd
+Z59 FZ:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Product.vhd
+l0
+L5
+V<QQibM<NQ5A:JdnL:9fkD0
+R8
+32
+Z60 !s108 1349263517.363000
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Product.vhd|
+Z62 !s107 Z:/workspace/2012-2013/ArchOrdI/multiplier/vhdl/Product.vhd|
+R12
+R13
+!s100 :YmjXe4bd6I[P]Y=7<X9@3
+Asynth
+R3
+R4
+DEx4 work 7 product 0 22 <QQibM<NQ5A:JdnL:9fkD0
+l18
+L16
+V[gF][a4KXTSFbJ0cB9:b31
+R8
+32
+R60
+R61
+R62
+R12
+R13
+!s100 DiE1D<leQbP2Xe1BNb6<z0

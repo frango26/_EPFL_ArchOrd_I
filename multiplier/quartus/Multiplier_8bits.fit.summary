@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Oct 03 11:45:58 2012
+Quartus II 32-bit Version : 12.0 Build 263 08/02/2012 SP 2 SJ Full Version
+Revision Name : Multiplier_8bits
+Top-level Entity Name : Multiplier_8bits
+Family : Cyclone II
+Device : EP2C20F484C8
+Timing Models : Final
+Total logic elements : 73 / 18,752 ( < 1 % )
+    Total combinational functions : 61 / 18,752 ( < 1 % )
+    Dedicated logic registers : 56 / 18,752 ( < 1 % )
+Total registers : 56
+Total pins : 36 / 315 ( 11 % )
+Total virtual pins : 0
+Total memory bits : 0 / 239,616 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 52 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

@@ -1,5 +1,8 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
 
 entity logic_unit is
 	port(
@@ -11,17 +14,18 @@ entity logic_unit is
 end logic_unit;
 
 architecture synth of logic_unit is
+
 begin
-	process (a, b, op)
+	process(a,b,op)
 	begin
-		-- sequencial process
-		if op = '00' then -- nor operator
+		
+		if(op = "00") then
 			r <= a nor b;
-		else if op = '01' then -- and operator
+		elsif(op = "01") then
 			r <= a and b;
-		else if op = '10' then -- or operator
+		elsif(op = "10") then
 			r <= a or b;
-		else if op = '11' then -- xor operator
+		elsif(op = "11") then
 			r <= a xor b;
 		end if;
 	end process;

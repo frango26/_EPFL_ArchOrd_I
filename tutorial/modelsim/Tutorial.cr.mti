@@ -1,0 +1,31 @@
+Z:/workspace/2012-2013/ArchOrdI/tutorial/vhdl/alu.vhd {1 {vcom -work work -2002 -explicit Z:/workspace/2012-2013/ArchOrdI/tutorial/vhdl/alu.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity ALU
+-- Compiling architecture synth of ALU
+
+} {} {}} Z:/workspace/2012-2013/ArchOrdI/tutorial/vhdl/multiplexer.vhd {1 {vcom -work work -2002 -explicit Z:/workspace/2012-2013/ArchOrdI/tutorial/vhdl/multiplexer.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity multiplexer
+-- Compiling architecture synth of multiplexer
+
+} {} {}} Z:/workspace/2012-2013/ArchOrdI/tutorial/vhdl/counter.vhd {1 {vcom -work work -2002 -explicit Z:/workspace/2012-2013/ArchOrdI/tutorial/vhdl/counter.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity counter
+-- Compiling architecture synth of counter
+
+} {} {}}
