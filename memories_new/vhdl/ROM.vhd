@@ -21,7 +21,7 @@ architecture synth of ROM is
 	end component;
 	
 	signal in_rddata : std_logic_vector(31 downto 0);
-	signal reg_read : std_logic;	
+	signal reg_read : std_logic;
 begin
 	rom_block_0: ROM_Block port map(
 		address => address,
