@@ -14,7 +14,7 @@
 
 -- PROGRAM		"Quartus II 32-bit"
 -- VERSION		"Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition"
--- CREATED		"Mon Oct 22 23:44:56 2012"
+-- CREATED		"Mon Oct 22 23:55:40 2012"
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all; 
@@ -25,17 +25,12 @@ ENTITY memories IS
 	PORT
 	(
 		CLOCK :  IN  STD_LOGIC;
-		read :  IN  STD_LOGIC;
-		write :  IN  STD_LOGIC;
-		address :  IN  STD_LOGIC_VECTOR(15 DOWNTO 0);
 		KEY_n :  IN  STD_LOGIC_VECTOR(0 TO 0);
-		wrdata :  IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
 		LED_Reset :  OUT  STD_LOGIC;
 		LED_Sel_B :  OUT  STD_LOGIC_VECTOR(0 TO 7);
 		LED_Sel_G :  OUT  STD_LOGIC_VECTOR(0 TO 7);
 		LED_Sel_R :  OUT  STD_LOGIC_VECTOR(0 TO 7);
-		LED_SelC_n :  OUT  STD_LOGIC_VECTOR(0 TO 11);
-		rddata :  OUT  STD_LOGIC_VECTOR(31 DOWNTO 0)
+		LED_SelC_n :  OUT  STD_LOGIC_VECTOR(0 TO 11)
 	);
 END memories;
 
@@ -46,6 +41,17 @@ COMPONENT decoder
 		 cs_RAM : OUT STD_LOGIC;
 		 cs_ROM : OUT STD_LOGIC;
 		 cs_LEDs : OUT STD_LOGIC
+	);
+END COMPONENT;
+
+COMPONENT controller
+	PORT(clk : IN STD_LOGIC;
+		 reset_n : IN STD_LOGIC;
+		 rddata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+		 read : OUT STD_LOGIC;
+		 write : OUT STD_LOGIC;
+		 address : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+		 wrdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
 	);
 END COMPONENT;
 
@@ -97,15 +103,20 @@ COMPONENT rom
 	);
 END COMPONENT;
 
+SIGNAL	address :  STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL	clk :  STD_LOGIC;
 SIGNAL	cs_LEDs :  STD_LOGIC;
 SIGNAL	cs_RAM :  STD_LOGIC;
 SIGNAL	cs_ROM :  STD_LOGIC;
 SIGNAL	GND :  STD_LOGIC;
+SIGNAL	rddata :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL	reset :  STD_LOGIC;
 SIGNAL	reset_n :  STD_LOGIC;
 SIGNAL	VCC :  STD_LOGIC;
+SIGNAL	wrdata :  STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL	SYNTHESIZED_WIRE_0 :  STD_LOGIC_VECTOR(95 DOWNTO 0);
+SIGNAL	SYNTHESIZED_WIRE_6 :  STD_LOGIC;
+SIGNAL	SYNTHESIZED_WIRE_7 :  STD_LOGIC;
 
 SIGNAL	GDFX_TEMP_SIGNAL_0 :  STD_LOGIC_VECTOR(2 DOWNTO 0);
 
@@ -119,6 +130,16 @@ PORT MAP(address => address,
 		 cs_RAM => cs_RAM,
 		 cs_ROM => cs_ROM,
 		 cs_LEDs => cs_LEDs);
+
+
+b2v_inst : controller
+PORT MAP(clk => clk,
+		 reset_n => reset_n,
+		 rddata => rddata,
+		 read => SYNTHESIZED_WIRE_7,
+		 write => SYNTHESIZED_WIRE_6,
+		 address => address,
+		 wrdata => wrdata);
 
 
 b2v_inst1 : extled
@@ -145,8 +166,8 @@ b2v_LEDs_0 : leds
 PORT MAP(clk => clk,
 		 reset_n => reset_n,
 		 cs => cs_LEDs,
-		 write => write,
-		 read => read,
+		 write => SYNTHESIZED_WIRE_6,
+		 read => SYNTHESIZED_WIRE_7,
 		 address => address(3 DOWNTO 2),
 		 wrdata => wrdata,
 		 LEDs => SYNTHESIZED_WIRE_0,
@@ -156,8 +177,8 @@ PORT MAP(clk => clk,
 b2v_RAM_0 : ram
 PORT MAP(clk => clk,
 		 cs => cs_RAM,
-		 write => write,
-		 read => read,
+		 write => SYNTHESIZED_WIRE_6,
+		 read => SYNTHESIZED_WIRE_7,
 		 address => address(11 DOWNTO 2),
 		 wrdata => wrdata,
 		 rddata => rddata);
@@ -166,7 +187,7 @@ PORT MAP(clk => clk,
 b2v_ROM_0 : rom
 PORT MAP(clk => clk,
 		 cs => cs_ROM,
-		 read => read,
+		 read => SYNTHESIZED_WIRE_7,
 		 address => address(11 DOWNTO 2),
 		 rddata => rddata);
 
