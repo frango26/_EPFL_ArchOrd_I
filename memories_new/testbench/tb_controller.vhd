@@ -13,7 +13,7 @@ signal reset_n        : std_logic := '0';
 
 begin
 
-memories_0: ENTITY work.memories(bdf_type) port map(
+memories_0: ENTITY work.memories_new(bdf_type) port map(
 	clk => clk,
 	reset_n => reset_n,
 	LEDs_out => open
