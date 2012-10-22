@@ -1,4 +1,4 @@
-Z:/workspace/2012-2013/ArchOrdI/register_file/testbench/tb_register_file.vhd {1 {vcom -work work -2002 -explicit {Z:\workspace\2012-2013\ArchOrdI\register_file\testbench\tb_register_file.vhd}
+../testbench/tb_register_file.vhd {1 {vcom -work work -2002 -explicit {..\testbench\tb_register_file.vhd}
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -8,7 +8,7 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity tb_register_file
 -- Compiling architecture bench of tb_register_file
 
-} {} {}} Z:/workspace/2012-2013/ArchOrdI/register_file/vhdl/register_file.vhd {1 {vcom -work work -2002 -explicit {Z:\workspace\2012-2013\ArchOrdI\register_file\vhdl\register_file.vhd}
+} {} {}} ../vhdl/register_file.vhd {1 {vcom -work work -2002 -explicit {..\vhdl\register_file.vhd}
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
