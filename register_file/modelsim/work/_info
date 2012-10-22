@@ -4,76 +4,80 @@ K3
 cModel Technology
 dZ:\workspace\2012-2013\ArchOrdI\alu\modelsim
 Eregister_file
-Z0 w1349867275
-Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
-Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
-Z3 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
-Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z5 dZ:\workspace\2012-2013\ArchOrdI\register_file\modelsim
-Z6 8Z:\workspace\2012-2013\ArchOrdI\register_file\vhdl\register_file.vhd
-Z7 FZ:\workspace\2012-2013\ArchOrdI\register_file\vhdl\register_file.vhd
+Z0 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z1 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+32
+Z4 w1350920048
+Z5 dD:\workspace\_EPFL\ArcOrd_I\register_file\modelsim
+Z6 8D:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd
+Z7 FD:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd
 l0
 L5
 VJ2jaR_N]mXO:<6?BOA``Y0
-Z8 OV;C;10.0d;49
-32
-Z9 !s108 1349867282.800000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:\workspace\2012-2013\ArchOrdI\register_file\vhdl\register_file.vhd|
-Z11 !s107 Z:\workspace\2012-2013\ArchOrdI\register_file\vhdl\register_file.vhd|
+Z8 OP;C;10.1c;51
+Z9 !s108 1350920065.059000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd|
+Z11 !s107 D:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd|
 Z12 o-work work -2002 -explicit -O0
 Z13 tExplicit 1
+!i10b 1
 !s100 F0ij0@Z81XQi[^S>7G_IM3
 Asynth
+Z14 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 R1
 R2
 R3
-R4
 DEx4 work 13 register_file 0 22 J2jaR_N]mXO:<6?BOA``Y0
+32
 l19
 L16
-V;BS690D_K^E2OATS8V8;`1
+V`cMR;9DOiE;JZGIYOnc>;2
 R8
-32
 R9
 R10
 R11
 R12
 R13
-!s100 OWHaeX?hLdN^JaV7U`7=V2
+!i10b 1
+!s100 enLXB<`?45Je4UT_FF_ZK0
 Etb_register_file
-Z14 w1349867686
+Z15 w1349867686
+R14
 R1
 R2
 R3
-R4
 R5
-Z15 8Z:\workspace\2012-2013\ArchOrdI\register_file\testbench\tb_register_file.vhd
-Z16 FZ:\workspace\2012-2013\ArchOrdI\register_file\testbench\tb_register_file.vhd
+Z16 8D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd
+Z17 FD:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd
 l0
 L5
 V?4<fN86?C6z2Ac8d6EKEO0
 !s100 :8mF@mak7]96i>?<NdiIA0
 R8
 32
-Z17 !s108 1349867695.076000
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|Z:\workspace\2012-2013\ArchOrdI\register_file\testbench\tb_register_file.vhd|
-Z19 !s107 Z:\workspace\2012-2013\ArchOrdI\register_file\testbench\tb_register_file.vhd|
+!i10b 1
+Z18 !s108 1350922525.368000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-O0|D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd|
+Z20 !s107 D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd|
 R12
 R13
 Abench
+R14
 R1
 R2
 R3
-R4
-Z20 DEx4 work 16 tb_register_file 0 22 ?4<fN86?C6z2Ac8d6EKEO0
+Z21 DEx4 work 16 tb_register_file 0 22 ?4<fN86?C6z2Ac8d6EKEO0
 l29
 L6
-V2<Thi>BPSk:7@9M2F[IRK0
-!s100 YFORQ@2ElR_AlT<Q8Scoj3
+Z22 V2<Thi>BPSk:7@9M2F[IRK0
+Z23 !s100 YFORQ@2ElR_AlT<Q8Scoj3
 R8
 32
-R17
+!i10b 1
 R18
 R19
+R20
 R12
 R13

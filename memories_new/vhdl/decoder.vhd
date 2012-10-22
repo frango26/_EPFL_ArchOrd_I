@@ -13,5 +13,17 @@ end decoder;
 
 architecture synth of decoder is
 begin
-
+	process (address)
+	begin
+		cs_ROM <= '0';
+		cs_RAM <= '0';
+		cs_LEDs <= '0';
+		if (address < X"1000") then
+			cs_ROM <= '1';
+		elsif (address < X"2000") then
+			cs_RAM <= '1';
+		elsif (address < X"2010") then
+			cs_LEDs <= '1';
+		end if;
+	end process;
 end synth;

@@ -15,7 +15,7 @@ entity register_file is
 end register_file;
 architecture synth of register_file is
 	type reg_type is array(0 to 31) of std_logic_vector(31 downto 0);
-	signal reg: reg_type;
+	signal reg: reg_type := (others =>(others=>'0'));
 begin
 	process(aa)
 	begin
@@ -36,9 +36,7 @@ begin
 	process(clk, aw, wren, wrdata)
 	begin
 		if (clk'event  and clk='1' and wren ='1' ) then
-			if (aw="0000") then
-				reg(0)<=(others=>'0');
-			else
+			if (not (aw ="0000")) then
 				reg(conv_integer(aw))<= wrdata;
 			end if;
 		end if;
