@@ -88,16 +88,12 @@ begin
 		LEDs <= LEDs_reg and ( 95 downto 0 => pwm);
 	end process;
 
-	process (reset_n)
-	begin
-		if (reset_n='1') then
-			LEDs_reg <= (others => '0');	
-		end if;
-	end process;
 
 	process (clk, reset_n, cs, write)
 	begin
-		if (reset_n='0' and rising_edge(clk) and cs = '1' and write = '1') then
+		if (reset_n='0') then
+			LEDs_reg <= (95 downto 0 => '0');
+		elsif (reset_n='1' and rising_edge(clk) and cs = '1' and write = '1') then
 			if ( address = REG_LED_0_31 ) then
 					LEDs_reg(31 downto 0) <= wrdata;
 			elsif ( address = REG_LED_32_63  ) then

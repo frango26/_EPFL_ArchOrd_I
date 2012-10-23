@@ -1,5 +1,5 @@
 Analysis & Synthesis report for memories
-Mon Oct 22 23:55:17 2012
+Tue Oct 23 14:18:34 2012
 Quartus II 32-bit Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Mon Oct 22 23:55:17 2012             ;
+; Analysis & Synthesis Status        ; Failed - Tue Oct 23 14:18:34 2012             ;
 ; Quartus II 32-bit Version          ; 12.0 Build 263 08/02/2012 SP 2 SJ Web Edition ;
 ; Revision Name                      ; memories                                      ;
 ; Top-level Entity Name              ; memories                                      ;
@@ -156,23 +156,26 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 263 08/02/2012 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Oct 22 23:55:16 2012
+    Info: Processing started: Tue Oct 23 14:18:32 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off memories -c memories
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memories.bdf
     Info (12023): Found entity 1: memories
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/memories_new/vhdl/decoder.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/memories_new/vhdl/decoder.vhd
     Info (12022): Found design unit 1: decoder-synth
     Info (12023): Found entity 1: decoder
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/memories_new/vhdl/leds.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/memories_new/vhdl/leds.vhd
     Info (12022): Found design unit 1: LEDs-synth
     Info (12023): Found entity 1: LEDs
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/memories_new/vhdl/ram.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/memories_new/vhdl/ram.vhd
     Info (12022): Found design unit 1: RAM-synth
     Info (12023): Found entity 1: RAM
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/memories_new/vhdl/rom.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/memories_new/vhdl/rom.vhd
     Info (12022): Found design unit 1: ROM-synth
     Info (12023): Found entity 1: ROM
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/memories_new/vhdl/controller.vhd
+    Info (12022): Found design unit 1: controller-synth
+    Info (12023): Found entity 1: controller
 Info (12021): Found 2 design units, including 1 entities, in source file extled.vhdl
     Info (12022): Found design unit 1: ExtLED-bhv
     Info (12023): Found entity 1: ExtLED
@@ -186,30 +189,15 @@ Warning (10492): VHDL Process Statement warning at LEDs.vhd(62): signal "read" i
 Warning (10492): VHDL Process Statement warning at LEDs.vhd(71): signal "luminosity_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at LEDs.vhd(79): signal "luminosity_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at LEDs.vhd(88): signal "LEDs_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[95]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10029): Constant driver at LEDs.vhd(93) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 93
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[94]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[93]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[92]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[91]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[90]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[89]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[88]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[87]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[86]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[85]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[84]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[83]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[82]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[81]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[80]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[79]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (10028): Can't resolve multiple constant drivers for net "LEDs_reg[78]" at LEDs.vhd(100) File: D:/workspace/_EPFL/ArcOrd_I/memories_new/vhdl/LEDs.vhd Line: 100
-Error (12152): Can't elaborate user hierarchy "LEDs:LEDs_0"
-Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 20 errors, 8 warnings
-    Error: Peak virtual memory: 346 megabytes
-    Error: Processing ended: Mon Oct 22 23:55:17 2012
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12128): Elaborating entity "decoder" for hierarchy "decoder:decoder_0"
+Info (12128): Elaborating entity "controller" for hierarchy "controller:inst"
+Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM_0"
+Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM_0"
+Error (12006): Node instance "rom_block_0" instantiates undefined entity "ROM_Block" File: D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/ROM.vhd Line: 26
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 1 error, 8 warnings
+    Error: Peak virtual memory: 343 megabytes
+    Error: Processing ended: Tue Oct 23 14:18:34 2012
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:02
 
 
