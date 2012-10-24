@@ -11,3 +11,13 @@ bak
 bak/**
 bakup
 bakup/**
+*.hdb
+*.logdb
+*.cdb
+*.bpm
+*.rdm
+*.kpt
+*.rdb
+*.dpi
+*.sig
+*.hb_info

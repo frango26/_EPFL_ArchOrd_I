@@ -9,17 +9,17 @@ Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
 Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
 Z3 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
 Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
-Z5 dD:\workspace\_EPFL\_ArchOrd_I\memories_new\modelsim
-Z6 8D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/controller.vhd
-Z7 FD:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/controller.vhd
+Z5 dD:\workspace\_EPFL\_ArchOrd_I\labs\memories_new_board\modelsim
+Z6 8D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/controller.vhd
+Z7 FD:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/controller.vhd
 l0
 L5
 V@VPbhW<L>VeMSbZ;d3jR:1
 Z8 OV;C;10.0d;49
 32
-Z9 !s108 1351008967.614000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/controller.vhd|
-Z11 !s107 D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/controller.vhd|
+Z9 !s108 1351066792.339000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/controller.vhd|
+Z11 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/controller.vhd|
 Z12 o-work work -2002 -explicit -O0
 Z13 tExplicit 1
 !s100 2Dn5Rb2m04AUYn8XQ3Na61
@@ -47,16 +47,16 @@ R1
 R3
 R4
 R5
-Z15 8D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/decoder.vhd
-Z16 FD:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/decoder.vhd
+Z15 8D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/decoder.vhd
+Z16 FD:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/decoder.vhd
 l0
 L5
 V96^PERgGPnm=oL>W^DjcH2
 R8
 32
-Z17 !s108 1351008967.880000
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/decoder.vhd|
-Z19 !s107 D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/decoder.vhd|
+Z17 !s108 1351066792.428000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/decoder.vhd|
+Z19 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/decoder.vhd|
 R12
 R13
 !s100 kLY1CHQIHM9lQTgBfOi5h3
@@ -84,16 +84,16 @@ R2
 R3
 R4
 R5
-Z21 8D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/LEDs.vhd
-Z22 FD:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/LEDs.vhd
+Z21 8D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd
+Z22 FD:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd
 l0
 L6
 V<6?0MV0kI1XAzVSo0VkzZ0
 R8
 32
-Z23 !s108 1351008968.001000
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/LEDs.vhd|
-Z25 !s107 D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/LEDs.vhd|
+Z23 !s108 1351066792.516000
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd|
+Z25 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd|
 R12
 R13
 !s100 P6[D3=V>N<S;W38:QI;n40
@@ -115,30 +115,30 @@ R12
 R13
 !s100 zF6lDE=kb>XRLmm6Y>AMJ2
 Ememories
-Z26 w1350996459
+Z26 w1351066729
 R3
 R4
 R5
-Z27 8D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/memories.vhd
-Z28 FD:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/memories.vhd
+Z27 8D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/memories.vhd
+Z28 FD:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/memories.vhd
 l0
 L24
-Vg0[JRbc<KL_iLGXOT2j7F0
+VkmQ4cUzG8bmdb>:Mm_zaj1
 R8
 32
-Z29 !s108 1351008968.153000
-Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/memories.vhd|
-Z31 !s107 D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/memories.vhd|
+Z29 !s108 1351066792.881000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/memories.vhd|
+Z31 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/memories.vhd|
 R12
 R13
-!s100 i;ABgCXRzS6C[Q5D<JT^O2
+!s100 O6I[k20]7K>DKVS5i>VD_3
 Abdf_type
 R3
 R4
-DEx4 work 8 memories 0 22 g0[JRbc<KL_iLGXOT2j7F0
-l123
-L37
-VN>iM1l^9T]=5M4Dk`P6n71
+Z32 DEx4 work 8 memories 0 22 kmQ4cUzG8bmdb>:Mm_zaj1
+l113
+L43
+VkKdHQLEng]7fjTMFNoNE=1
 R8
 32
 R29
@@ -146,7 +146,7 @@ R30
 R31
 R12
 R13
-!s100 _JF66oh4g[IDN4]ZiPB[93
+!s100 3nAoCZMKXf6HFa1Y=Uk4c1
 Eram
 R14
 R2
@@ -154,16 +154,16 @@ R1
 R3
 R4
 R5
-Z32 8D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/RAM.vhd
-Z33 FD:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/RAM.vhd
+Z33 8D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd
+Z34 FD:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd
 l0
 L5
 V4?9YAD>L3mJIc=Lm0C5P20
 R8
 32
-Z34 !s108 1351008968.295000
-Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/RAM.vhd|
-Z36 !s107 D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/RAM.vhd|
+Z35 !s108 1351066792.608000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd|
+Z37 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd|
 R12
 R13
 !s100 EXkfmkY`c3:oKnMDi`ngR2
@@ -178,29 +178,29 @@ L16
 VZd6=7NHhnPRzM=L_AkYz[1
 R8
 32
-R34
 R35
 R36
+R37
 R12
 R13
 !s100 ;ghmlzLPb[7aGl=g61[nn1
 Eregister_file
-Z37 w1350920048
+Z38 w1350920048
 R1
 R2
-Z38 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z39 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
 R4
-Z39 dD:\workspace\_EPFL\ArcOrd_I\register_file\modelsim
-Z40 8D:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd
-Z41 FD:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd
+Z40 dD:\workspace\_EPFL\ArcOrd_I\register_file\modelsim
+Z41 8D:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd
+Z42 FD:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd
 l0
 L5
 VJ2jaR_N]mXO:<6?BOA``Y0
-Z42 OP;C;10.1c;51
+Z43 OP;C;10.1c;51
 32
-Z43 !s108 1350934303.921000
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd|
-Z45 !s107 D:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd|
+Z44 !s108 1350934303.921000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd|
+Z46 !s107 D:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd|
 R12
 R13
 !s100 F0ij0@Z81XQi[^S>7G_IM3
@@ -208,17 +208,17 @@ R13
 Asynth
 R1
 R2
-R38
+R39
 R4
 DEx4 work 13 register_file 0 22 J2jaR_N]mXO:<6?BOA``Y0
 l19
 L16
 V`cMR;9DOiE;JZGIYOnc>;2
-R42
-32
 R43
+32
 R44
 R45
+R46
 R12
 R13
 !s100 enLXB<`?45Je4UT_FF_ZK0
@@ -230,16 +230,16 @@ R1
 R3
 R4
 R5
-Z46 8D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/ROM.vhd
-Z47 FD:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/ROM.vhd
+Z47 8D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM.vhd
+Z48 FD:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM.vhd
 l0
 L5
 VIZK8WIBb6W5=hliE;WY7z3
 R8
 32
-Z48 !s108 1351008968.471000
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/ROM.vhd|
-Z50 !s107 D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/ROM.vhd|
+Z49 !s108 1351066792.699000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM.vhd|
+Z51 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM.vhd|
 R12
 R13
 !s100 V8YPZeA;YcDh0VH`n]QoJ2
@@ -254,27 +254,27 @@ L14
 VlHbALj]@UNfgBCI5=Y>Qi2
 R8
 32
-R48
 R49
 R50
+R51
 R12
 R13
 !s100 Pz=>_6[ERK9<5>^EXda^53
 Erom_block
-Z51 w1350981862
+Z52 w1350981862
 R3
 R4
 R5
-Z52 8D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/ROM_Block.vhd
-Z53 FD:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/ROM_Block.vhd
+Z53 8D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM_Block.vhd
+Z54 FD:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM_Block.vhd
 l0
 L42
 VYVYZmzO`FGR9e7IYG>cfX2
 R8
 32
-Z54 !s108 1351008968.687000
-Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/ROM_Block.vhd|
-Z56 !s107 D:/workspace/_EPFL/_ArchOrd_I/memories_new/vhdl/ROM_Block.vhd|
+Z55 !s108 1351066792.788000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM_Block.vhd|
+Z57 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM_Block.vhd|
 R12
 R13
 !s100 ?hV[j4f]VOPA4i_JAO[d51
@@ -287,69 +287,87 @@ L52
 VMfnJL`W7nYEeKO<Q?>1TK2
 R8
 32
-R54
 R55
 R56
+R57
 R12
 R13
 !s100 G``jgWE1kWVR>ai_Y_8ZW0
 Etb_controller
-w1350999342
+w1350630417
 R1
 R2
 R3
 R4
 R5
-8D:/workspace/_EPFL/_ArchOrd_I/memories_new/testbench/tb_controller.vhd
-FD:/workspace/_EPFL/_ArchOrd_I/memories_new/testbench/tb_controller.vhd
+8D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd
+FD:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd
 l0
 L6
 V`fBP>MKHe07^73`3dK6=J2
-!s100 k2`T78eQZGlfhK__hcogY2
 R8
 32
-!s108 1351009059.163000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/memories_new/testbench/tb_controller.vhd|
-!s107 D:/workspace/_EPFL/_ArchOrd_I/memories_new/testbench/tb_controller.vhd|
 R12
 R13
+!s100 k2`T78eQZGlfhK__hcogY2
+!s108 1351066792.964000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd|
+!s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd|
 Etb_memories
-R14
+Z58 w1350630435
 R1
 R2
 R3
 R4
 R5
-8D:/workspace/_EPFL/_ArchOrd_I/memories_new/testbench/tb_memories.vhd
-FD:/workspace/_EPFL/_ArchOrd_I/memories_new/testbench/tb_memories.vhd
+Z59 8D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_memories.vhd
+Z60 FD:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_memories.vhd
 l0
 L6
 V:RJ12fJYBPQ7HnB0EdO0i3
+!s100 Q35L:3jFA]l1mMQ?CIG6e2
 R8
 32
+Z61 !s108 1351066793.035000
+Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_memories.vhd|
+Z63 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_memories.vhd|
 R12
 R13
-!s100 Q35L:3jFA]l1mMQ?CIG6e2
-!s108 1351008968.899000
-!s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/memories_new/testbench/tb_memories.vhd|
-!s107 D:/workspace/_EPFL/_ArchOrd_I/memories_new/testbench/tb_memories.vhd|
-Etb_register_file
-Z57 w1349867686
+Atestbench
+R32
 R1
 R2
-R38
+R3
 R4
+DEx4 work 11 tb_memories 0 22 :RJ12fJYBPQ7HnB0EdO0i3
+l19
+L8
+VFDBVenLh^z3eYfA6F_AY@1
+!s100 E:WC6YeezaRJaO8ZlDeS_1
+R8
+32
+R61
+R62
+R63
+R12
+R13
+Etb_register_file
+Z64 w1349867686
+R1
+R2
 R39
-Z58 8D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd
-Z59 FD:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd
+R4
+R40
+Z65 8D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd
+Z66 FD:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd
 l0
 L5
 V?4<fN86?C6z2Ac8d6EKEO0
-R42
+R43
 32
-Z60 !s108 1350934304.343000
-Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd|
-Z62 !s107 D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd|
+Z67 !s108 1350934304.343000
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd|
+Z69 !s107 D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd|
 R12
 R13
 !s100 :8mF@mak7]96i>?<NdiIA0
@@ -357,17 +375,17 @@ R13
 Abench
 R1
 R2
-R38
+R39
 R4
 DEx4 work 16 tb_register_file 0 22 ?4<fN86?C6z2Ac8d6EKEO0
 l29
 L6
 V2<Thi>BPSk:7@9M2F[IRK0
-R42
+R43
 32
-R60
-R61
-R62
+R67
+R68
+R69
 R12
 R13
 !s100 YFORQ@2ElR_AlT<Q8Scoj3

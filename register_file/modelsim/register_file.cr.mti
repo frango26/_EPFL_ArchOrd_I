@@ -1,5 +1,5 @@
-../vhdl/register_file.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/ArcOrd_I/register_file/vhdl/register_file.vhd
-Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
+../vhdl/register_file.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/register_file/vhdl/register_file.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
@@ -8,8 +8,8 @@ Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 
 -- Compiling entity register_file
 -- Compiling architecture synth of register_file
 
-} {} {}} ../testbench/tb_register_file.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd
-Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
+} {} {}} ../testbench/tb_register_file.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/register_file/testbench/tb_register_file.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
