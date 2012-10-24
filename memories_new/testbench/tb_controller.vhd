@@ -15,7 +15,7 @@ begin
 
 memories_0: ENTITY work.memories(bdf_type) port map(
 	CLOCK => clk,
-	LED_Reset => reset_n,
+	KEY_n(0) => reset_n,
 	LEDs_out => open
 	);
 	

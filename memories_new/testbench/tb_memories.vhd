@@ -19,8 +19,8 @@ signal finished       : std_logic := '0';
 begin
 
 memories_0: ENTITY work.memories(bdf_type) port map(
-	clk => clk,
-	reset_n => reset_n,
+	CLOCK => clk,
+	KEY_n(0) => reset_n,
 	write => write,
 	read => read,
 	address => address,

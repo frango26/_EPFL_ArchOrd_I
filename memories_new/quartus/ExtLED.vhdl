@@ -99,7 +99,7 @@ end process pCountTime;
 	-- Loop continuously for ever
 	
 pLED:
-	process(PresentSt, iCntTime, iCntCol, LED_COLOR)
+	process(PresentSt, iCntTime, iCntCol, LED_COLOR, LED)
 	begin	
 	RzCntus <= '0';					-- Disable by default
 	EnCntus <= '0';					-- Disable by default
