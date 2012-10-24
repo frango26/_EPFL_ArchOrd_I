@@ -14,16 +14,20 @@ entity RAM is
 end RAM;
 
 architecture synth of RAM is
-	type reg_type is array(0 to 0) of std_logic_vector(31 downto 0);
+	type reg_type is array(9 downto 0) of std_logic_vector(31 downto 0);
 	signal reg : reg_type;
 	signal reg_address : std_logic_vector(9 downto 0);
 	signal reg_read : std_logic;
+	signal reg_write : std_logic;
 begin
-	process (clk)
+	process (clk, cs, read, write, address)
 	begin
 		if (rising_edge(clk)) then
 			reg_read <= cs and read;
-			reg_address <= address;
+			reg_write <= cs and write;
+			if (reg_read='1' or reg_write='1') then
+  			 reg_address <= address;
+			end if;
 		end if;
 	end process;
 	
@@ -34,12 +38,10 @@ begin
 			rddata <= reg(conv_integer(reg_address));
 		end if;
 	end process;
-	process (clk)
+	process (reg_write, wrdata)
 	begin
-		if (rising_edge(clk)) then
-			if (cs = '1' and write = '1') then
-				reg(conv_integer(address)) <= wrdata;
-			end if;
+		if (reg_write='1') then
+			reg(conv_integer(reg_address)) <= wrdata;
 		end if;
 	end process;	
 end synth;
