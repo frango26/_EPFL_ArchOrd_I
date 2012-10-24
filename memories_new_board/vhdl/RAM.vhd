@@ -14,7 +14,7 @@ entity RAM is
 end RAM;
 
 architecture synth of RAM is
-	type reg_type is array(9 downto 0) of std_logic_vector(31 downto 0);
+	type reg_type is array(0 to 9) of std_logic_vector(31 downto 0);
 	signal reg : reg_type;
 	signal reg_address : std_logic_vector(9 downto 0);
 	signal reg_read : std_logic;

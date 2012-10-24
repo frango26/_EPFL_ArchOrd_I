@@ -76,7 +76,8 @@ begin
 	
 	process (counter)
 	begin
-		if (  conv_integer( counter ) <= conv_integer( unsigned(luminosity_reg) )  ) then
+		--if (  conv_integer( counter ) <= conv_integer( unsigned(luminosity_reg) )  ) then
+		if (  counter  <= luminosity_reg ) then
 			pwm <= '1';
 		else
 			pwm <= '0';
