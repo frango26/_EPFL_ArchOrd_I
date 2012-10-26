@@ -52,17 +52,7 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd(20): (vcom-1035) Formal port "wrdata" has OPEN or no actual associated with it.
 ** Error: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd(36): VHDL Compiler exiting
 
-} {11.0 16.0} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity RAM
--- Compiling architecture synth of RAM
-
-} {} {}} ../testbench/tb_register_file.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd
+} {11.0 16.0} {}} ../testbench/tb_register_file.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd
 Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO

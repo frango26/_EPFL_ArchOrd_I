@@ -1,0 +1,82 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity tb_memories is end;
+
+architecture testbench of tb_memories is
+constant CLK_PERIOD : time := 40 ns;
+
+signal clk            : std_logic := '0';
+signal reset_n        : std_logic := '0';
+signal write, read    : std_logic := '0';
+signal cs    		  : std_logic := '0';
+signal address        : std_logic_vector(15 downto 0);
+signal wrdata, rddata : std_logic_vector(31 downto 0);
+
+signal finished       : std_logic := '0';
+
+begin
+
+RAM_0: ENTITY work.RAM(bdf_type) port map(
+		clk     =>clk,
+		cs      =>cs,
+		read    =>read,
+		write   =>write,
+		address =>address,
+		wrdata  =>wrdata,
+		rddata  =>rrdata
+	);
+process
+begin
+	clk <= not clk;
+	wait for CLK_PERIOD/2;
+	if( finished = '1') then
+	    wait;
+	end if;
+end process;
+
+process
+begin
+	--init
+	write   <= '0';
+	address <= (others => '0');
+	wrdata  <= (others => '0');
+  reset_n <= '0';
+  wait for CLK_PERIOD*3/2;
+  reset_n <= '1';
+	
+	-- read some values in the ROM
+	-- verify that it corresponds to the data that is in your .hex file.
+	read <= '1';
+	for i in 0 to 31 loop
+	   address <= conv_std_logic_vector(i*4,16);
+		wait for CLK_PERIOD;
+	end loop;
+	read <= '0';
+	
+	-- write some values in the RAM
+	write <= '1';
+	for i in 0 to 31 loop
+		address <= conv_std_logic_vector(i*4,16) + X"1000";
+		wrdata  <= conv_std_logic_vector(i, 32) + X"AAAA0000";
+		wait for CLK_PERIOD;
+	end loop;
+	write <= '0';
+	
+	--read back in the RAM
+	read <= '1';
+	for i in 0 to 31 loop
+		address <= conv_std_logic_vector(i*4,16) + X"1000";
+		wait for CLK_PERIOD;
+		ASSERT rddata = (conv_std_logic_vector(i, 32) + X"AAAA0000")
+			REPORT "Did not read or write correctly in RAM"
+			SEVERITY ERROR;
+	end loop;
+	
+	finished <= '1';
+	wait;
+end process;
+
+end testbench;

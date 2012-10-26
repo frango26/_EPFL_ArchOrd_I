@@ -14,7 +14,7 @@ entity RAM is
 end RAM;
 
 architecture synth of RAM is
-	type reg_type is array(0 to 9) of std_logic_vector(31 downto 0);
+	type reg_type is array(0 to 1023) of std_logic_vector(31 downto 0);
 	signal reg : reg_type;
 	signal reg_address : std_logic_vector(9 downto 0);
 	signal reg_read : std_logic;
@@ -34,7 +34,7 @@ begin
 	process (reg, reg_read, reg_address)
 	begin
 		rddata <= (others => 'Z');
-		if (reg_read ='1') then
+		if ( rising_edge(reg_read) and reg_read ='1') then
 			rddata <= reg(conv_integer(reg_address));
 		end if;
 	end process;

@@ -78,7 +78,7 @@ R12
 R13
 !s100 4Nm:QnS=>H[2Q]LF0Za`h1
 Eleds
-Z20 w1351121094
+Z20 w1351284805
 R1
 R2
 R3
@@ -91,7 +91,7 @@ L6
 V<6?0MV0kI1XAzVSo0VkzZ0
 R8
 32
-Z23 !s108 1351121116.795000
+Z23 !s108 1351285346.331000
 Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd|
 Z25 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd|
 R12
@@ -103,9 +103,9 @@ R2
 R3
 R4
 DEx4 work 4 leds 0 22 <6?0MV0kI1XAzVSo0VkzZ0
-l38
+l40
 L23
-Vf]m;8f5@6UOiH]IH0I5T=3
+VQ<293VWLBFz2kWgYlXLIk3
 R8
 32
 R23
@@ -113,7 +113,7 @@ R24
 R25
 R12
 R13
-!s100 6M<0IVL=A7Z[K54N7V4Q00
+!s100 1jMZY6:<]4P6WZ1f?lUGh3
 Ememories
 Z26 w1351066729
 R3
@@ -148,7 +148,7 @@ R12
 R13
 !s100 3nAoCZMKXf6HFa1Y=Uk4c1
 Eram
-Z33 w1351120928
+Z33 w1351284960
 R2
 R1
 R3
@@ -161,7 +161,7 @@ L5
 V4?9YAD>L3mJIc=Lm0C5P20
 R8
 32
-Z36 !s108 1351120944.933000
+Z36 !s108 1351285346.453000
 Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd|
 Z38 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd|
 R12
@@ -175,7 +175,7 @@ R4
 DEx4 work 3 ram 0 22 4?9YAD>L3mJIc=Lm0C5P20
 l22
 L16
-VA]:VfTE@h<m5Gnm[b0PzK1
+V7QYQfSX9eSzQhBMkfgU[42
 R8
 32
 R36
@@ -183,7 +183,7 @@ R37
 R38
 R12
 R13
-!s100 kH@?o]?VHJ3:D93I8m3`>3
+!s100 :TI5;3dj3A_WP05m5XQd22
 Eregister_file
 Z39 w1350920048
 R1
@@ -308,7 +308,7 @@ V`fBP>MKHe07^73`3dK6=J2
 !s100 k2`T78eQZGlfhK__hcogY2
 R8
 32
-!s108 1351121116.880000
+!s108 1351285346.520000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd|
 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd|
 R12
@@ -327,7 +327,7 @@ L6
 V:RJ12fJYBPQ7HnB0EdO0i3
 R8
 32
-Z62 !s108 1351118913.466000
+Z62 !s108 1351208453.677000
 Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_memories.vhd|
 Z64 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_memories.vhd|
 R12
