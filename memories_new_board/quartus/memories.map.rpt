@@ -1,5 +1,5 @@
 Analysis & Synthesis report for memories
-Wed Oct 24 09:57:10 2012
+Fri Oct 26 23:12:04 2012
 Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
 
 
@@ -10,21 +10,7 @@ Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |memories|ExtLED:inst1|PresentSt
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component|altsyncram_ojc1:auto_generated
- 15. Parameter Settings for User Entity Instance: ExtLED:inst1
- 16. Parameter Settings for User Entity Instance: ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component
- 17. altsyncram Parameter Settings by Entity Instance
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -50,20 +36,20 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Oct 24 09:57:10 2012    ;
+; Analysis & Synthesis Status        ; Failed - Fri Oct 26 23:12:04 2012        ;
 ; Quartus II 32-bit Version          ; 12.0 Build 178 05/31/2012 SJ Web Edition ;
 ; Revision Name                      ; memories                                 ;
 ; Top-level Entity Name              ; memories                                 ;
 ; Family                             ; Cyclone IV E                             ;
-; Total logic elements               ; 539                                      ;
-;     Total combinational functions  ; 399                                      ;
-;     Dedicated logic registers      ; 181                                      ;
-; Total registers                    ; 181                                      ;
-; Total pins                         ; 217                                      ;
-; Total virtual pins                 ; 0                                        ;
-; Total memory bits                  ; 32,768                                   ;
-; Embedded Multiplier 9-bit elements ; 0                                        ;
-; Total PLLs                         ; 0                                        ;
+; Total logic elements               ; N/A until Partition Merge                ;
+;     Total combinational functions  ; N/A until Partition Merge                ;
+;     Dedicated logic registers      ; N/A until Partition Merge                ;
+; Total registers                    ; N/A until Partition Merge                ;
+; Total pins                         ; N/A until Partition Merge                ;
+; Total virtual pins                 ; N/A until Partition Merge                ;
+; Total memory bits                  ; N/A until Partition Merge                ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                ;
+; Total PLLs                         ; N/A until Partition Merge                ;
 +------------------------------------+------------------------------------------+
 
 
@@ -164,268 +150,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                       ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                         ; Library ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
-; memories.bdf                     ; yes             ; User Block Diagram/Schematic File      ; D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/quartus/memories.bdf           ;         ;
-; ../vhdl/ROM_Block.vhd            ; yes             ; User Wizard-Generated File             ; D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM_Block.vhd             ;         ;
-; ../vhdl/decoder.vhd              ; yes             ; User VHDL File                         ; D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/decoder.vhd               ;         ;
-; ../vhdl/LEDs.vhd                 ; yes             ; User VHDL File                         ; D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd                  ;         ;
-; ../vhdl/RAM.vhd                  ; yes             ; User VHDL File                         ; D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd                   ;         ;
-; ../vhdl/ROM.vhd                  ; yes             ; User VHDL File                         ; D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM.vhd                   ;         ;
-; ExtLED.vhdl                      ; yes             ; User VHDL File                         ; D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/quartus/ExtLED.vhdl            ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; e:/gnuapp/altera/12.0/quartus/libraries/megafunctions/altsyncram.tdf                 ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; e:/gnuapp/altera/12.0/quartus/libraries/megafunctions/stratix_ram_block.inc          ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; e:/gnuapp/altera/12.0/quartus/libraries/megafunctions/lpm_mux.inc                    ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; e:/gnuapp/altera/12.0/quartus/libraries/megafunctions/lpm_decode.inc                 ;         ;
-; aglobal120.inc                   ; yes             ; Megafunction                           ; e:/gnuapp/altera/12.0/quartus/libraries/megafunctions/aglobal120.inc                 ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; e:/gnuapp/altera/12.0/quartus/libraries/megafunctions/a_rdenreg.inc                  ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; e:/gnuapp/altera/12.0/quartus/libraries/megafunctions/altrom.inc                     ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; e:/gnuapp/altera/12.0/quartus/libraries/megafunctions/altram.inc                     ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; e:/gnuapp/altera/12.0/quartus/libraries/megafunctions/altdpram.inc                   ;         ;
-; db/altsyncram_ojc1.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/quartus/db/altsyncram_ojc1.tdf ;         ;
-; rom.hex                          ; yes             ; Auto-Found Memory Initialization File  ; D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/quartus/rom.hex                ;         ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------+---------+
-
-
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 539         ;
-;                                             ;             ;
-; Total combinational functions               ; 399         ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 198         ;
-;     -- 3 input functions                    ; 57          ;
-;     -- <=2 input functions                  ; 144         ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 365         ;
-;     -- arithmetic mode                      ; 34          ;
-;                                             ;             ;
-; Total registers                             ; 181         ;
-;     -- Dedicated logic registers            ; 181         ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 217         ;
-; Total memory bits                           ; 32768       ;
-; Maximum fan-out node                        ; CLOCK~input ;
-; Maximum fan-out                             ; 213         ;
-; Total fan-out                               ; 2625        ;
-; Average fan-out                             ; 2.51        ;
-+---------------------------------------------+-------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Library Name ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-; |memories                                    ; 399 (0)           ; 181 (0)      ; 32768       ; 0            ; 0       ; 0         ; 217  ; 0            ; |memories                                                                                                ;              ;
-;    |ExtLED:inst1|                            ; 133 (133)         ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memories|ExtLED:inst1                                                                                   ;              ;
-;    |LEDs:LEDs_0|                             ; 188 (188)         ; 115 (115)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memories|LEDs:LEDs_0                                                                                    ;              ;
-;    |RAM:RAM_0|                               ; 2 (2)             ; 34 (34)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memories|RAM:RAM_0                                                                                      ;              ;
-;    |ROM:ROM_0|                               ; 75 (75)           ; 1 (1)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |memories|ROM:ROM_0                                                                                      ;              ;
-;       |ROM_Block:rom_block_0|                ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |memories|ROM:ROM_0|ROM_Block:rom_block_0                                                                ;              ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |memories|ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component                                ;              ;
-;             |altsyncram_ojc1:auto_generated| ; 0 (0)             ; 0 (0)        ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |memories|ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component|altsyncram_ojc1:auto_generated ;              ;
-;    |decoder:decoder_0|                       ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |memories|decoder:decoder_0                                                                              ;              ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                 ;
-+-----------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------+
-; Name                                                                                                      ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                ;
-+-----------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------+
-; ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component|altsyncram_ojc1:auto_generated|ALTSYNCRAM ; M9K  ; ROM  ; 1024         ; 32           ; --           ; --           ; 32768 ; ../quartus/ROM.hex ;
-+-----------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------+--------------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                           ; IP Include File                                                          ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------+--------------------------------------------------------------------------+
-; Altera ; ROM: 1-PORT  ; N/A     ; N/A          ; N/A          ; |memories|ROM:ROM_0|ROM_Block:rom_block_0 ; D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM_Block.vhd ;
-+--------+--------------+---------+--------------+--------------+-------------------------------------------+--------------------------------------------------------------------------+
-
-
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |memories|ExtLED:inst1|PresentSt                                                                                                         ;
-+-------------------+-------------------+------------------+------------------+------------------+-------------------+------------------+------------------+
-; Name              ; PresentSt.stEnCol ; PresentSt.stGap3 ; PresentSt.stGap2 ; PresentSt.stGap1 ; PresentSt.stRzLED ; PresentSt.stSELC ; PresentSt.stIdle ;
-+-------------------+-------------------+------------------+------------------+------------------+-------------------+------------------+------------------+
-; PresentSt.stIdle  ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 0                ;
-; PresentSt.stSELC  ; 0                 ; 0                ; 0                ; 0                ; 0                 ; 1                ; 1                ;
-; PresentSt.stRzLED ; 0                 ; 0                ; 0                ; 0                ; 1                 ; 0                ; 1                ;
-; PresentSt.stGap1  ; 0                 ; 0                ; 0                ; 1                ; 0                 ; 0                ; 1                ;
-; PresentSt.stGap2  ; 0                 ; 0                ; 1                ; 0                ; 0                 ; 0                ; 1                ;
-; PresentSt.stGap3  ; 0                 ; 1                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
-; PresentSt.stEnCol ; 1                 ; 0                ; 0                ; 0                ; 0                 ; 0                ; 1                ;
-+-------------------+-------------------+------------------+------------------+------------------+-------------------+------------------+------------------+
-
-
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; ExtLED:inst1|PresentSt.stSELC         ; Lost fanout        ;
-; ExtLED:inst1|PresentSt.stGap3         ; Lost fanout        ;
-; Total Number of Removed Registers = 2 ;                    ;
-+---------------------------------------+--------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 181   ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 138   ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 140   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered                          ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------+----------------------------+
-; 3:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; |memories|ExtLED:inst1|iCntTime[19] ;                            ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; |memories|LEDs:LEDs_0|Mux1          ;                            ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; |memories|LEDs:LEDs_0|Mux24         ;                            ;
-; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; |memories|ExtLED:inst1|LED_SEL_G[7] ;                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+-------------------------------------+----------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Source assignments for ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component|altsyncram_ojc1:auto_generated ;
-+---------------------------------+--------------------+------+---------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                      ;
-+---------------------------------+--------------------+------+---------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                       ;
-+---------------------------------+--------------------+------+---------------------------------------------------------+
-
-
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ExtLED:inst1 ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; nbled          ; 96    ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+--------------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                             ;
-+------------------------------------+----------------------+--------------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                          ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                       ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                     ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                     ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                   ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                          ;
-; OPERATION_MODE                     ; ROM                  ; Untyped                                          ;
-; WIDTH_A                            ; 32                   ; Signed Integer                                   ;
-; WIDTHAD_A                          ; 10                   ; Signed Integer                                   ;
-; NUMWORDS_A                         ; 1024                 ; Signed Integer                                   ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                          ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                          ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                          ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                          ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                          ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                          ;
-; WIDTH_B                            ; 1                    ; Untyped                                          ;
-; WIDTHAD_B                          ; 1                    ; Untyped                                          ;
-; NUMWORDS_B                         ; 1                    ; Untyped                                          ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                          ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                          ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                          ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                          ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                          ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                          ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                          ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                          ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                          ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                          ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                          ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                          ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                   ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                          ;
-; RAM_BLOCK_TYPE                     ; M9K                  ; Untyped                                          ;
-; BYTE_SIZE                          ; 8                    ; Untyped                                          ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                          ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                          ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                          ;
-; INIT_FILE                          ; ../quartus/ROM.hex   ; Untyped                                          ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                          ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                          ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                          ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                          ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                          ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                          ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                          ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                          ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                          ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                          ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                          ;
-; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                          ;
-; CBXI_PARAMETER                     ; altsyncram_ojc1      ; Untyped                                          ;
-+------------------------------------+----------------------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                            ;
-+-------------------------------------------+-----------------------------------------------------------------+
-; Name                                      ; Value                                                           ;
-+-------------------------------------------+-----------------------------------------------------------------+
-; Number of entity instances                ; 1                                                               ;
-; Entity Instance                           ; ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; ROM                                                             ;
-;     -- WIDTH_A                            ; 32                                                              ;
-;     -- NUMWORDS_A                         ; 1024                                                            ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                    ;
-;     -- WIDTH_B                            ; 1                                                               ;
-;     -- NUMWORDS_B                         ; 1                                                               ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                          ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                    ;
-;     -- RAM_BLOCK_TYPE                     ; M9K                                                             ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                       ;
-+-------------------------------------------+-----------------------------------------------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:03     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 178 05/31/2012 SJ Web Edition
-    Info: Processing started: Wed Oct 24 09:57:06 2012
+    Info: Processing started: Fri Oct 26 23:12:03 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off memories -c memories
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file memories.bdf
@@ -454,84 +185,37 @@ Info (12021): Found 2 design units, including 1 entities, in source file extled.
 Info (12127): Elaborating entity "memories" for the top level hierarchy
 Warning (275043): Pin "LED_Sel_B[0..7]" is missing source
 Warning (275043): Pin "LED_SelC_n[0..11]" is missing source
+Warning (275013): Port "clk" of type controller and instance "inst" is missing source signal
 Info (12128): Elaborating entity "ExtLED" for hierarchy "ExtLED:inst1"
 Info (12128): Elaborating entity "LEDs" for hierarchy "LEDs:LEDs_0"
-Warning (10492): VHDL Process Statement warning at LEDs.vhd(62): signal "read" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LEDs.vhd(71): signal "luminosity_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LEDs.vhd(79): signal "luminosity_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LEDs.vhd(88): signal "LEDs_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12128): Elaborating entity "decoder" for hierarchy "decoder:decoder_0"
-Info (12128): Elaborating entity "ROM" for hierarchy "ROM:ROM_0"
-Info (12128): Elaborating entity "ROM_Block" for hierarchy "ROM:ROM_0|ROM_Block:rom_block_0"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component"
-Info (12130): Elaborated megafunction instantiation "ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component"
-Info (12133): Instantiated megafunction "ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component" with the following parameter:
-    Info (12134): Parameter "address_aclr_a" = "NONE"
-    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
-    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "../quartus/ROM.hex"
-    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
-    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
-    Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "1024"
-    Info (12134): Parameter "operation_mode" = "ROM"
-    Info (12134): Parameter "outdata_aclr_a" = "NONE"
-    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
-    Info (12134): Parameter "ram_block_type" = "M9K"
-    Info (12134): Parameter "widthad_a" = "10"
-    Info (12134): Parameter "width_a" = "32"
-    Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ojc1.tdf
-    Info (12023): Found entity 1: altsyncram_ojc1
-Info (12128): Elaborating entity "altsyncram_ojc1" for hierarchy "ROM:ROM_0|ROM_Block:rom_block_0|altsyncram:altsyncram_component|altsyncram_ojc1:auto_generated"
-Info (12128): Elaborating entity "RAM" for hierarchy "RAM:RAM_0"
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "RAM:RAM_0|reg" is uninferred due to inappropriate RAM size
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED_Sel_B[0]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_B[1]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_B[2]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_B[3]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_B[4]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_B[5]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_B[6]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_B[7]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_R[0]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_R[1]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_R[2]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_R[3]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_R[4]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_R[5]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_R[6]" is stuck at GND
-    Warning (13410): Pin "LED_Sel_R[7]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[0]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[1]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[2]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[3]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[4]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[5]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[6]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[7]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[8]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[9]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[10]" is stuck at GND
-    Warning (13410): Pin "LED_SelC_n[11]" is stuck at GND
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "address[1]"
-    Warning (15610): No output dependent on input pin "address[0]"
-Info (21057): Implemented 789 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 52 input pins
-    Info (21059): Implemented 165 output pins
-    Info (21061): Implemented 540 logic cells
-    Info (21064): Implemented 32 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 357 megabytes
-    Info: Processing ended: Wed Oct 24 09:57:10 2012
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+Warning (10036): Verilog HDL or VHDL warning at LEDs.vhd(35): object "reg_address" assigned a value but never read
+Warning (10631): VHDL Process Statement warning at LEDs.vhd(42): inferring latch(es) for signal or variable "LEDs_reg", which holds its previous value in one or more paths through the process
+Warning (10492): VHDL Process Statement warning at LEDs.vhd(104): signal "luminosity_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at LEDs.vhd(113): signal "LEDs_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Error (10818): Can't infer register for "rddata[0]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[1]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[2]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[3]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[4]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[5]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[6]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[7]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[8]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[9]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[10]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[11]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[12]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[13]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[14]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[15]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[16]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[17]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (10818): Can't infer register for "rddata[18]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd Line: 70
+Error (12152): Can't elaborate user hierarchy "LEDs:LEDs_0"
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 20 errors, 8 warnings
+    Error: Peak virtual memory: 339 megabytes
+    Error: Processing ended: Fri Oct 26 23:12:05 2012
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:01
 
 

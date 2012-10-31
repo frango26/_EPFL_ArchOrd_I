@@ -21,3 +21,6 @@ bakup/**
 *.dpi
 *.sig
 *.hb_info
+*.flock
+work/*
+*/work/*
