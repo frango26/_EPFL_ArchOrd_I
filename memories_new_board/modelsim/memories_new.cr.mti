@@ -8,16 +8,6 @@ Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 
 -- Compiling entity register_file
 -- Compiling architecture synth of register_file
 
-} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/decoder.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/decoder.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity decoder
--- Compiling architecture synth of decoder
-
 } {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM.vhd {1 {vcom -work work -2002 -explicit {D:\workspace\_EPFL\_ArchOrd_I\labs\memories_new_board\vhdl\ROM.vhd}
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
@@ -27,6 +17,16 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity ROM
 -- Compiling architecture synth of ROM
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/decoder.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/decoder.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity decoder
+-- Compiling architecture synth of decoder
 
 } {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd {0 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
@@ -44,35 +44,24 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Error: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd(20): (vcom-1035) Formal port "wrdata" has OPEN or no actual associated with it.
 ** Error: D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_controller.vhd(36): VHDL Compiler exiting
 
-} {11.0 16.0} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd
+} {11.0 16.0} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_memories.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_memories.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package std_logic_arith
 -- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity RAM
--- Compiling architecture synth of RAM
+-- Compiling entity tb_memories
+-- Compiling architecture testbench of tb_memories
+-- Loading entity memories
 
-} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM_Block.vhd {1 {vcom -work work -2002 -explicit {D:\workspace\_EPFL\_ArchOrd_I\labs\memories_new_board\vhdl\ROM_Block.vhd}
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity LEDs
--- Compiling architecture synth of LEDs
-
-} {} {}} ../testbench/tb_register_file.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd
-Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity tb_register_file
--- Compiling architecture bench of tb_register_file
+-- Compiling entity ROM_Block
+-- Compiling architecture SYN of rom_block
 
 } {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/controller.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/controller.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
@@ -84,23 +73,34 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity controller
 -- Compiling architecture synth of controller
 
-} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/ROM_Block.vhd {1 {vcom -work work -2002 -explicit {D:\workspace\_EPFL\_ArchOrd_I\labs\memories_new_board\vhdl\ROM_Block.vhd}
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+} {} {}} ../testbench/tb_register_file.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/ArcOrd_I/register_file/testbench/tb_register_file.vhd
+Model Technology ModelSim PE Student Edition vcom 10.1c Compiler 2012.07 Jul 28 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity ROM_Block
--- Compiling architecture SYN of rom_block
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity tb_register_file
+-- Compiling architecture bench of tb_register_file
 
-} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_memories.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/testbench/tb_memories.vhd
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/LEDs.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package std_logic_arith
 -- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity tb_memories
--- Compiling architecture testbench of tb_memories
--- Loading entity memories
+-- Compiling entity LEDs
+-- Compiling architecture synth of LEDs
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/memories_new_board/vhdl/RAM.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity RAM
+-- Compiling architecture synth of RAM
 
 } {} {}}

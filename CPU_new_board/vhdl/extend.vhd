@@ -13,5 +13,12 @@ end extend;
 
 architecture synth of extend is
 begin
+	process(signed, imm16)
+	begin
+		imm32 <= (15 downto 0 => '0') & imm16;
+		if (signed='1') then
+			imm32 <= (15 downto 0 => imm16(15)) & imm16;
+		end if;
+	end process;
 
 end synth;
