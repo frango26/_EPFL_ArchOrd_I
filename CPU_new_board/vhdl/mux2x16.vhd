@@ -14,5 +14,13 @@ end mux2x16;
 
 architecture synth of mux2x16 is
 begin
+	process(i0, i1, sel)
+	begin
+		case sel is
+			when "00" => o <= i0;
+			when "01" => o <= i1;
+			when others =>
+		end case;
+	end process;
 
 end synth;
