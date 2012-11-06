@@ -1,0 +1,313 @@
+m255
+K3
+13
+cModel Technology
+dD:\workspace\_EPFL\_ArchOrd_I\labs\memories_new_board\modelsim
+Pcheck_functions
+Z0 DPx4 ieee 16 std_logic_textio 0 22 nS@;e8VD1o]DCVjBMSZYk3
+Z1 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z3 DPx3 std 6 textio 0 22 G^o2zK;Vh4eVdKTVo98653
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 w1350836382
+Z6 dD:\workspace\_EPFL\_ArchOrd_I\labs\CPU_new_board\modelsim
+Z7 8D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd
+Z8 FD:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd
+l0
+L8
+VYEnHgQ6z[FYo^[JOdXYXL1
+Z9 OV;C;10.0d;49
+32
+b1
+Z10 !s108 1351678392.320000
+Z11 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd|
+Z12 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd|
+Z13 o-work work -2002 -explicit -O0
+Z14 tExplicit 1
+!s100 ZezfWCDCjgLGcNnES=i540
+Bbody
+Z15 DPx4 work 15 check_functions 0 22 YEnHgQ6z[FYo^[JOdXYXL1
+Z16 DPx4 ieee 16 std_logic_textio 0 22 nS@;e8VD1o]DCVjBMSZYk3
+R1
+R2
+R3
+R4
+l0
+L46
+V=F[g?7mJTf8@XoYo4Cl?Z0
+R9
+32
+R10
+R11
+R12
+R13
+R14
+nbody
+!s100 f9@0gI:<gY[hC`9J@QLXJ0
+Ecpu
+R5
+R3
+R4
+R6
+Z17 8D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/CPU.vhd
+Z18 FD:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/CPU.vhd
+l0
+L23
+VPA]CL:3C@EDPH@c3ZLnfO1
+R9
+32
+Z19 !s108 1351682794.322000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/CPU.vhd|
+Z21 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/CPU.vhd|
+R13
+R14
+!s100 PTCCiUEUNl]b9R7K^V29O2
+Abdf_type
+R3
+R4
+DEx4 work 3 cpu 0 22 PA]CL:3C@EDPH@c3ZLnfO1
+l167
+L36
+VFWLG=Fj`W:a52AzORD^>T0
+R9
+32
+R19
+R20
+R21
+R13
+R14
+!s100 JHJGl9e6:MmNSL9_39NKE0
+Eextend
+Z22 w1351678332
+R2
+R1
+R3
+R4
+R6
+Z23 8D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/extend.vhd
+Z24 FD:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/extend.vhd
+l0
+L6
+V0P5DNF6cgWcVmMjZ^5CY31
+R9
+32
+Z25 !s108 1351678361.618000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/extend.vhd|
+Z27 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/extend.vhd|
+R13
+R14
+!s100 ;TBM?o4j@NTIojK6k[K]a2
+Asynth
+R2
+R1
+R3
+R4
+DEx4 work 6 extend 0 22 0P5DNF6cgWcVmMjZ^5CY31
+l15
+L14
+VWR4zRffY_DMe<g[M5UVAj2
+R9
+32
+R25
+R26
+R27
+R13
+R14
+!s100 LmlAnNNgKHN]>iA<DWGcd2
+Eir
+Z28 w1351679891
+R2
+R1
+R3
+R4
+R6
+Z29 8D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/IR.vhd
+Z30 FD:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/IR.vhd
+l0
+L6
+Vnic7QDn;MFhBT[K=R@joG2
+R9
+32
+Z31 !s108 1351679908.004000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/IR.vhd|
+Z33 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/IR.vhd|
+R13
+R14
+!s100 7`8jYQjn]N?5hS^XUS]ZP1
+Asynth
+R2
+R1
+R3
+R4
+DEx4 work 2 ir 0 22 nic7QDn;MFhBT[K=R@joG2
+l17
+L15
+V8f@C7`N78If2VO=OZXHE:1
+R9
+32
+R31
+R32
+R33
+R13
+R14
+!s100 <a3egIjVPDd^OH=UE7:o^1
+Epc
+Z34 w1351683413
+R1
+R2
+R3
+R4
+R6
+Z35 8D:\workspace\_EPFL\_ArchOrd_I\labs\CPU_new_board\vhdl\PC.vhd
+Z36 FD:\workspace\_EPFL\_ArchOrd_I\labs\CPU_new_board\vhdl\PC.vhd
+l0
+L5
+V:TQOTThBkJBVeNdW[=aJF0
+!s100 TAGBENj?g3CMP?S8mZKWm3
+R9
+32
+Z37 !s108 1351683433.978000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:\workspace\_EPFL\_ArchOrd_I\labs\CPU_new_board\vhdl\PC.vhd|
+Z39 !s107 D:\workspace\_EPFL\_ArchOrd_I\labs\CPU_new_board\vhdl\PC.vhd|
+R13
+R14
+Asynth
+R1
+R2
+R3
+R4
+Z40 DEx4 work 2 pc 0 22 :TQOTThBkJBVeNdW[=aJF0
+l21
+L19
+Vnjgabc<di@aRY@d^G<5l22
+!s100 DaMT_F0PE7UGHn4`Z5l;f2
+R9
+32
+R37
+R38
+R39
+R13
+R14
+Etb_extend
+R5
+R15
+R16
+R2
+R1
+R3
+R4
+R6
+Z41 8D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd
+Z42 FD:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd
+l0
+L10
+VbPoS=5NMdMN]>2o0eLzk22
+R9
+32
+Z43 !s108 1351678396.652000
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd|
+Z45 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd|
+R13
+R14
+!s100 0cJb5Nz2Rm:kgmUg1k7n?0
+Atestbench
+R15
+R16
+R2
+R1
+R3
+R4
+DEx4 work 9 tb_extend 0 22 bPoS=5NMdMN]>2o0eLzk22
+l32
+L12
+VRGTlYncE5zPnInmk;VgnK0
+R9
+32
+R43
+R44
+R45
+R13
+R14
+!s100 QH`Q<bLS5^F>WRcdk?>H62
+Etb_ir
+R5
+R15
+R16
+R2
+R1
+R3
+R4
+R6
+Z46 8D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_IR.vhd
+Z47 FD:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_IR.vhd
+l0
+L10
+VmQHj^oGJ02@lKm6`KimZ51
+R9
+32
+Z48 !s108 1351679917.064000
+Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_IR.vhd|
+Z50 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_IR.vhd|
+R13
+R14
+!s100 8Dc_nU^6fZaX3ZGi[hI002
+Atestbench
+R15
+R16
+R2
+R1
+R3
+R4
+DEx4 work 5 tb_ir 0 22 mQHj^oGJ02@lKm6`KimZ51
+l34
+L12
+V4kRc7EdB2]3m36TN[13NW2
+R9
+32
+R48
+R49
+R50
+R13
+R14
+!s100 Ujo8P9W]N36SW70R<]D5C3
+Etb_pc
+R5
+R15
+R16
+R2
+R1
+R3
+R4
+R6
+Z51 8D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_PC.vhd
+Z52 FD:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_PC.vhd
+l0
+L10
+VA[Mm@8kUSc@[<O^:6G0381
+R9
+32
+Z53 !s108 1351681849.443000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_PC.vhd|
+Z55 !s107 D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_PC.vhd|
+R13
+R14
+!s100 `Y8Rca1=V[gTj2ASQSKG=2
+Atestbench
+R15
+R16
+R2
+R1
+R3
+R4
+DEx4 work 5 tb_pc 0 22 A[Mm@8kUSc@[<O^:6G0381
+l43
+L12
+VI9QSK>XXG8zgH0_^9h[zg0
+R9
+32
+R53
+R54
+R55
+R13
+R14
+!s100 BJgoc[jANL4ae[[[E5ndg1

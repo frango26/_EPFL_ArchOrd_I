@@ -1,0 +1,113 @@
+D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_PC.vhd {2 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_PC.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Loading package check_functions
+-- Compiling entity tb_PC
+-- Compiling architecture testbench of tb_PC
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_PC.vhd(59): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_PC.vhd(61): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_IR.vhd {2 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_IR.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Loading package check_functions
+-- Compiling entity tb_IR
+-- Compiling architecture testbench of tb_IR
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_IR.vhd(45): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_IR.vhd(47): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/PC.vhd {1 {vcom -work work -2002 -explicit {D:\workspace\_EPFL\_ArchOrd_I\labs\CPU_new_board\vhdl\PC.vhd}
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity PC
+-- Compiling architecture synth of PC
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/IR.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/IR.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity IR
+-- Compiling architecture synth of IR
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd {2 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Loading package check_functions
+-- Compiling entity tb_Extend
+-- Compiling architecture testbench of tb_Extend
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd(42): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd(44): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/CPU.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/CPU.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CPU
+-- Compiling architecture bdf_type of CPU
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd {2 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Compiling package check_functions
+-- Compiling package body check_functions
+-- Loading package check_functions
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(57): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(67): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(73): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(75): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(76): (vcom-1283) Cannot reference file "text_report" inside pure function "scheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(92): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(102): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(108): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(110): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(111): (vcom-1283) Cannot reference file "text_report" inside pure function "icheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(127): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(137): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(143): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(145): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(146): (vcom-1283) Cannot reference file "text_report" inside pure function "hcheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(162): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(172): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(178): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(180): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd(181): (vcom-1283) Cannot reference file "text_report" inside pure function "bcheck".
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/extend.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/extend.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity extend
+-- Compiling architecture synth of extend
+
+} {} {}}
