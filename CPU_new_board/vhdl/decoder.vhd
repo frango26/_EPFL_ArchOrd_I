@@ -7,7 +7,7 @@ entity decoder is
 		cs_LEDs : out std_logic;
 		cs_RAM : out std_logic;
 		cs_ROM : out std_logic;
-		cs_Buttons : out std_logic;
+		cs_Buttons : out std_logic
 	);
 end decoder;
 architecture synth of decoder is

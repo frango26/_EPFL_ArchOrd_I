@@ -17,8 +17,8 @@ begin
 	process(i0, i1, sel)
 	begin
 		case sel is
-			when "00" => o <= i0;
-			when "01" => o <= i1;
+			when '0' => o <= i0;
+			when '1' => o <= i1;
 			when others =>
 		end case;
 	end process;
