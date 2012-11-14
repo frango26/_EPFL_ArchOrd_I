@@ -22,5 +22,6 @@ bakup/**
 *.sig
 *.hb_info
 *.flock
+work
 work/*
 */work/*
