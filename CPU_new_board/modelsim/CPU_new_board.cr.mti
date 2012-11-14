@@ -26,27 +26,7 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 ** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_IR.vhd(45): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 ** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_IR.vhd(47): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 
-} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/PC.vhd {1 {vcom -work work -2002 -explicit {D:\workspace\_EPFL\_ArchOrd_I\labs\CPU_new_board\vhdl\PC.vhd}
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity PC
--- Compiling architecture synth of PC
-
-} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/IR.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/IR.vhd
-Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package std_logic_arith
--- Loading package STD_LOGIC_UNSIGNED
--- Compiling entity IR
--- Compiling architecture synth of IR
-
-} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd {2 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Controller.vhd {2 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Controller.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -55,20 +35,67 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STD_LOGIC_UNSIGNED
 -- Loading package std_logic_textio
 -- Loading package check_functions
--- Compiling entity tb_Extend
--- Compiling architecture testbench of tb_Extend
-** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd(42): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd(44): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+-- Compiling entity tb_Controller
+-- Compiling architecture testbench of tb_Controller
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Controller.vhd(123): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Controller.vhd(124): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
 
-} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/CPU.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/CPU.vhd
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/mux2x16.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/mux2x16.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity CPU
--- Compiling architecture bdf_type of CPU
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity mux2x16
+-- Compiling architecture synth of mux2x16
 
-} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd {2 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/System.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/System.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity System
+-- Compiling architecture bdf_type of System
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/shift_unit.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/shift_unit.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity shift_unit
+-- Compiling architecture synth of shift_unit
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/logic_unit.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/logic_unit.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity logic_unit
+-- Compiling architecture synth of logic_unit
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/decoder.vhd {1 {vcom -work work -2002 -explicit {D:\workspace\_EPFL\_ArchOrd_I\labs\CPU_new_board\vhdl\decoder.vhd}
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity decoder
+-- Compiling architecture synth of decoder
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/ROM_Block.vhd {0 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/ROM_Block.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+** Error: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/ROM_Block.vhd(39): Library altera_mf not found.
+** Error: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/ROM_Block.vhd(40): (vcom-1136) Unknown identifier "altera_mf".
+** Error: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/ROM_Block.vhd(42): VHDL Compiler exiting
+
+} {6.0 9.0} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd {2 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/check_functions.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -109,5 +136,166 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity extend
 -- Compiling architecture synth of extend
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/comparator.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/comparator.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity comparator
+-- Compiling architecture synth of comparator
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/mux2x5.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/mux2x5.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity mux2x5
+-- Compiling architecture synth of mux2x5
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/ALU.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/ALU.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity alu
+-- Compiling architecture bdf_type of alu
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/add_sub.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/add_sub.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity add_sub
+-- Compiling architecture synth of add_sub
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/IR.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/IR.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity IR
+-- Compiling architecture synth of IR
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/PC.vhd {1 {vcom -work work -2002 -explicit {D:\workspace\_EPFL\_ArchOrd_I\labs\CPU_new_board\vhdl\PC.vhd}
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity PC
+-- Compiling architecture synth of PC
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/multiplexer.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/multiplexer.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity multiplexer
+-- Compiling architecture synth of multiplexer
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/register_file.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/register_file.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity register_file
+-- Compiling architecture synth of register_file
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_system.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_system.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity tb_system
+-- Compiling architecture testbench of tb_system
+-- Loading entity System
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/ROM.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/ROM.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity ROM
+-- Compiling architecture synth of ROM
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/buttons.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/buttons.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity buttons
+-- Compiling architecture synth of buttons
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd {2 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package std_logic_textio
+-- Loading package check_functions
+-- Compiling entity tb_Extend
+-- Compiling architecture testbench of tb_Extend
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd(42): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+** Warning: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/testbench/tb_Extend.vhd(44): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/CPU.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/CPU.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity CPU
+-- Compiling architecture bdf_type of CPU
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity LEDs
+-- Compiling architecture synth of LEDs
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/RAM.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/RAM.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity RAM
+-- Compiling architecture synth of RAM
+
+} {} {}} D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/mux2x32.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/mux2x32.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity mux2x32
+-- Compiling architecture synth of mux2x32
 
 } {} {}}
