@@ -23,7 +23,7 @@ entity controller is
 		-- register file enable
 		rf_wren    : out std_logic;
 		-- multiplexers selections
-		sel_addr   : out std_logic;
+		sel_address   : out std_logic;
 		sel_b      : out std_logic;
 		sel_mem    : out std_logic;
 		sel_pc     : out std_logic;
@@ -37,87 +37,136 @@ entity controller is
 	);
 end controller;
 architecture synth of controller is
-		type state_type is (S0_FETCH1, S1_FETCH2, S2_DECODE, S3_I_OP, S4_R_OP, S5_LOAD, S6_STORE, S7_BREAK);
-		signal state, nextstate : state_type;
-		signal rdaddress, nextrdaddress : std_logic_vector(15 downto 0);
-		signal wraddress, nextwraddress : std_logic_vector(15 downto 0);
-		signal ROMaddr , nextROMaddr : std_logic_vector(15 downto 0);
-		signal length , nextlength : std_logic_vector(15 downto 0);
+		type state_type is (S_FETCH1, S_FETCH2, S_DECODE, S_I_OP, S_R_OP, S_LOAD_1, S_LOAD_2, S_STORE, S_BREAK);
+		signal state, next_state : state_type;
+		-- Immediate Operations handled by I_OP State
+		constant INSTR_ADDI 		: std_logic_vector(7 downto 0) := X"04";
+		constant INSTR_CMP_GEI		: std_logic_vector(7 downto 0) := X"08";
+		constant INSTR_CMP_LTI 		: std_logic_vector(7 downto 0) := X"10";
+		constant INSTR_CMP_NEI 		: std_logic_vector(7 downto 0) := X"18";
+		constant INSTR_CMP_EQI 		: std_logic_vector(7 downto 0) := X"20";
+		-- Immediate Operations not handled by I_OP State
+		constant INSTR_ANDI 		: std_logic_vector(7 downto 0) := X"0C";
+		constant INSTR_ORI 			: std_logic_vector(7 downto 0) := X"14";
+		constant INSTR_XORI 		: std_logic_vector(7 downto 0) := X"1C";
+		constant INSTR_CMP_GEUI 	: std_logic_vector(7 downto 0) := X"28";
+		constant INSTR_CMP_LTUI 	: std_logic_vector(7 downto 0) := X"30";
+		-- Register Operations handled by R_OP State
+		constant INSTR_ADD 			: std_logic_vector(7 downto 0) := X"31";
+		constant INSTR_SUB 			: std_logic_vector(7 downto 0) := X"39";
+		constant INSTR_CMP_GE		: std_logic_vector(7 downto 0) := X"08";
+		constant INSTR_CMP_LT 		: std_logic_vector(7 downto 0) := X"10";
+		constant INSTR_CMP_NE 		: std_logic_vector(7 downto 0) := X"18";
+		constant INSTR_CMP_EQ 		: std_logic_vector(7 downto 0) := X"20";
+		constant INSTR_CMP_GEU 		: std_logic_vector(7 downto 0) := X"28";
+		constant INSTR_CMP_LTU 		: std_logic_vector(7 downto 0) := X"30";
+		constant INSTR_NOR 			: std_logic_vector(7 downto 0) := X"06";
+		constant INSTR_AND 			: std_logic_vector(7 downto 0) := X"0E";
+		constant INSTR_OR 			: std_logic_vector(7 downto 0) := X"16";
+		constant INSTR_XOR 			: std_logic_vector(7 downto 0) := X"1E";
+		constant INSTR_ROL 			: std_logic_vector(7 downto 0) := X"03";
+		constant INSTR_ROR 			: std_logic_vector(7 downto 0) := X"0B";
+		constant INSTR_SLL 			: std_logic_vector(7 downto 0) := X"13";
+		constant INSTR_SRL 			: std_logic_vector(7 downto 0) := X"1B";
+		constant INSTR_SRA 			: std_logic_vector(7 downto 0) := X"3B";
+		-- OPX Code for shift and rotate
+		constant INSTR_ROLI 		: std_logic_vector(7 downto 0) := X"02";
+		constant INSTR_SLLI 		: std_logic_vector(7 downto 0) := X"12";
+		constant INSTR_SRLI 		: std_logic_vector(7 downto 0) := X"1A";
+		constant INSTR_SRAI 		: std_logic_vector(7 downto 0) := X"3A";
 begin
-	
-	process(reset_n, clk)
+	process(reset_n, clk, ir_en)
 	begin
 		if(reset_n='0')then
-			state <= S0_FETCH1;
-			ROMaddr <= (others =>'0');
+			state <= S_FETCH1;
 		elsif(rising_edge(clk))then
-			state <= nextstate;
-			ROMaddr <= nextROMaddr;
-			rdaddress <= nextrdaddress;
-			wraddress <= nextwraddress;
-			length <= nextlength;
+			state <= next_state;
 		end if;
 	end process;
 	
-	process(state, rdaddress, wraddress, ROMaddr, length, rddata)
+	process(state)
 	begin
-		nextstate <= state;
-		nextrdaddress <= rdaddress;
-		nextwraddress <= wraddress;
-		nextROMaddr <= ROMaddr;
-		nextlength <= length;
-		-- read in address ROMaddr by default
-		address <= ROMaddr;
-		read <= '0';
-		write <= '0';
-		-- wrdata is always equal to rddata
-		wrdata <= rddata;
+		-- activates branch condition
+		branch_op  <= '0';
+		-- immediate value sign extention
+		imm_signed  <= '0';
+		-- instruction register enable
+		ir_en  		<= '0';
+		-- PC control signals
+		pc_add_imm  <= '0';
+		pc_en  		<= '0';
+		pc_sel_a   	<= '0';
+		pc_sel_imm  <= '0';
+		-- register file enable
+		rf_wren  	<= '0';
+		-- multiplexers selections
+		sel_address <= '0';
+		sel_b  		<= '0';
+		sel_mem   	<= '0';
+		sel_pc  	<= '0';
+		sel_ra  	<= '0';
+		sel_rC  	<= '0';
+		-- write memory output
+		read  		<= '0';
+		write  		<= '0';
+		-- alu op
+		op_alu  	<= '0';
+		-- StateMachine
+		next_state 	<= state;
+		-- State Machine execution
 		case state is
-			-- read in the ROM and increment ROMaddr
-			when S0_FETCH1 =>
-				nextstate <= S1_FETCH2;
+			when S_FETCH1 =>
+				next_state <= S_FETCH2;
 				read <= '1';
-				nextROMaddr <= ROMaddr + 4;
-				-- read in the ROM and increment ROMaddr
-				-- store the read value in the length register
-			when S1_FETCH2 =>
-				-- if length is 0, End of the program.
-				if(rddata(15 downto 0) = 0)then
-					nextstate <= S5_LOAD;
-				else
-					nextstate <= S2_DECODE;
+				if ( ir_en = '1') then
+					next_IR_address <= IR_address + 4;
 				end if;
-				read <= '1';
-				nextROMaddr <= ROMaddr + 4;
-				nextlength <= rddata(15 downto 0);
-				-- store the read value in the rdaddress and wraddress registers
-			when S2_DECODE =>
-				nextstate <= S3_I_OP;
-				nextrdaddress <= rddata(31 downto 16);
-				nextwraddress <= rddata(15 downto 0);
-				-- read the rdaddress address
-			when S3_I_OP =>
-				-- if length is zero, return to S0_FETCH1
-				if(length=0)then
-					nextstate <= S0_FETCH1;
-				else
-					nextstate <= S4_R_OP;
-				end if;
-				nextrdaddress <= rdaddress + 4;
-				nextlength <= length - 1;
-				read <= '1';
-				address <= rdaddress;
-				-- write the wraddress address
-			when S4_R_OP =>
-				write <= '1';
-				nextstate <= S3_I_OP;
-				address <= wraddress;
-				nextwraddress <= wraddress + 4;
-				-- dead end
-			when S5_LOAD =>
-				nextstate <= S5_LOAD;
+			when S_FETCH2 =>
+				next_state <= S_DECODE;
+				ir_en <= '1' ;
+				pc_en <= '1' ;
+			when S_DECODE =>
+				if (op = X"17") then
+					next_state <= S_LOAD;
+				-- Add/Sub
+				elsif ( op(5 downto 3)  = "000" or op(5 downto 3)  = "001") then
+					next_state <= S_I_OP;
+				-- Comparison
+				elsif ( op  = "011001" or op  = "011010" or op  = "011011" or op  = "011100" or op  = "011101" or op  = "011110") then
+					next_state <= S_I_OP;
+				-- Logical
+				elsif ( op(5 downto 4)  = "10" and ( op( 1 downto 0)  = "") ) then
+					next_state <= S_I_OP;
+				-- Shift/Rotate (Optional)
+				end if ;
+			when S_I_OP =>
+				next_state <= S_DECODE;
+			when S_R_OP =>
+				next_state <= S_DECODE;
+			when S_LOAD_1 =>
+				next_state <= S_DECODE;
+			when S_LOAD_2 =>
+				next_state <= S_DECODE;
 			when others =>
-				nextstate <= S0_FETCH1;
+				next_state <= S_DECODE;
+		end case;
+	end process;
+	process (op, opx)
+	begin
+		case "00" & op is
+			when X"17" =>
+				next_state <= S_I_OP ;
+			when X"3A" =>
+				case "00" & opx is
+					when X"31" =>
+						next_state <= S_R_OP ;
+					when X"39" =>
+						next_state <= S_R_OP ;
+					when X"08" =>
+						next_state <= S_R_OP ;
+					when X"08" =>
+						next_state <= S_R_OP ;
+				end case'
 		end case;
 	end process;
 end synth;
