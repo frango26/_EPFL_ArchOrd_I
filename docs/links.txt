@@ -1,2 +1,0 @@
-http://lap.epfl.ch/archord1
-http://lapsubmit.epfl.ch:8080/

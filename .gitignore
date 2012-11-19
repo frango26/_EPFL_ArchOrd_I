@@ -7,6 +7,7 @@
 t
 t/**
 t/*.*
+<<<<<<< HEAD
 */work
 */work/**
 */work/*.*
@@ -27,3 +28,23 @@ quartus/db/*.*
 *.qws
 db
 transcript
+=======
+bak
+bak/**
+bakup
+bakup/**
+*.hdb
+*.logdb
+*.cdb
+*.bpm
+*.rdm
+*.kpt
+*.rdb
+*.dpi
+*.sig
+*.hb_info
+*.flock
+work
+work/*
+*/work/*
+>>>>>>> f0842bf8467b53b0111e2cd2b50f9464d0782d95

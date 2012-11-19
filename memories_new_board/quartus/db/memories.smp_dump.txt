@@ -1,0 +1,10 @@
+
+State Machine - |memories|ExtLED:inst1|PresentSt
+Name PresentSt.stEnCol PresentSt.stGap3 PresentSt.stGap2 PresentSt.stGap1 PresentSt.stRzLED PresentSt.stSELC PresentSt.stIdle 
+PresentSt.stIdle 0 0 0 0 0 0 0 
+PresentSt.stSELC 0 0 0 0 0 1 1 
+PresentSt.stRzLED 0 0 0 0 1 0 1 
+PresentSt.stGap1 0 0 0 1 0 0 1 
+PresentSt.stGap2 0 0 1 0 0 0 1 
+PresentSt.stGap3 0 1 0 0 0 0 1 
+PresentSt.stEnCol 1 0 0 0 0 0 1 
