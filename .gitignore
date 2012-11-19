@@ -7,3 +7,17 @@
 t
 t/**
 t/*.*
+*/work
+*/work/**
+*/work/*.*
+
+work
+work/**
+work/*.*
+quartus/db
+quartus/db/*
+quartus/db/**
+quartus/db/*.*
+*.wlf
+*mti
+*.mpf
