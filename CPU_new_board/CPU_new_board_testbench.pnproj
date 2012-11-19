@@ -1,1 +1,1 @@
-<Project name="CPU_new_board_testbench"></Project>
+<Project name="CPU_new_board_testbench"><File path="testbench\check_functions.vhd"></File><File path="testbench\tb_Controller.vhd"></File><File path="testbench\tb_Extend.vhd"></File><File path="testbench\tb_IR.vhd"></File><File path="testbench\tb_PC.vhd"></File><File path="testbench\tb_system.vhd"></File></Project>
