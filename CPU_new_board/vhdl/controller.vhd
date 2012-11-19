@@ -84,7 +84,7 @@ begin
 		end if;
 	end process;
 
-	process(state)
+	process(state, op, opx)
 	begin
 		-- activates branch condition
 		branch_op  <= '0';
@@ -112,79 +112,101 @@ begin
 		-- alu op
 		op_alu  	<= (others => '0');
 		-- StateMachine
-		-- next_state 	<= state;
+		next_state 	<= state;
 		-- State Machine execution
 		case state is
 			when S_FETCH1 =>
-				-- next_state <= S_FETCH2;
+				next_state <= S_FETCH2;
 				read <= '1';
 			when S_FETCH2 =>
-				-- next_state <= S_DECODE;
+				next_state <= S_DECODE;
 				ir_en <= '1' ;
 				pc_en <= '1' ;
 			when S_DECODE =>
 				if (op = X"17") then
-				-- 	next_state <= S_LOAD_1;
+					next_state <= S_LOAD_1;
 				-- Add/Sub
 				elsif ( op(5 downto 3)  = "000" or op(5 downto 3)  = "001") then
-				-- 	next_state <= S_I_OP;
+					next_state <= S_I_OP;
 				-- Comparison
 				elsif ( op  = "011001" or op  = "011010" or op  = "011011" or op  = "011100" or op  = "011101" or op  = "011110") then
-				-- 	next_state <= S_I_OP;
+					next_state <= S_I_OP;
 				-- Logical
 				elsif ( op(5 downto 4)  = "10" and ( op( 1 downto 0)  = "") ) then
-				-- 	next_state <= S_I_OP;
+					next_state <= S_I_OP;
 				-- Shift/Rotate (Optional)
-				end if ;
+				else
+					case "00" & op is
+						when X"3A" =>
+							case "00" & opx is
+								when X"0E" =>
+									next_state <= S_R_OP ;
+								when X"1B" =>
+									next_state <= S_R_OP ;
+								when X"34" =>
+									next_state <= S_BREAK ;
+								when others =>
+									next_state <= S_FETCH1;
+							end case;
+						when X"04" =>
+							next_state <= S_I_OP;
+						when X"17" =>
+							next_state <= S_LOAD_1 ;
+						when X"15" =>
+							next_state <= S_STORE ;
+						when others =>
+							next_state <= S_FETCH1;
+					end case;
+				end if;
 			when S_I_OP =>
-				-- next_state <= S_FETCH1;
+				next_state <= S_FETCH1;
 			when S_R_OP =>
-				-- next_state <= S_FETCH1;
+				next_state <= S_FETCH1;
 			when S_LOAD_1 =>
-				-- next_state <= S_LOAD_2;
+				next_state <= S_LOAD_2;
 				pc_sel_a <= '1';
 				pc_sel_imm <= '1';
 				sel_address <= '1';
 				read <= '1';
 			when S_LOAD_2 =>
-				-- next_state <= S_FETCH1;
+				next_state <= S_FETCH1;
 			when S_STORE =>
-				-- next_state <= S_FETCH1;
+				next_state <= S_FETCH1;
 				sel_b <= '1';
 				sel_address <= '1';
 				imm_signed <= '1';
 				write <= '1';
 				op_alu <= op;
 			when S_BREAK =>
-				-- next_state <= S_BREAK;
-			when others =>
-				-- next_state <= S_FETCH1;
-		end case;
-	end process;
-
-	process (op, opx)
-	begin
-		case "00" & op is
-			when X"3A" =>
-				case "00" & opx is
-					when X"0E" =>
-						next_state <= S_R_OP ;
-					when X"1B" =>
-						next_state <= S_R_OP ;
-					when X"34" =>
-						next_state <= S_BREAK ;
-					when others =>
-						next_state <= S_FETCH1;
-				end case;
-			when X"04" =>
-				next_state <= S_I_OP;
-			when X"17" =>
-				next_state <= S_LOAD_1 ;
-			when X"15" =>
-				next_state <= S_STORE ;
+				next_state <= S_BREAK;
 			when others =>
 				next_state <= S_FETCH1;
 		end case;
 	end process;
+
+--	process (op, opx)
+--	begin
+--		case "00" & op is
+--			when X"3A" =>
+--				case "00" & opx is
+--					when X"0E" =>
+--						next_state <= S_R_OP ;
+--					when X"1B" =>
+--						next_state <= S_R_OP ;
+--					when X"34" =>
+--						next_state <= S_BREAK ;
+--					when others =>
+--						next_state <= S_FETCH1;
+--				end case;
+--			when X"04" =>
+--				next_state <= S_I_OP;
+--			when X"17" =>
+--				next_state <= S_LOAD_1 ;
+--			when X"15" =>
+--				next_state <= S_STORE ;
+--			when others =>
+--				next_state <= S_FETCH1;
+--		end case;
+--	end process;
 
 end synth;

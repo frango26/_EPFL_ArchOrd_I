@@ -148,7 +148,7 @@ R12
 R13
 !s100 JR5_Fj2BkTcmQB]8B2^2=0
 Econtroller
-Z30 w1353365551
+Z30 w1353367071
 R1
 R2
 R3
@@ -162,7 +162,7 @@ Vg>zm59X4R:=[ihl<ZKezn1
 !s100 a73]lKKTA>HQ_9Kh5he<o1
 R8
 32
-Z33 !s108 1353365562.365000
+Z33 !s108 1353367075.802000
 Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/controller.vhd|
 Z35 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/controller.vhd|
 R12
@@ -172,11 +172,11 @@ R1
 R2
 R3
 R4
-DEx4 work 10 controller 0 22 g>zm59X4R:=[ihl<ZKezn1
+Z36 DEx4 work 10 controller 0 22 g>zm59X4R:=[ihl<ZKezn1
 l77
 L39
-VSY?l0z1bQ8]JA1;ElInS13
-!s100 naO<h=YU:@6EQDAC7EK2n0
+VEDj`l62XIkhzAGbeoiaWo2
+!s100 7elZ=So`8<g8aMd8BNLHz3
 R8
 32
 R33
@@ -189,16 +189,16 @@ R14
 R3
 R4
 R5
-Z36 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/CPU.vhd
-Z37 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/CPU.vhd
+Z37 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/CPU.vhd
+Z38 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/CPU.vhd
 l0
 L23
 VPA]CL:3C@EDPH@c3ZLnfO1
 R8
 32
-Z38 !s108 1353364519.323000
-Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/CPU.vhd|
-Z40 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/CPU.vhd|
+Z39 !s108 1353364519.323000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/CPU.vhd|
+Z41 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/CPU.vhd|
 R12
 R13
 !s100 PTCCiUEUNl]b9R7K^V29O2
@@ -211,9 +211,9 @@ L36
 VFWLG=Fj`W:a52AzORD^>T0
 R8
 32
-R38
 R39
 R40
+R41
 R12
 R13
 !s100 JHJGl9e6:MmNSL9_39NKE0
@@ -224,16 +224,16 @@ R1
 R3
 R4
 R5
-Z41 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/decoder.vhd
-Z42 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/decoder.vhd
+Z42 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/decoder.vhd
+Z43 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/decoder.vhd
 l0
 L4
 Vf:6`:Q7SWhImcFBi<fg`A1
 R8
 32
-Z43 !s108 1353364519.610000
-Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/decoder.vhd|
-Z45 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/decoder.vhd|
+Z44 !s108 1353364519.610000
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/decoder.vhd|
+Z46 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/decoder.vhd|
 R12
 R13
 !s100 h76bM2a0boeB3UmKPn7[h2
@@ -248,9 +248,9 @@ L13
 V0BLDXVgO4A1MnnK8D5K?=1
 R8
 32
-R43
 R44
 R45
+R46
 R12
 R13
 !s100 L`]8EDS^9]4MACfaYOH]Q0
@@ -261,16 +261,16 @@ R2
 R3
 R4
 R5
-Z46 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/extend.vhd
-Z47 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/extend.vhd
+Z47 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/extend.vhd
+Z48 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/extend.vhd
 l0
 L6
 V0P5DNF6cgWcVmMjZ^5CY31
 R8
 32
-Z48 !s108 1353364519.859000
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/extend.vhd|
-Z50 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/extend.vhd|
+Z49 !s108 1353364519.859000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/extend.vhd|
+Z51 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/extend.vhd|
 R12
 R13
 !s100 ;TBM?o4j@NTIojK6k[K]a2
@@ -285,9 +285,9 @@ L14
 VWR4zRffY_DMe<g[M5UVAj2
 R8
 32
-R48
 R49
 R50
+R51
 R12
 R13
 !s100 LmlAnNNgKHN]>iA<DWGcd2
@@ -298,16 +298,16 @@ R2
 R3
 R4
 R5
-Z51 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/IR.vhd
-Z52 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/IR.vhd
+Z52 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/IR.vhd
+Z53 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/IR.vhd
 l0
 L6
 Vnic7QDn;MFhBT[K=R@joG2
 R8
 32
-Z53 !s108 1353364520.198000
-Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/IR.vhd|
-Z55 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/IR.vhd|
+Z54 !s108 1353364520.198000
+Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/IR.vhd|
+Z56 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/IR.vhd|
 R12
 R13
 !s100 7`8jYQjn]N?5hS^XUS]ZP1
@@ -322,9 +322,9 @@ L15
 V8f@C7`N78If2VO=OZXHE:1
 R8
 32
-R53
 R54
 R55
+R56
 R12
 R13
 !s100 <a3egIjVPDd^OH=UE7:o^1
@@ -335,16 +335,16 @@ R2
 R3
 R4
 R5
-Z56 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/LEDs.vhd
-Z57 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/LEDs.vhd
+Z57 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/LEDs.vhd
+Z58 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/LEDs.vhd
 l0
 L5
 V<6?0MV0kI1XAzVSo0VkzZ0
 R8
 32
-Z58 !s108 1353364520.441000
-Z59 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/LEDs.vhd|
-Z60 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/LEDs.vhd|
+Z59 !s108 1353364520.441000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/LEDs.vhd|
+Z61 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/LEDs.vhd|
 R12
 R13
 !s100 08SlzmWF_SlCQTa7_oTG[0
@@ -359,9 +359,9 @@ L20
 V]:X1Ba0hAd3>6SkNKRlmN2
 R8
 32
-R58
 R59
 R60
+R61
 R12
 R13
 !s100 iHhT7MQ>8S4CZ3O2PaAOI0
@@ -370,16 +370,16 @@ R14
 R3
 R4
 R5
-Z61 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/logic_unit.vhd
-Z62 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/logic_unit.vhd
+Z62 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/logic_unit.vhd
+Z63 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/logic_unit.vhd
 l0
 L3
 V_HQE`l=Mz16PL5[gzVUW?2
 R8
 32
-Z63 !s108 1353364520.652000
-Z64 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/logic_unit.vhd|
-Z65 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/logic_unit.vhd|
+Z64 !s108 1353364520.652000
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/logic_unit.vhd|
+Z66 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/logic_unit.vhd|
 R12
 R13
 !s100 _LB]9ce0d1iDoJHG@SVXl2
@@ -392,9 +392,9 @@ L11
 V2TUg6`efzKl@iPPeZ;nd50
 R8
 32
-R63
 R64
 R65
+R66
 R12
 R13
 !s100 VoYCW^<LecOD]N;i`k5i;0
@@ -405,16 +405,16 @@ R2
 R3
 R4
 R5
-Z66 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/multiplexer.vhd
-Z67 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/multiplexer.vhd
+Z67 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/multiplexer.vhd
+Z68 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/multiplexer.vhd
 l0
 L5
 V=H5ANXWeSicoSj64d:I5;3
 R8
 32
-Z68 !s108 1353364520.977000
-Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/multiplexer.vhd|
-Z70 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/multiplexer.vhd|
+Z69 !s108 1353364520.977000
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/multiplexer.vhd|
+Z71 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/multiplexer.vhd|
 R12
 R13
 !s100 0UHEYcFj?2fJF3Gn;PJdj3
@@ -429,9 +429,9 @@ L15
 VD_XM[IIOiW]lD3k]oEG<G3
 R8
 32
-R68
 R69
 R70
+R71
 R12
 R13
 !s100 9DhE@15mzPN62A=2j4_X03
@@ -442,16 +442,16 @@ R2
 R3
 R4
 R5
-Z71 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x16.vhd
-Z72 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x16.vhd
+Z72 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x16.vhd
+Z73 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x16.vhd
 l0
 L6
 Vc^i_bCX6;T@Zdj8O=<@1W1
 R8
 32
-Z73 !s108 1353364521.410000
-Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x16.vhd|
-Z75 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x16.vhd|
+Z74 !s108 1353364521.410000
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x16.vhd|
+Z76 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x16.vhd|
 R12
 R13
 !s100 4VSHY4@c[=KZ:;fO1=[US3
@@ -466,9 +466,9 @@ L15
 V7g9R=LH8MAWSgJfPV]L=L3
 R8
 32
-R73
 R74
 R75
+R76
 R12
 R13
 !s100 JVQJBdhT6J^U9>^><[oo93
@@ -479,16 +479,16 @@ R2
 R3
 R4
 R5
-Z76 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x32.vhd
-Z77 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x32.vhd
+Z77 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x32.vhd
+Z78 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x32.vhd
 l0
 L6
 VC?jW<7SO]F=zCnj`2^?D01
 R8
 32
-Z78 !s108 1353364521.696000
-Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x32.vhd|
-Z80 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x32.vhd|
+Z79 !s108 1353364521.696000
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x32.vhd|
+Z81 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x32.vhd|
 R12
 R13
 !s100 YGCK>LW?dh4VdCI>TPgFS1
@@ -503,9 +503,9 @@ L15
 VBADOna^IL<BK?>Ig]?F<K3
 R8
 32
-R78
 R79
 R80
+R81
 R12
 R13
 !s100 J14<a@03MeM<GPYa6KlP<0
@@ -516,16 +516,16 @@ R2
 R3
 R4
 R5
-Z81 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x5.vhd
-Z82 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x5.vhd
+Z82 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x5.vhd
+Z83 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x5.vhd
 l0
 L6
 VZBM4o>U>iImMO>oMRV2AE3
 R8
 32
-Z83 !s108 1353364521.137000
-Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x5.vhd|
-Z85 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x5.vhd|
+Z84 !s108 1353364521.137000
+Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x5.vhd|
+Z86 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/mux2x5.vhd|
 R12
 R13
 !s100 f]X^zjkA^:MXDNPlN7V>a2
@@ -540,9 +540,9 @@ L15
 VQQGmbznY6WoML`b]hKf^`3
 R8
 32
-R83
 R84
 R85
+R86
 R12
 R13
 !s100 Pi^B1RWVChH7JUCM@PV8[0
@@ -553,16 +553,16 @@ R1
 R3
 R4
 R5
-Z86 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/PC.vhd
-Z87 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/PC.vhd
+Z87 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/PC.vhd
+Z88 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/PC.vhd
 l0
 L5
 V:TQOTThBkJBVeNdW[=aJF0
 R8
 32
-Z88 !s108 1353364521.920000
-Z89 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/PC.vhd|
-Z90 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/PC.vhd|
+Z89 !s108 1353364521.920000
+Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/PC.vhd|
+Z91 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/PC.vhd|
 R12
 R13
 !s100 TAGBENj?g3CMP?S8mZKWm3
@@ -577,9 +577,9 @@ L19
 Vnjgabc<di@aRY@d^G<5l22
 R8
 32
-R88
 R89
 R90
+R91
 R12
 R13
 !s100 DaMT_F0PE7UGHn4`Z5l;f2
@@ -590,16 +590,16 @@ R1
 R3
 R4
 R5
-Z91 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/RAM.vhd
-Z92 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/RAM.vhd
+Z92 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/RAM.vhd
+Z93 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/RAM.vhd
 l0
 L4
 V4?9YAD>L3mJIc=Lm0C5P20
 R8
 32
-Z93 !s108 1353364522.220000
-Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/RAM.vhd|
-Z95 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/RAM.vhd|
+Z94 !s108 1353364522.220000
+Z95 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/RAM.vhd|
+Z96 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/RAM.vhd|
 R12
 R13
 !s100 YdBe]0:;DCN_Dc=f_Zg?D1
@@ -614,29 +614,29 @@ L14
 VAle[kCGjQ[fN9GTBJic@21
 R8
 32
-R93
 R94
 R95
+R96
 R12
 R13
 !s100 QZNE1>I8>1VK6nzbz`RJh3
 Eregister_file
-Z96 w1353363026
+Z97 w1353363026
 R2
 R1
 R3
 R4
 R5
-Z97 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/register_file.vhd
-Z98 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/register_file.vhd
+Z98 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/register_file.vhd
+Z99 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/register_file.vhd
 l0
 L4
 VKC<JZhD=0BE;zZfn<R_=g2
 R8
 32
-Z99 !s108 1353364522.477000
-Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/register_file.vhd|
-Z101 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/register_file.vhd|
+Z100 !s108 1353364522.477000
+Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/register_file.vhd|
+Z102 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/register_file.vhd|
 R12
 R13
 !s100 2SNHi1egQWizh6P7PM`TU2
@@ -651,9 +651,9 @@ L16
 Vl8Am6_eZeXMRhJQ]o<eIa2
 R8
 32
-R99
 R100
 R101
+R102
 R12
 R13
 !s100 G_bW67k34;7jODNIGK0PY1
@@ -664,16 +664,16 @@ R1
 R3
 R4
 R5
-Z102 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/ROM.vhd
-Z103 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/ROM.vhd
+Z103 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/ROM.vhd
+Z104 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/ROM.vhd
 l0
 L4
 VIZK8WIBb6W5=hliE;WY7z3
 R8
 32
-Z104 !s108 1353364522.709000
-Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/ROM.vhd|
-Z106 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/ROM.vhd|
+Z105 !s108 1353364522.709000
+Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/ROM.vhd|
+Z107 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/ROM.vhd|
 R12
 R13
 !s100 OQDEc<GJ<a5dKFaaTeD@D2
@@ -688,9 +688,9 @@ L12
 VlHbALj]@UNfgBCI5=Y>Qi2
 R8
 32
-R104
 R105
 R106
+R107
 R12
 R13
 !s100 8egfg<Weo^[K3^aSk?bG^1
@@ -701,16 +701,16 @@ R2
 R3
 R4
 R5
-Z107 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/shift_unit.vhd
-Z108 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/shift_unit.vhd
+Z108 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/shift_unit.vhd
+Z109 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/shift_unit.vhd
 l0
 L5
 Vg^[GK44Q1H<Q]meoSD6D<3
 R8
 32
-Z109 !s108 1353364523.110000
-Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/shift_unit.vhd|
-Z111 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/shift_unit.vhd|
+Z110 !s108 1353364523.110000
+Z111 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/shift_unit.vhd|
+Z112 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/shift_unit.vhd|
 R12
 R13
 !s100 `2XH7e_1:QiiXzV@8Ih821
@@ -725,9 +725,9 @@ L13
 V8AI`c[M4KG_KKghhWV5fB0
 R8
 32
-R109
 R110
 R111
+R112
 R12
 R13
 !s100 jgdBK2dB?5lZP<JS>U3J73
@@ -736,16 +736,16 @@ R14
 R3
 R4
 R5
-Z112 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/System.vhd
-Z113 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/System.vhd
+Z113 8D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/System.vhd
+Z114 FD:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/System.vhd
 l0
 L24
 VZ`4WL^dfloXL1@0RGN4kB3
 R8
 32
-Z114 !s108 1353364523.427000
-Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/System.vhd|
-Z116 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/System.vhd|
+Z115 !s108 1353364523.427000
+Z116 !s90 -reportprogress|300|-work|work|-2002|-explicit|D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/System.vhd|
+Z117 !s107 D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/System.vhd|
 R12
 R13
 !s100 WS=_0;@]QfNm=TQ5jgTK60
@@ -758,9 +758,9 @@ L34
 VelQG_X9o^83BE5J8emH<R3
 R8
 32
-R114
 R115
 R116
+R117
 R12
 R13
 !s100 XjXfO7G>hNkE65hiNIm5C0
