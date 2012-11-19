@@ -1,5 +1,5 @@
 Analysis & Synthesis report for System
-Wed Oct 31 09:04:06 2012
+Mon Nov 19 22:06:15 2012
 Quartus II 32-bit Version 12.0 Build 178 05/31/2012 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Oct 31 09:04:06 2012        ;
+; Analysis & Synthesis Status        ; Failed - Mon Nov 19 22:06:15 2012        ;
 ; Quartus II 32-bit Version          ; 12.0 Build 178 05/31/2012 SJ Web Edition ;
 ; Revision Name                      ; System                                   ;
 ; Top-level Entity Name              ; System                                   ;
@@ -156,7 +156,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.0 Build 178 05/31/2012 SJ Web Edition
-    Info: Processing started: Wed Oct 31 09:04:03 2012
+    Info: Processing started: Mon Nov 19 22:06:14 2012
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off System -c System
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file extled.vhdl
@@ -168,82 +168,68 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.bdf
     Info (12023): Found entity 1: ALU
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.bdf
     Info (12023): Found entity 1: CPU
-Warning (12019): Can't analyze file -- file ../vhdl/add_sub.vhd is missing
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/buttons.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/add_sub.vhd
+    Info (12022): Found design unit 1: add_sub-synth
+    Info (12023): Found entity 1: add_sub
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/buttons.vhd
     Info (12022): Found design unit 1: buttons-synth
     Info (12023): Found entity 1: buttons
-Warning (12019): Can't analyze file -- file ../vhdl/comparator.vhd is missing
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/controller.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/comparator.vhd
+    Info (12022): Found design unit 1: comparator-synth
+    Info (12023): Found entity 1: comparator
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/controller.vhd
     Info (12022): Found design unit 1: controller-synth
     Info (12023): Found entity 1: controller
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/decoder.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/decoder.vhd
     Info (12022): Found design unit 1: decoder-synth
     Info (12023): Found entity 1: decoder
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/extend.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/extend.vhd
     Info (12022): Found design unit 1: extend-synth
     Info (12023): Found entity 1: extend
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/ir.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/ir.vhd
     Info (12022): Found design unit 1: IR-synth
     Info (12023): Found entity 1: IR
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/leds.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/leds.vhd
     Info (12022): Found design unit 1: LEDs-synth
     Info (12023): Found entity 1: LEDs
-Warning (12019): Can't analyze file -- file ../vhdl/logic_unit.vhd is missing
-Warning (12019): Can't analyze file -- file ../vhdl/multiplexer.vhd is missing
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/mux2x5.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/logic_unit.vhd
+    Info (12022): Found design unit 1: logic_unit-synth
+    Info (12023): Found entity 1: logic_unit
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/multiplexer.vhd
+    Info (12022): Found design unit 1: multiplexer-synth
+    Info (12023): Found entity 1: multiplexer
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/mux2x5.vhd
     Info (12022): Found design unit 1: mux2x5-synth
     Info (12023): Found entity 1: mux2x5
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/mux2x16.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/mux2x16.vhd
     Info (12022): Found design unit 1: mux2x16-synth
     Info (12023): Found entity 1: mux2x16
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/mux2x32.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/mux2x32.vhd
     Info (12022): Found design unit 1: mux2x32-synth
     Info (12023): Found entity 1: mux2x32
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/pc.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/pc.vhd
     Info (12022): Found design unit 1: PC-synth
     Info (12023): Found entity 1: PC
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/ram.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/ram.vhd
     Info (12022): Found design unit 1: RAM-synth
     Info (12023): Found entity 1: RAM
-Warning (12019): Can't analyze file -- file ../vhdl/register_file.vhd is missing
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/rom.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/register_file.vhd
+    Info (12022): Found design unit 1: register_file-synth
+    Info (12023): Found entity 1: register_file
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/rom.vhd
     Info (12022): Found design unit 1: ROM-synth
     Info (12023): Found entity 1: ROM
-Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/_archord_i/labs/cpu_new_board/vhdl/rom_block.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/rom_block.vhd
     Info (12022): Found design unit 1: rom_block-SYN
     Info (12023): Found entity 1: ROM_Block
-Warning (12019): Can't analyze file -- file ../vhdl/shift_unit.vhd is missing
-Info (12127): Elaborating entity "System" for the top level hierarchy
-Info (12128): Elaborating entity "ExtLED" for hierarchy "ExtLED:inst1"
-Info (12128): Elaborating entity "LEDs" for hierarchy "LEDs:LEDs_0"
-Warning (10036): Verilog HDL or VHDL warning at LEDs.vhd(35): object "reg_address" assigned a value but never read
-Warning (10631): VHDL Process Statement warning at LEDs.vhd(42): inferring latch(es) for signal or variable "LEDs_reg", which holds its previous value in one or more paths through the process
-Warning (10492): VHDL Process Statement warning at LEDs.vhd(104): signal "luminosity_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at LEDs.vhd(113): signal "LEDs_reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Error (10818): Can't infer register for "rddata[0]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[1]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[2]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[3]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[4]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[5]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[6]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[7]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[8]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[9]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[10]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[11]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[12]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[13]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[14]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[15]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[16]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[17]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (10818): Can't infer register for "rddata[18]" at LEDs.vhd(70) because it does not hold its value outside the clock edge File: D:/workspace/_EPFL/_ArchOrd_I/labs/CPU_new_board/vhdl/LEDs.vhd Line: 70
-Error (12152): Can't elaborate user hierarchy "LEDs:LEDs_0"
-Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 20 errors, 11 warnings
-    Error: Peak virtual memory: 340 megabytes
-    Error: Processing ended: Wed Oct 31 09:04:06 2012
-    Error: Elapsed time: 00:00:03
-    Error: Total CPU time (on all processors): 00:00:02
+Info (12021): Found 2 design units, including 1 entities, in source file /workspace/_epfl/arcord_i/cpu_new_board/vhdl/shift_unit.vhd
+    Info (12022): Found design unit 1: shift_unit-synth
+    Info (12023): Found entity 1: shift_unit
+Error (10309): VHDL Interface Declaration error in controller.vhd(121): interface object "ir_en" of mode out cannot be read. Change object mode to buffer. File: D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/controller.vhd Line: 121
+Error: Quartus II 32-bit Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 350 megabytes
+    Error: Processing ended: Mon Nov 19 22:06:15 2012
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
 
 

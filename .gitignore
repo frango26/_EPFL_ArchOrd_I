@@ -7,7 +7,6 @@
 t
 t/**
 t/*.*
-<<<<<<< HEAD
 */work
 */work/**
 */work/*.*
@@ -28,7 +27,6 @@ quartus/db/*.*
 *.qws
 db
 transcript
-=======
 bak
 bak/**
 bakup
@@ -47,4 +45,4 @@ bakup/**
 work
 work/*
 */work/*
->>>>>>> f0842bf8467b53b0111e2cd2b50f9464d0782d95
+*.[0-9]
