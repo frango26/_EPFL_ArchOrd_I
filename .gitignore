@@ -21,3 +21,9 @@ quartus/db/*.*
 *.wlf
 *mti
 *.mpf
+*.rpt
+*.summary
+*.qsf
+*.qws
+db
+transcript
