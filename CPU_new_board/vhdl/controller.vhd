@@ -39,6 +39,28 @@ end controller;
 architecture synth of controller is
 		type state_type is (S_FETCH1, S_FETCH2, S_DECODE, S_I_OP, S_R_OP, S_LOAD_1, S_LOAD_2, S_STORE, S_BREAK);
 		signal state, next_state : state_type;
+		-- The ALU opcode is summarized in the following table
+		constant ALU_OP_CODE_ADD		: std_logic_vector(5 downto 0) := "000000";
+		constant ALU_OP_CODE_SUB		: std_logic_vector(5 downto 0) := "001000";
+
+		constant ALU_OP_CODE_CMP_GES	: std_logic_vector(5 downto 0) := "011001";
+		constant ALU_OP_CODE_CMP_LTS	: std_logic_vector(5 downto 0) := "011010";
+		constant ALU_OP_CODE_CMP_NEQ	: std_logic_vector(5 downto 0) := "011011";
+		constant ALU_OP_CODE_CMP_EQL	: std_logic_vector(5 downto 0) := "011100";
+		constant ALU_OP_CODE_CMP_GEU	: std_logic_vector(5 downto 0) := "011101";
+		constant ALU_OP_CODE_CMP_LTU	: std_logic_vector(5 downto 0) := "011110";
+
+		constant ALU_OP_CODE_LGC_NOR	: std_logic_vector(5 downto 0) := "100000";
+		constant ALU_OP_CODE_LGC_AND	: std_logic_vector(5 downto 0) := "100001";
+		constant ALU_OP_CODE_LGC_OR		: std_logic_vector(5 downto 0) := "100010";
+		constant ALU_OP_CODE_LGC_XOR	: std_logic_vector(5 downto 0) := "100011";
+
+		constant ALU_OP_CODE_SRT_ROL	: std_logic_vector(5 downto 0) := "110000";
+		constant ALU_OP_CODE_SRT_ROR	: std_logic_vector(5 downto 0) := "110001";
+		constant ALU_OP_CODE_SRT_SLL	: std_logic_vector(5 downto 0) := "110010";
+		constant ALU_OP_CODE_SRT_SRL	: std_logic_vector(5 downto 0) := "110011";
+		constant ALU_OP_CODE_SRT_SRA	: std_logic_vector(5 downto 0) := "110111";
+
 		-- Immediate Operations handled by I_OP State
 		constant INSTR_ADDI 		: std_logic_vector(7 downto 0) := X"04";
 		constant INSTR_CMP_GEI		: std_logic_vector(7 downto 0) := X"08";
@@ -110,7 +132,7 @@ begin
 		read  		<= '0';
 		write  		<= '0';
 		-- alu op
-		op_alu  	<= (others => '0');
+		op_alu  	<= (others => 'Z');
 		-- StateMachine
 		next_state 	<= state;
 		-- State Machine execution
@@ -121,6 +143,7 @@ begin
 			when S_FETCH2 =>
 				next_state <= S_DECODE;
 				ir_en <= '1' ;
+				--read <= '1';
 				pc_en <= '1' ;
 			when S_DECODE =>
 				if (op = X"17") then
@@ -160,20 +183,62 @@ begin
 				end if;
 			when S_I_OP =>
 				next_state <= S_FETCH1;
+				rf_wren <= '1';
+				--pc_en <='1';
+				--read <='1';
+				--op_alu <= op;
+				--imm_signed <='1';
+				case "00" & op is
+					when INSTR_CMP_GEUI =>
+						pc_sel_imm <='1';
+						imm_signed <='0';
+						op_alu <= ALU_OP_CODE_CMP_GEU;
+					when INSTR_CMP_LTUI =>
+						pc_sel_imm <='1';
+						imm_signed <='0';
+						op_alu <= ALU_OP_CODE_CMP_LTU;
+					when INSTR_ADDI =>
+						pc_sel_imm <='1';
+						imm_signed <='1';
+						op_alu <= ALU_OP_CODE_ADD;
+					when others =>
+						imm_signed <='1';
+				end case;
+				-- ir_en <= '1';
+
 			when S_R_OP =>
 				next_state <= S_FETCH1;
+				rf_wren <='1';
+				sel_b <= '1';
+				--pc_en <='1';
+				sel_rC <= '1';
+				--read  <= '1';
+				--op_alu <= opx;
+
+				case "00" & opx is
+					when INSTR_AND =>
+						imm_signed <='0';
+						op_alu <= ALU_OP_CODE_LGC_AND;
+					when INSTR_SRL =>
+						imm_signed <='0';
+						op_alu <= ALU_OP_CODE_SRT_SRL;
+					when others =>
+						imm_signed <='0';
+				end case;
 			when S_LOAD_1 =>
 				next_state <= S_LOAD_2;
 				pc_sel_a <= '1';
 				pc_sel_imm <= '1';
-				sel_address <= '1';
+				--sel_address <= '1';
+				pc_add_imm <= '1';
 				read <= '1';
 			when S_LOAD_2 =>
 				next_state <= S_FETCH1;
 			when S_STORE =>
 				next_state <= S_FETCH1;
 				sel_b <= '1';
-				sel_address <= '1';
+				pc_add_imm <= '1';
+				--sel_address <= '1';
 				imm_signed <= '1';
 				write <= '1';
 				op_alu <= op;
