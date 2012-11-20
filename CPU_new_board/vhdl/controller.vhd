@@ -23,12 +23,12 @@ entity controller is
 		-- register file enable
 		rf_wren    : out std_logic;
 		-- multiplexers selections
-		sel_address   : out std_logic;
-		sel_b      : out std_logic;
-		sel_mem    : out std_logic;
-		sel_pc     : out std_logic;
-		sel_ra     : out std_logic;
-		sel_rC     : out std_logic;
+		sel_address		: out std_logic;
+		sel_b      		: out std_logic;
+		sel_mem    		: out std_logic;
+		sel_pc     		: out std_logic;
+		sel_ra     		: out std_logic;
+		sel_rC     		: out std_logic;
 		-- write memory output
 		read       : out std_logic;
 		write      : out std_logic;
@@ -37,7 +37,7 @@ entity controller is
 	);
 end controller;
 architecture synth of controller is
-		type state_type is (S_FETCH1, S_FETCH2, S_DECODE, S_I_OP, S_R_OP, S_LOAD_1, S_LOAD_2, S_STORE, S_BREAK);
+		type state_type is (S_FETCH1, S_FETCH2, S_DECODE, S_I_OP, S_R_OP, S_LOAD_1, S_LOAD_2, S_STORE, S_BREAK, S_BRANCH, S_CALL, S_JMP, S_JMPI, S_CALLR);
 		signal state, next_state : state_type;
 		-- The ALU opcode is summarized in the following table
 		constant ALU_OP_CODE_ADD		: std_logic_vector(5 downto 0) := "000000";
@@ -96,6 +96,19 @@ architecture synth of controller is
 		constant INSTR_SLLI 		: std_logic_vector(7 downto 0) := X"12";
 		constant INSTR_SRLI 		: std_logic_vector(7 downto 0) := X"1A";
 		constant INSTR_SRAI 		: std_logic_vector(7 downto 0) := X"3A";
+		-- The BRANCH state executes branch instructions, which are I-Type instructions.
+		constant INSTR_BR 			: std_logic_vector(7 downto 0) := X"06";
+		constant INSTR_BGE 			: std_logic_vector(7 downto 0) := X"0E";
+		constant INSTR_BLT 			: std_logic_vector(7 downto 0) := X"16";
+		constant INSTR_BNE 			: std_logic_vector(7 downto 0) := X"1E";
+		constant INSTR_BEQ 			: std_logic_vector(7 downto 0) := X"26";
+		constant INSTR_BGEU 		: std_logic_vector(7 downto 0) := X"2E";
+		constant INSTR_BLTU 		: std_logic_vector(7 downto 0) := X"36";
+		-- The CALL state executes the call instruction, which is a I-type instruction with OP=0x00.
+		constant INSTR_CALL 		: std_logic_vector(7 downto 0) := X"00";
+		-- TThe JMP state executes the jmp and ret instructions, which are R-type instructions with OPX=0x0D and OPX=0x05, respectively.
+		constant INSTR_JMP 		: std_logic_vector(7 downto 0) := X"0D";
+		constant INSTR_RET 		: std_logic_vector(7 downto 0) := X"05";
 begin
 	process(reset_n, clk)
 	begin
@@ -168,6 +181,10 @@ begin
 									next_state <= S_R_OP ;
 								when X"34" =>
 									next_state <= S_BREAK ;
+								when X"0D"|X"05" =>
+									next_state <= S_JMP ;
+								when X"1D" =>
+									next_state <= S_CALLR ;
 								when others =>
 									next_state <= S_FETCH1;
 							end case;
@@ -177,6 +194,12 @@ begin
 							next_state <= S_LOAD_1 ;
 						when X"15" =>
 							next_state <= S_STORE ;
+						when INSTR_BR|INSTR_BGE|INSTR_BLT|INSTR_BNE|INSTR_BEQ|INSTR_BGEU|INSTR_BLTU =>
+							next_state <= S_BRANCH;
+						when X"00" =>
+							next_state <= S_CALL ;
+						when X"01" =>
+							next_state <= S_JMPI ;
 						when others =>
 							next_state <= S_FETCH1;
 					end case;
@@ -201,6 +224,9 @@ begin
 						pc_sel_imm <='1';
 						imm_signed <='1';
 						op_alu <= ALU_OP_CODE_ADD;
+						sel_b <= '1';
+						pc_sel_a <= '1';
+						
 					when others =>
 						imm_signed <='1';
 				end case;
@@ -209,9 +235,9 @@ begin
 			when S_R_OP =>
 				next_state <= S_FETCH1;
 				rf_wren <='1';
-				sel_b <= '1';
+				
 				--pc_en <='1';
-				sel_rC <= '1';
+				
 				--read  <= '1';
 				--op_alu <= opx;
 
@@ -219,14 +245,21 @@ begin
 					when INSTR_AND =>
 						imm_signed <='0';
 						op_alu <= ALU_OP_CODE_LGC_AND;
+						sel_b <= '1';
+						pc_sel_a <= '1';
+						sel_rC <= '1';
 					when INSTR_SRL =>
 						imm_signed <='0';
 						op_alu <= ALU_OP_CODE_SRT_SRL;
+						sel_b <= '1';
+						pc_sel_a <= '1';
+						sel_rC <= '1';
 					when others =>
 						imm_signed <='0';
 				end case;
 			when S_LOAD_1 =>
 				next_state <= S_LOAD_2;
+				sel_b <= '1';
 				pc_sel_a <= '1';
 				pc_sel_imm <= '1';
 				--sel_address <= '1';
@@ -244,6 +277,108 @@ begin
 				op_alu <= op;
 			when S_BREAK =>
 				next_state <= S_BREAK;
+			when S_BRANCH =>
+				next_state <= S_FETCH1;
+				
+				
+				branch_op <= '1';
+				--rf_wren <= '1';
+				--sel_addr <= '1';
+				sel_b <= '1';
+				--sel_mem <= '1';
+				--pc_en <= '1';
+				pc_add_imm <= '1';
+				--sel_rC <= '1';
+				read <= '1';
+				write <= '1';
+				
+				op_alu <= op;
+				imm_signed <= '1';
+				--ir_en <= '1';
+			when S_CALL =>
+				next_state <= S_FETCH1;
+				--branc_op <= '1';
+				rf_wren <='1';
+				--sel_addr <='1';
+				--sel_b <='1';
+				sel_mem <='1';
+				pc_en <='1';
+				pc_sel_imm <='1';
+				--pc_add_imm <='1';
+				sel_pc <='1';
+				sel_ra <='1';
+				sel_rC <='1';
+				--read <='1';
+				--write <='1';
+				--op_alu <= op;
+				--imm_signed <= '1';
+				--ir_en <= '1';
+			when S_JMP =>
+				--branch_op <='1';
+				--rf_wren <='1';
+				--sel_addr <='1';
+				--sel_b <='1';
+				--sel_mem <='1';
+				pc_en <='1';
+				pc_sel_a <='1';
+				--pc_sel_imm <='1';
+				--pc_add_imm <='1';
+				--sel_pc <='1';
+				--sel_ra <='1';
+				--sel_rC <='1';
+				--read <='1';
+				--write <='1';
+				--op_alu <=opx;
+				--imm_signed <='1';
+				--ir_en <='1';
+				case "00" & opx is
+					when INSTR_JMP =>
+						next_state <= S_FETCH1;
+						
+					when INSTR_RET =>
+						next_state <= S_FETCH1;
+						
+					when others =>
+						next_state <= S_FETCH1;
+				end case;
+			when S_JMPI =>
+				next_state <= S_FETCH1;
+				--branch_op <='1';
+				--rf_wren <='1';
+				--sel_addr <='1';
+				--sel_b <='1';
+				--sel_mem <='1';
+				pc_en <='1';
+				pc_sel_a <='1';
+				pc_sel_imm <='1';
+				pc_add_imm <='1';
+				--sel_pc <='1';
+				--sel_ra <='1';
+				--sel_rC <='1';
+				--read <='1';
+				--write <='1';
+				--op_alu <=opx;
+				--imm_signed <='1';
+				--ir_en <='1';
+			when S_CALLR =>
+				next_state <= S_FETCH1;
+				--branch_op <='1';
+				--rf_wren <='1';
+				--sel_addr <='1';
+				--sel_b <='1';
+				--sel_mem <='1';
+				pc_en <='1';
+				pc_sel_a <='1';
+				--pc_sel_imm <='1';
+				--pc_add_imm <='1';
+				sel_pc <='1';
+				--sel_ra <='1';
+				--sel_rC <='1';
+				--read <='1';
+				--write <='1';
+				--op_alu <=opx;
+				--imm_signed <='1';
+				--ir_en <='1';
 			when others =>
 				next_state <= S_FETCH1;
 		end case;
