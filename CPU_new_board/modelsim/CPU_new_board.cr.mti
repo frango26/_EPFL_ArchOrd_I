@@ -131,6 +131,20 @@ Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Compiling entity multiplexer
 -- Compiling architecture synth of multiplexer
 
+} {} {}} D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/controller.vhd {2 {vcom -work work -2002 -explicit D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/controller.vhd
+Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity controller
+-- Compiling architecture synth of controller
+** Warning: D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/controller.vhd(162): (vcom-1186) Array type case expression must be of a locally static subtype.
+** Warning: D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/controller.vhd(164): (vcom-1186) Array type case expression must be of a locally static subtype.
+** Warning: D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/controller.vhd(191): (vcom-1186) Array type case expression must be of a locally static subtype.
+** Warning: D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/controller.vhd(218): (vcom-1186) Array type case expression must be of a locally static subtype.
+
 } {} {}} D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/register_file.vhd {1 {vcom -work work -2002 -explicit D:/workspace/_EPFL/ArcOrd_I/CPU_new_board/vhdl/register_file.vhd
 Model Technology ModelSim ALTERA vcom 10.0d Compiler 2012.01 Jan 18 2012
 -- Loading package STANDARD
