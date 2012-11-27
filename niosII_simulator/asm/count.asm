@@ -1,6 +1,6 @@
 main:
 	addi a0, zero, data				; a0: Data address
-	addi a1, zero, 6				; a1: Number of elements
+	addi a1, zero, 8				; a1: Number of elements
 	call count
 	break							; end of the program
 count:
@@ -21,7 +21,5 @@ count_return:
 data:								; data initialization
 	.word 1
 	.word 3
-	.word 4
-	.word 0xAAAAFFFA
 	.word 0xAAAAAAAA
 	.word 0xFFFFFFFF
