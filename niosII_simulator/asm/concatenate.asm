@@ -1,25 +1,23 @@
 main:
-	addi a2, zero, 	data				; a0: first parameter
-	addi a1, a2,	4				; a1: second parameter
-	addi a0, a1,	4				; a1: the output
-	
+	;addi a2, zero, 	0x1011			; a0: first parameter
+	addi a1, zero, 	data			; a0: first parameter
+	;addi a1, zero,	0x1002			; a1: second parameter
+	addi a2, a1, 	4			; a0: first parameter
+	addi a0, zero,	0x1023			; a1: the output
 	call concatenate
 	break							; end of the program
 concatenate:
-	add v0, zero, zero				; v0 = 0
-	add t0, a2, zero				; t0 = a0
-	add t1, zero, zero				; t1 = 0
-concatenate_loop:
-	bgeu t1, a1, concatenate_return	; if (  t1 > a1 ) goto return;
-	ldw t2, 0(t0)					; t2 = mem[t0]
-	srli t2, t2, 10					; t2 = t2 >> 10;
-	andi t2, t2, 0xFFFF				; t2 = t2 & 0xffff ; // set the bit between 31 and 16
-	ori	 t2, t2, 0xF800				; t2 = t2 | 0xf800 ; // set the bit between 15 and 11
-	stw  t2, 0(t0)					;
-	addi t1, t1, 1					; t1 = t1 + 1;
-	addi t0, t0, 4					; t0 = t0 + 4;
-	br concatenate_loop			; goto concatenate_loop
-
+	;andi t0, a1,    0xfffe			; remove the last 2 bit
+	ldw  t1, 0(a1)					; t2 = mem[t0]
+	;andi t0, a2,    0xfffe			; remove the last 2 bit
+	ldw  t2, 0(a2)					; t2 = mem[t0]
+	ldw  t0, 0(a0)
+	andi t3, a0, 0xfffc
+    sub  t3, a0, t3
+	srl  t1, t1, t3
+	stw  t1, 0(a0)
+shift_loop:
+	
 concatenate_return:
 	ret								; return to caller
 data:								; data initialization
@@ -28,17 +26,3 @@ data:								; data initialization
 
 	.word 0x000000					; "FPGA" = output
 
-;	.word 0x474100					; "GA"
-;	.word 0x474100					; "GA"
-
-;	.word 0x000000					; "GAGA" = output
-
-;	.word 0x474100					; "GA"
-;	.word 0x465000					; "FP"
-
-;	.word 0x000000					; "GAFP" = output
-
-;	.word 0x465000					; "FP"
-;	.word 0x465000					; "FP"
-
-;	.word 0x000000					; "FPFP" = output
